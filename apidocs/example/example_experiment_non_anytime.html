@@ -6,7 +6,7 @@
 
   <head>
     
-    <title>example</title>
+    <title>example_experiment_non_anytime</title>
     <meta name="generator" content="pydoctor 23.9.1"> 
         
     </meta>
@@ -31,7 +31,7 @@
       
       <div class="navlinks">
         <span class="navbar-brand">
-          example <a href="index.html">API Documentation</a>
+          example-stoppings/example_experiment_complete/test3/example_experiment_non_anytime/example-last/example_experiment2/example_experiment/example_experiment_for_beginners/example_experiment_for_beginners2/example_experiment_simple/test4/tmp/demo/mkl_bugfix/example-timings/example-batches <a href="index.html">API Documentation</a>
         </span>
 
         <a href="moduleIndex.html">
@@ -141,14 +141,20 @@
   <div>
 
       <div class="thingTitle">
-        <span>Package</span>
-        <code class="thisobject"><a href="index.html" class="internal-link" title="This package">example</a></code> 
+        <span>Module</span>
+        <code class="thisobject"><a href="example_experiment_non_anytime.html" class="internal-link" title="This module">example<wbr></wbr>_experiment<wbr></wbr>_non<wbr></wbr>_anytime</a></code> 
       </div>
       
       <div>
         
 
-        <div class="childrenKindTitle">Modules</div>
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Functions</div>
         <ul>
     
     <li class="">
@@ -157,7 +163,7 @@
         
 
         
-            <div class="itemName"><code><a href="example.demo.html" class="internal-link" title="example.demo">demo</a></code>
+            <div class="itemName"><code><a href="#default_budget_list" class="internal-link" title="example_experiment_non_anytime.default_budget_list">default<wbr></wbr>_budget<wbr></wbr>_list</a></code>
             </div>
         
 
@@ -167,7 +173,7 @@
         
 
         
-            <div class="itemName"><code><a href="example.example_experiment.html" class="internal-link" title="example.example_experiment">example<wbr></wbr>_experiment</a></code>
+            <div class="itemName"><code><a href="#fmin" class="internal-link" title="example_experiment_non_anytime.fmin">fmin</a></code>
             </div>
         
 
@@ -177,68 +183,12 @@
         
 
         
-            <div class="itemName"><code><a href="example.example_experiment2.html" class="internal-link" title="example.example_experiment2">example<wbr></wbr>_experiment2</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="example.example_experiment_complete.html" class="internal-link" title="example.example_experiment_complete">example<wbr></wbr>_experiment<wbr></wbr>_complete</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="example.example_experiment_for_beginners.html" class="internal-link" title="example.example_experiment_for_beginners">example<wbr></wbr>_experiment<wbr></wbr>_for<wbr></wbr>_beginners</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="example.example_experiment_non_anytime.html" class="internal-link" title="example.example_experiment_non_anytime">example<wbr></wbr>_experiment<wbr></wbr>_non<wbr></wbr>_anytime</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="example.example_experiment_simple.html" class="internal-link" title="example.example_experiment_simple">example<wbr></wbr>_experiment<wbr></wbr>_simple</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="example.mkl_bugfix.html" class="internal-link" title="example.mkl_bugfix">mkl<wbr></wbr>_bugfix</a></code>
+            <div class="itemName"><code><a href="#main" class="internal-link" title="example_experiment_non_anytime.main">main</a></code>
             </div>
         
 
     </li>
 </ul> 
-
-        
-        
-
-        
-         
 
         
          
@@ -268,14 +218,14 @@
         
 
         <div class="page-header">
-          <h1 class="package"><code><code><a href="index.html" class="internal-link">example</a></code></code></h1>
+          <h1 class="module"><code><code><a href="example_experiment_non_anytime.html" class="internal-link">example_experiment_non_anytime</a></code></code></h1>
           <div id="showPrivate">
             <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
           </div>
         </div>
 
         <div class="categoryHeader">
-          package documentation
+          module documentation
         </div>
 
         <div class="extrasDocstring">
@@ -284,53 +234,39 @@
         </div>
 
         <div class="moduleDocstring">
-          <div><p class="undocumented">Undocumented</p></div>
+          <div><p>An example experiment for benchmarking non-anytime optimization algorithms
+with restarts.</p>
+<p>Non-anytime algorithms are those whose parameters depend not only on the
+dimensionality of the problem, but also on the budget of evaluations.
+Benchmarking such algorithms therefore entails running experiments on a test
+suite using various (increasing) budgets. These budgets can/should be provided
+by the user. If the user does not specify a budget list, a default budget list
+is used.</p>
+<p>This code builds upon the example experiment for beginners and provides only
+simplistic progress information.</p>
+<p>To apply the code to a different solver, add an interface to function <code><a href="#fmin" class="internal-link" title="example_experiment_non_anytime.fmin">fmin</a></code>.</p>
+</div>
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id1">
+          <table class="children sortable" id="id11">
   
   
-  <tr class="module">
+  <tr class="function">
     
-    <td>Module</td>
-    <td><code><a href="example.demo.html" class="internal-link" title="example.demo">demo</a></code></td>
-    <td>Usage from a system shell:</td>
-  </tr><tr class="module">
+    <td>Function</td>
+    <td><code><a href="#default_budget_list" class="internal-link" title="example_experiment_non_anytime.default_budget_list">default<wbr></wbr>_budget<wbr></wbr>_list</a></code></td>
+    <td>Produces a budget list with at most <code>num</code> different increasing budgets within [1, <code>max_budget</code>] that are equally spaced in the logarithmic space.</td>
+  </tr><tr class="function">
     
-    <td>Module</td>
-    <td><code><a href="example.example_experiment.html" class="internal-link" title="example.example_experiment">example<wbr></wbr>_experiment</a></code></td>
-    <td>DEPRECATED: use rather <code>example_experiment_complete.py</code></td>
-  </tr><tr class="module">
+    <td>Function</td>
+    <td><code><a href="#fmin" class="internal-link" title="example_experiment_non_anytime.fmin">fmin</a></code></td>
+    <td>Invokes <code>solver</code> on <code>problem</code> with <code><a href="example_experiment.html#budget" class="internal-link" title="example_experiment.budget">budget</a></code> and initial solution <code><a href="example_experiment_for_beginners.html#x0" class="internal-link" title="example_experiment_for_beginners.x0">x0</a></code>. Returns the final solution.</td>
+  </tr><tr class="function">
     
-    <td>Module</td>
-    <td><code><a href="example.example_experiment2.html" class="internal-link" title="example.example_experiment2">example<wbr></wbr>_experiment2</a></code></td>
-    <td>DEPRECATED: use rather <code>example_experiment_complete.py</code></td>
-  </tr><tr class="module">
-    
-    <td>Module</td>
-    <td><code><a href="example.example_experiment_complete.html" class="internal-link" title="example.example_experiment_complete">example<wbr></wbr>_experiment<wbr></wbr>_complete</a></code></td>
-    <td>A short yet complete example experiment script with restarts and batching.</td>
-  </tr><tr class="module">
-    
-    <td>Module</td>
-    <td><code><a href="example.example_experiment_for_beginners.html" class="internal-link" title="example.example_experiment_for_beginners">example<wbr></wbr>_experiment<wbr></wbr>_for<wbr></wbr>_beginners</a></code></td>
-    <td>DEPRECATED: use rather <code>example_experiment_simple.py</code></td>
-  </tr><tr class="module">
-    
-    <td>Module</td>
-    <td><code><a href="example.example_experiment_non_anytime.html" class="internal-link" title="example.example_experiment_non_anytime">example<wbr></wbr>_experiment<wbr></wbr>_non<wbr></wbr>_anytime</a></code></td>
-    <td>An example experiment for benchmarking non-anytime optimization algorithms with restarts.</td>
-  </tr><tr class="module">
-    
-    <td>Module</td>
-    <td><code><a href="example.example_experiment_simple.html" class="internal-link" title="example.example_experiment_simple">example<wbr></wbr>_experiment<wbr></wbr>_simple</a></code></td>
-    <td>A short and simple example experiment with restarts mainly for reading.</td>
-  </tr><tr class="module">
-    
-    <td>Module</td>
-    <td><code><a href="example.mkl_bugfix.html" class="internal-link" title="example.mkl_bugfix">mkl<wbr></wbr>_bugfix</a></code></td>
-    <td>import this before numpy is imported to fix hangups with 100% CPU usage on Linux.</td>
+    <td>Function</td>
+    <td><code><a href="#main" class="internal-link" title="example_experiment_non_anytime.main">main</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
           
@@ -339,7 +275,83 @@
         </div>
 
         <div id="childList">
-          
+          <div class="basefunction">
+  
+  
+  <a name="example_experiment_non_anytime.default_budget_list">
+    
+  </a>
+  <a name="default_budget_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">default_budget_list</span><span class="function-signature">(max_budget=10, num=50)</span>:
+    
+    <a class="headerLink" href="#default_budget_list" title="example_experiment_non_anytime.default_budget_list">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Produces a budget list with at most <code>num</code> different increasing budgets
+within [1, <code>max_budget</code>] that are equally spaced in the logarithmic space.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="example_experiment_non_anytime.fmin">
+    
+  </a>
+  <a name="fmin">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">fmin</span><span class="function-signature">(problem, x0, solver, budget)</span>:
+    
+    <a class="headerLink" href="#fmin" title="example_experiment_non_anytime.fmin">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Invokes <code>solver</code> on <code>problem</code> with <code><a href="example_experiment.html#budget" class="internal-link" title="example_experiment.budget">budget</a></code> and initial solution <code><a href="example_experiment_for_beginners.html#x0" class="internal-link" title="example_experiment_for_beginners.x0">x0</a></code>.
+Returns the final solution.</p>
+<p>Add here the interface to your solver.</p>
+</div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="example_experiment_non_anytime.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">main</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#main" title="example_experiment_non_anytime.main">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div>
         </div>
       
       </div>
@@ -349,9 +361,9 @@
 
   
   <div class="container">
-    <a href="index.html">API Documentation</a> for example,
+    <a href="index.html">API Documentation</a> for example-stoppings/example_experiment_complete/test3/example_experiment_non_anytime/example-last/example_experiment2/example_experiment/example_experiment_for_beginners/example_experiment_for_beginners2/example_experiment_simple/test4/tmp/demo/mkl_bugfix/example-timings/example-batches,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    23.9.1 at 2024-07-11 01:25:36.
+    23.9.1 at 2024-07-11 01:14:01.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 
