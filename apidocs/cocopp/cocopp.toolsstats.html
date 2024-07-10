@@ -7,11 +7,11 @@
   <head>
     
     <title>cocopp.toolsstats</title>
-    <meta name="generator" content="pydoctor 22.2.1"> 
+    <meta name="generator" content="pydoctor 23.9.1"> 
         
     </meta>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.75" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="apidocs.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
@@ -21,67 +21,914 @@
 
     
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default mainnavbar">
+      
   
-  <div class="container">
+  <div class="container-fluid">
+
 
     <div class="navbar-header">
       
       <div class="navlinks">
-          <span class="navbar-brand">
-            cocopp <a href="index.html">API Documentation</a>
-          </span>
+        <span class="navbar-brand">
+          cocopp <a href="index.html">API Documentation</a>
+        </span>
 
-          <a href="moduleIndex.html">
-            Modules
-          </a>
+        <a href="moduleIndex.html">
+          Modules
+        </a>
 
-          <a href="classIndex.html">
-            Classes
-          </a>
+        <a href="classIndex.html">
+          Classes
+        </a>
 
-          <a href="nameIndex.html">
-            Names
-          </a>
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
       </div>
 
-    </div>
-  </div>
-</nav>
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
 
-    
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
 
-    <div class="container">
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
 
-      <div class="page-header">
-        <h1 class="module"><code><code><a href="index.html" class="internal-link">cocopp</a></code><wbr></wbr>.<code><a href="cocopp.toolsstats.html" class="internal-link" title="cocopp.toolsstats">toolsstats</a></code></code></h1>
-        <div id="showPrivate">
-          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
         </div>
       </div>
 
-      <div class="categoryHeader">
-        module documentation
-      </div>
+    </div>
 
-      <div class="extrasDocstring">
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
         
-        <p></p>
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code class="thisobject"><a href="cocopp.toolsstats.html" class="internal-link" title="This module">toolsstats</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.toolsstats.Evals.html" class="internal-link" title="cocopp.toolsstats.Evals"><wbr></wbr>Evals</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#best_alg_indices" class="internal-link" title="cocopp.toolsstats.best_alg_indices">best<wbr></wbr>_alg<wbr></wbr>_indices</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#draw" class="internal-link" title="cocopp.toolsstats.draw">draw</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#drawSP" class="internal-link" title="cocopp.toolsstats.drawSP">draw<wbr></wbr>SP</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#drawSP_from_dataset" class="internal-link" title="cocopp.toolsstats.drawSP_from_dataset">draw<wbr></wbr>SP_from_dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#drawSP_from_dataset_new" class="internal-link" title="cocopp.toolsstats.drawSP_from_dataset_new">draw<wbr></wbr>SP_from_dataset_new</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#equals_approximately" class="internal-link" title="cocopp.toolsstats.equals_approximately">equals<wbr></wbr>_approximately</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#fastsort" class="internal-link" title="cocopp.toolsstats.fastsort">fastsort</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#fix_data_number" class="internal-link" title="cocopp.toolsstats.fix_data_number">fix<wbr></wbr>_data<wbr></wbr>_number</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#in_approximately" class="internal-link" title="cocopp.toolsstats.in_approximately">in<wbr></wbr>_approximately</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#prctile" class="internal-link" title="cocopp.toolsstats.prctile">prctile</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#randint" class="internal-link" title="cocopp.toolsstats.randint">randint</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#randint_derandomized" class="internal-link" title="cocopp.toolsstats.randint_derandomized">randint<wbr></wbr>_derandomized</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#rankdata" class="internal-link" title="cocopp.toolsstats.rankdata">rankdata</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ranksum_statistic" class="internal-link" title="cocopp.toolsstats.ranksum_statistic">ranksum<wbr></wbr>_statistic</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ranksumtest" class="internal-link" title="cocopp.toolsstats.ranksumtest">ranksumtest</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#significance_all_best_vs_other" class="internal-link" title="cocopp.toolsstats.significance_all_best_vs_other">significance<wbr></wbr>_all<wbr></wbr>_best<wbr></wbr>_vs<wbr></wbr>_other</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#significancetest" class="internal-link" title="cocopp.toolsstats.significancetest">significancetest</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#simulated_evals" class="internal-link" title="cocopp.toolsstats.simulated_evals">simulated<wbr></wbr>_evals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#sliding_window_data" class="internal-link" title="cocopp.toolsstats.sliding_window_data">sliding<wbr></wbr>_window<wbr></wbr>_data</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#sp" class="internal-link" title="cocopp.toolsstats.sp">sp</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#sp1" class="internal-link" title="cocopp.toolsstats.sp1">sp1</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#zprob" class="internal-link" title="cocopp.toolsstats.zprob">zprob</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_has_len" class="internal-link" title="cocopp.toolsstats._has_len">_has<wbr></wbr>_len</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_randint_derandomized_generator" class="internal-link" title="cocopp.toolsstats._randint_derandomized_generator">_randint<wbr></wbr>_derandomized<wbr></wbr>_generator</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="index.html" class="internal-link" title="The parent of this module">cocopp</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.comp2.html" class="internal-link" title="cocopp.comp2">comp2</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.compall.html" class="internal-link" title="cocopp.compall">compall</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.algportfolio.html" class="internal-link" title="cocopp.algportfolio">algportfolio</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html" class="internal-link" title="cocopp.archiving">archiving</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.bestalg.html" class="internal-link" title="cocopp.bestalg">bestalg</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.bwsettings.html" class="internal-link" title="cocopp.bwsettings">bwsettings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.captions.html" class="internal-link" title="cocopp.captions">captions</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.cococommands.html" class="internal-link" title="cocopp.cococommands">cococommands</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.config.html" class="internal-link" title="cocopp.config">config</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.dataformatsettings.html" class="internal-link" title="cocopp.dataformatsettings">dataformatsettings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.findfiles.html" class="internal-link" title="cocopp.findfiles">findfiles</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.firstsession.html" class="internal-link" title="cocopp.firstsession">firstsession</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.genericsettings.html" class="internal-link" title="cocopp.genericsettings">genericsettings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.grayscalesettings.html" class="internal-link" title="cocopp.grayscalesettings">grayscalesettings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.htmldesc.html" class="internal-link" title="cocopp.htmldesc">htmldesc</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.old_line_styles.html" class="internal-link" title="cocopp.old_line_styles">old<wbr></wbr>_line<wbr></wbr>_styles</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppconverrorbars.html" class="internal-link" title="cocopp.ppconverrorbars">ppconverrorbars</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppfig.html" class="internal-link" title="cocopp.ppfig">ppfig</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppfigcons1.html" class="internal-link" title="cocopp.ppfigcons1">ppfigcons1</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppfigdim.html" class="internal-link" title="cocopp.ppfigdim">ppfigdim</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppfigparam.html" class="internal-link" title="cocopp.ppfigparam">ppfigparam</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pplogloss.html" class="internal-link" title="cocopp.pplogloss">pplogloss</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pprldistr.html" class="internal-link" title="cocopp.pprldistr">pprldistr</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pprldistr2009_hardestRLB.html" class="internal-link" title="cocopp.pprldistr2009_hardestRLB">pprldistr2009_hardest<wbr></wbr>RLB</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.html" class="internal-link" title="cocopp.pproc">pproc</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppsingle.html" class="internal-link" title="cocopp.ppsingle">ppsingle</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pptable.html" class="internal-link" title="cocopp.pptable">pptable</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pptex.html" class="internal-link" title="cocopp.pptex">pptex</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.preparehtml.html" class="internal-link" title="cocopp.preparehtml">preparehtml</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.preparetexforhtml.html" class="internal-link" title="cocopp.preparetexforhtml">preparetexforhtml</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.html" class="internal-link" title="cocopp.readalign">readalign</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.rungeneric.html" class="internal-link" title="cocopp.rungeneric">rungeneric</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.rungeneric1.html" class="internal-link" title="cocopp.rungeneric1">rungeneric1</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.rungenericmany.html" class="internal-link" title="cocopp.rungenericmany">rungenericmany</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.sanitycheck.html" class="internal-link" title="cocopp.sanitycheck">sanitycheck</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.test.html" class="internal-link" title="cocopp.test">test</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.testbedsettings.html" class="internal-link" title="cocopp.testbedsettings">testbedsettings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.toolsdivers.html" class="internal-link" title="cocopp.toolsdivers">toolsdivers</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.toolsstats.html" class="internal-link" title="cocopp.toolsstats">toolsstats</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.__main__.html" class="internal-link" title="cocopp.__main__">__main__</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp._version.html" class="internal-link" title="cocopp._version">_version</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.Interface.html" class="internal-link" title="cocopp.Interface"><wbr></wbr>Interface</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
       </div>
 
-      <div class="moduleDocstring">
-        <div>Bootstrapping and statistics routines.</div>
-      </div>
+      <div id="main" class="">
+        
 
-      <div id="splitTables">
-        <table class="children sortable" id="id168">
+        
+
+        <div class="page-header">
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">cocopp</a></code><wbr></wbr>.<code><a href="cocopp.toolsstats.html" class="internal-link" title="cocopp.toolsstats">toolsstats</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          module documentation
+        </div>
+
+        <div class="extrasDocstring">
+          
+          <p></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>Bootstrapping and statistics routines.</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id156">
   
   
   <tr class="class">
     
     <td>Class</td>
-    <td><code><a href="cocopp.toolsstats.Evals.html" class="internal-link" title="cocopp.toolsstats.Evals">​Evals</a></code></td>
+    <td><code><a href="cocopp.toolsstats.Evals.html" class="internal-link" title="cocopp.toolsstats.Evals"><wbr></wbr>Evals</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#best_alg_indices" class="internal-link" title="cocopp.toolsstats.best_alg_indices">best<wbr></wbr>_alg<wbr></wbr>_indices</a></code></td>
+    <td>return the index of the most promising algorithm for each target.</td>
   </tr><tr class="function">
     
     <td>Function</td>
@@ -90,22 +937,22 @@
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#drawSP" class="internal-link" title="cocopp.toolsstats.drawSP">draw​SP</a></code></td>
+    <td><code><a href="#drawSP" class="internal-link" title="cocopp.toolsstats.drawSP">draw<wbr></wbr>SP</a></code></td>
     <td>Returns the percentiles of the bootstrapped distribution of 'simulated' running lengths of successful runs.</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#drawSP_from_dataset" class="internal-link" title="cocopp.toolsstats.drawSP_from_dataset">draw​SP_from_dataset</a></code></td>
+    <td><code><a href="#drawSP_from_dataset" class="internal-link" title="cocopp.toolsstats.drawSP_from_dataset">draw<wbr></wbr>SP_from_dataset</a></code></td>
     <td>returns <tt class="rst-docutils literal">(percentiles, all_sampled_values_sorted)</tt> of simulated runlengths to reach <tt class="rst-docutils literal">ftarget</tt> based on a <tt class="rst-docutils literal">DataSet</tt> class instance, specifically:</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#drawSP_from_dataset_new" class="internal-link" title="cocopp.toolsstats.drawSP_from_dataset_new">draw​SP_from_dataset_new</a></code></td>
+    <td><code><a href="#drawSP_from_dataset_new" class="internal-link" title="cocopp.toolsstats.drawSP_from_dataset_new">draw<wbr></wbr>SP_from_dataset_new</a></code></td>
     <td>new implementation, old interface (which should also change at some point)</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#equals_approximately" class="internal-link" title="cocopp.toolsstats.equals_approximately">equals​_approximately</a></code></td>
+    <td><code><a href="#equals_approximately" class="internal-link" title="cocopp.toolsstats.equals_approximately">equals<wbr></wbr>_approximately</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function">
     
@@ -115,12 +962,12 @@
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#fix_data_number" class="internal-link" title="cocopp.toolsstats.fix_data_number">fix​_data​_number</a></code></td>
+    <td><code><a href="#fix_data_number" class="internal-link" title="cocopp.toolsstats.fix_data_number">fix<wbr></wbr>_data<wbr></wbr>_number</a></code></td>
     <td>Obsolete and subject to removal. Use instead <tt class="rst-docutils literal"><span class="pre">np.asarray(data)[randint_derandomized(0,</span> len(data), ndata)]</tt> or <tt class="rst-docutils literal">[data[i] for i in randint_derandomized(0, len(data), ndata)]</tt>.</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#in_approximately" class="internal-link" title="cocopp.toolsstats.in_approximately">in​_approximately</a></code></td>
+    <td><code><a href="#in_approximately" class="internal-link" title="cocopp.toolsstats.in_approximately">in<wbr></wbr>_approximately</a></code></td>
     <td>return True if <tt class="rst-docutils literal">a</tt> equals approximately any of the elements in <tt class="rst-docutils literal">list_</tt>, in short</td>
   </tr><tr class="function">
     
@@ -135,7 +982,7 @@
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#randint_derandomized" class="internal-link" title="cocopp.toolsstats.randint_derandomized">randint​_derandomized</a></code></td>
+    <td><code><a href="#randint_derandomized" class="internal-link" title="cocopp.toolsstats.randint_derandomized">randint<wbr></wbr>_derandomized</a></code></td>
     <td>return a <code>numpy</code> array of derandomized random integers.</td>
   </tr><tr class="function">
     
@@ -145,7 +992,7 @@
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#ranksum_statistic" class="internal-link" title="cocopp.toolsstats.ranksum_statistic">ranksum​_statistic</a></code></td>
+    <td><code><a href="#ranksum_statistic" class="internal-link" title="cocopp.toolsstats.ranksum_statistic">ranksum<wbr></wbr>_statistic</a></code></td>
     <td>Returns the U test statistic of the rank-sum (Mann-Whitney-Wilcoxon) test.</td>
   </tr><tr class="function">
     
@@ -155,8 +1002,8 @@
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#significance_all_best_vs_other" class="internal-link" title="cocopp.toolsstats.significance_all_best_vs_other">significance​_all​_best​_vs​_other</a></code></td>
-    <td></td>
+    <td><code><a href="#significance_all_best_vs_other" class="internal-link" title="cocopp.toolsstats.significance_all_best_vs_other">significance<wbr></wbr>_all<wbr></wbr>_best<wbr></wbr>_vs<wbr></wbr>_other</a></code></td>
+    <td>returns a list of <tt class="rst-docutils literal">(z, p)</tt> tuples, each results from the ranksum tests for the respective target value for each algorithm against the best algorithm defined from the index list. Each <tt class="rst-docutils literal">(z, p)</tt> is either the first ...</td>
   </tr><tr class="function">
     
     <td>Function</td>
@@ -165,18 +1012,18 @@
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#simulated_evals" class="internal-link" title="cocopp.toolsstats.simulated_evals">simulated​_evals</a></code></td>
+    <td><code><a href="#simulated_evals" class="internal-link" title="cocopp.toolsstats.simulated_evals">simulated<wbr></wbr>_evals</a></code></td>
     <td>Obsolete: see <code><a href="cocopp.pproc.DataSet.html#evals_with_simulated_restarts" class="internal-link" title="cocopp.pproc.DataSet.evals_with_simulated_restarts">DataSet.evals_with_simulated_restarts</a></code> instead.</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#sliding_window_data" class="internal-link" title="cocopp.toolsstats.sliding_window_data">sliding​_window​_data</a></code></td>
+    <td><code><a href="#sliding_window_data" class="internal-link" title="cocopp.toolsstats.sliding_window_data">sliding<wbr></wbr>_window<wbr></wbr>_data</a></code></td>
     <td>width is an absolute number, the resulting data has the same length as the original data and the window width is between width/2 at the border and width in the middle.</td>
   </tr><tr class="function">
     
     <td>Function</td>
     <td><code><a href="#sp" class="internal-link" title="cocopp.toolsstats.sp">sp</a></code></td>
-    <td><span class="undocumented">No summary</span></td>
+    <td>sp(data, issuccessful=None) computes the sum of the function evaluations over all runs divided by the number of success, the so-called success performance which estimates the expected runtime ERT.</td>
   </tr><tr class="function">
     
     <td>Function</td>
@@ -190,23 +1037,59 @@
   </tr><tr class="function private">
     
     <td>Function</td>
-    <td><code><a href="#_has_len" class="internal-link" title="cocopp.toolsstats._has_len">​_has​_len</a></code></td>
+    <td><code><a href="#_has_len" class="internal-link" title="cocopp.toolsstats._has_len">_has<wbr></wbr>_len</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function private">
     
     <td>Function</td>
-    <td><code><a href="#_randint_derandomized_generator" class="internal-link" title="cocopp.toolsstats._randint_derandomized_generator">​_randint​_derandomized​_generator</a></code></td>
-    <td>the generator for <code><a href="#randint_derandomized" class="internal-link" title="cocopp.toolsstats.randint_derandomized">randint_derandomized</a></code></td>
+    <td><code><a href="#_randint_derandomized_generator" class="internal-link" title="cocopp.toolsstats._randint_derandomized_generator">_randint<wbr></wbr>_derandomized<wbr></wbr>_generator</a></code></td>
+    <td>the generator for <code><a href="cocopp.toolsstats.html#randint_derandomized" class="internal-link" title="cocopp.toolsstats.randint_derandomized">randint_derandomized</a></code></td>
   </tr>
 </table>
-        
-
           
-      </div>
 
-      <div id="childList">
+            
+        </div>
 
-        <div class="basefunction">
+        <div id="childList">
+          <div class="basefunction">
+  
+  
+  <a name="cocopp.toolsstats.best_alg_indices">
+    
+  </a>
+  <a name="best_alg_indices">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">best_alg_indices</span><span class="function-signature">(ert_ars=None, median_finalfunvals=None, datasets=None, targets=None)</span>:
+    
+    <a class="headerLink" href="#best_alg_indices" title="cocopp.toolsstats.best_alg_indices">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>return the index of the most promising algorithm for each target.</p>
+<p><code>ert_ars</code> are the first criterion and computed from <code>datasets</code> and
+<code>targets</code> if necessary. <code>median_finalfunvals</code> are needed when all
+<code>ert_ars</code> are infinite for some target and computed from <code>datasets</code>
+when necessary.</p>
+<p>Lines in <code>ert_ars</code> contain ERTs for different targets, columns contain
+ERTs for a single target from different algorithms.</p>
+<p>Rationale: our primary (only) performance indicator is evals, hence we
+use expected evals to determine the candidate for best algorithm. When
+no evals are available, we have not run the experiment long enough (we
+have no real measurement), then the best candidate is the one with the
+best final f-values. The statistical test is later aligned to the
+largest evals where all runs have a recorded value.</p>
+</div>
+  </div>
+</div><div class="basefunction">
   
   
   <a name="cocopp.toolsstats.draw">
@@ -217,11 +1100,16 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">draw</span>(data, percentiles, samplesize=1000.0, func=<a href="#sp1" class="internal-link" title="cocopp.toolsstats.sp1">sp1</a>, args=()):
     
+    <span class="py-keyword">def</span> <span class="py-defname">draw</span><span class="function-signature">(data, percentiles, samplesize=1000.0, func=<a href="#sp1" class="internal-link" title="cocopp.toolsstats.sp1">sp1</a>, args=())</span>:
+    
+    <a class="headerLink" href="#draw" title="cocopp.toolsstats.draw">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Generates the empirical bootstrap distribution from a sample.</p>
 <dl class="rst-docutils">
@@ -269,11 +1157,16 @@ unexpected results.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">drawSP</span>(runlengths_succ, runlengths_unsucc, percentiles, samplesize=<a href="cocopp.genericsettings.html#simulated_runlength_bootstrap_sample_size" class="internal-link" title="cocopp.genericsettings.simulated_runlength_bootstrap_sample_size">genericsettings.simulated_runlength_bootstrap_sample_size</a>, derandomized=True):
     
+    <span class="py-keyword">def</span> <span class="py-defname">drawSP</span><span class="function-signature">(runlengths_succ, runlengths_unsucc, percentiles, samplesize=<a href="cocopp.genericsettings.html#simulated_runlength_bootstrap_sample_size" class="internal-link" title="cocopp.genericsettings.simulated_runlength_bootstrap_sample_size">genericsettings.simulated_runlength_bootstrap_sample_size</a>, derandomized=True)</span>:
+    
+    <a class="headerLink" href="#drawSP" title="cocopp.toolsstats.drawSP">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Returns the percentiles of the bootstrapped distribution of
 'simulated' running lengths of successful runs.</p>
@@ -313,11 +1206,16 @@ The latter is also depreciated, see
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">drawSP_from_dataset</span>(data_set, ftarget, percentiles, samplesize=<a href="cocopp.genericsettings.html#simulated_runlength_bootstrap_sample_size" class="internal-link" title="cocopp.genericsettings.simulated_runlength_bootstrap_sample_size">genericsettings.simulated_runlength_bootstrap_sample_size</a>):
     
+    <span class="py-keyword">def</span> <span class="py-defname">drawSP_from_dataset</span><span class="function-signature">(data_set, ftarget, percentiles, samplesize=<a href="cocopp.genericsettings.html#simulated_runlength_bootstrap_sample_size" class="internal-link" title="cocopp.genericsettings.simulated_runlength_bootstrap_sample_size">genericsettings.simulated_runlength_bootstrap_sample_size</a>)</span>:
+    
+    <a class="headerLink" href="#drawSP_from_dataset" title="cocopp.toolsstats.drawSP_from_dataset">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>returns <tt class="rst-docutils literal">(percentiles, all_sampled_values_sorted)</tt> of simulated
 runlengths to reach <tt class="rst-docutils literal">ftarget</tt> based on a <tt class="rst-docutils literal">DataSet</tt> class instance,
@@ -344,11 +1242,16 @@ modulo <code>data_set.nbRuns()</code>.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">drawSP_from_dataset_new</span>(data_set, ftarget, dummy, samplesize=<a href="cocopp.genericsettings.html#simulated_runlength_bootstrap_sample_size" class="internal-link" title="cocopp.genericsettings.simulated_runlength_bootstrap_sample_size">genericsettings.simulated_runlength_bootstrap_sample_size</a>):
     
+    <span class="py-keyword">def</span> <span class="py-defname">drawSP_from_dataset_new</span><span class="function-signature">(data_set, ftarget, dummy, samplesize=<a href="cocopp.genericsettings.html#simulated_runlength_bootstrap_sample_size" class="internal-link" title="cocopp.genericsettings.simulated_runlength_bootstrap_sample_size">genericsettings.simulated_runlength_bootstrap_sample_size</a>)</span>:
+    
+    <a class="headerLink" href="#drawSP_from_dataset_new" title="cocopp.toolsstats.drawSP_from_dataset_new">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>new implementation, old interface (which should also change at some point)</p>
 <p>returns (None, evals), that is, no percentiles, only the data=runtimes=evals</p>
@@ -365,11 +1268,16 @@ modulo <code>data_set.nbRuns()</code>.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">equals_approximately</span>(a, b, abs=1e-11, rel=1e-11):
     
+    <span class="py-keyword">def</span> <span class="py-defname">equals_approximately</span><span class="function-signature">(a, b, abs=1e-11, rel=1e-11)</span>:
+    
+    <a class="headerLink" href="#equals_approximately" title="cocopp.toolsstats.equals_approximately">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -384,11 +1292,16 @@ modulo <code>data_set.nbRuns()</code>.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">fastsort</span>(a):
     
+    <span class="py-keyword">def</span> <span class="py-defname">fastsort</span><span class="function-signature">(a)</span>:
+    
+    <a class="headerLink" href="#fastsort" title="cocopp.toolsstats.fastsort">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Sort an array and provide the argsort.</p>
 <dl class="rst-docutils">
@@ -410,11 +1323,16 @@ modulo <code>data_set.nbRuns()</code>.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">fix_data_number</span>(data, ndata=15, last_elements_randomized=True, warn=False):
     
+    <span class="py-keyword">def</span> <span class="py-defname">fix_data_number</span><span class="function-signature">(data, ndata=15, last_elements_randomized=True, warn=False)</span>:
+    
+    <a class="headerLink" href="#fix_data_number" title="cocopp.toolsstats.fix_data_number">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Obsolete and subject to removal. Use instead
 <tt class="rst-docutils literal"><span class="pre">np.asarray(data)[randint_derandomized(0,</span> len(data), ndata)]</tt> or
@@ -431,7 +1349,7 @@ or <tt class="rst-docutils literal">data</tt> itself.</p>
 <span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">assert</span> <span class="py-builtin">len</span>(fix_data_number(data, 14)) == 14
 <span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">assert</span> fix_data_number(data, 14)[2] == data[2]</pre><p>See also <tt class="rst-docutils literal">data[randint_derandomized(0, len(data), ndata)]</tt>, which
 should do pretty much the same, a little more randomized.</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data</span></td><td class="fieldArgDesc">is a (row)-vector</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ndata</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">last​_elements​_randomized</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">warn</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr></table></div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data</span></td><td class="fieldArgDesc">is a (row)-vector</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ndata</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">last<wbr></wbr>_elements<wbr></wbr>_randomized</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">warn</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -444,11 +1362,16 @@ should do pretty much the same, a little more randomized.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">in_approximately</span>(a, list_, abs=1e-11, rel=1e-11):
     
+    <span class="py-keyword">def</span> <span class="py-defname">in_approximately</span><span class="function-signature">(a, list_, abs=1e-11, rel=1e-11)</span>:
+    
+    <a class="headerLink" href="#in_approximately" title="cocopp.toolsstats.in_approximately">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>return True if <tt class="rst-docutils literal">a</tt> equals approximately any of the elements
 in <tt class="rst-docutils literal">list_</tt>, in short</p>
@@ -467,19 +1390,24 @@ return any([equals_approximately(a, b) for b in <a href="#system-message-1"><spa
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">prctile</span>(x, arrprctiles, issorted=False, ignore_nan=True):
     
+    <span class="py-keyword">def</span> <span class="py-defname">prctile</span><span class="function-signature">(x, arrprctiles, issorted=False, ignore_nan=True)</span>:
+    
+    <a class="headerLink" href="#prctile" title="cocopp.toolsstats.prctile">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Computes percentile based on data with linear interpolation</p>
 <div class="rst-admonition note">
 <p class="rst-first rst-admonition-title">Note</p>
-<p class="rst-last">treats np.Inf and -np.Inf, np.NaN and None, the latter are
+<p class="rst-last">treats np.inf and -np.inf, np.nan and None, the latter are
 simply disregarded</p>
 </div>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">x</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">arrprctiles</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">issorted</span></td><td class="fieldArgDesc">indicate if data is sorted</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ignore​_nan</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">prctiles:</span>scalar or sequence</td><td class="fieldArgDesc">percentiles to be calculated. Values beyond the
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">x</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">arrprctiles</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">issorted</span></td><td class="fieldArgDesc">indicate if data is sorted</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ignore<wbr></wbr>_nan</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">prctiles:</span>scalar or sequence</td><td class="fieldArgDesc">percentiles to be calculated. Values beyond the
 interval [0,100] also return the respective
 extreme value in data.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">sequence data</span></td><td class="fieldArgDesc">(list, array) of data values</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">sequence of percentile values in data according to argument
 prctiles</td></tr></table></div>
@@ -495,11 +1423,16 @@ prctiles</td></tr></table></div>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">randint</span>(upper, n):
     
+    <span class="py-keyword">def</span> <span class="py-defname">randint</span><span class="function-signature">(upper, n)</span>:
+    
+    <a class="headerLink" href="#randint" title="cocopp.toolsstats.randint">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -514,17 +1447,22 @@ prctiles</td></tr></table></div>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">randint_derandomized</span>(low, high=None, size=None):
     
+    <span class="py-keyword">def</span> <span class="py-defname">randint_derandomized</span><span class="function-signature">(low, high=None, size=None)</span>:
+    
+    <a class="headerLink" href="#randint_derandomized" title="cocopp.toolsstats.randint_derandomized">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     
-    
     <div><p>return a <code>numpy</code> array of derandomized random integers.</p>
 <p>The interface is the same as for <code>numpy.randint</code>, however the
-default value for <code>size</code> is <tt class="rst-docutils literal"><span class="pre">high-low</span></tt> and each "random" integer
+default value for <code>size</code> is <tt class="rst-docutils literal">high - low</tt> and each "random" integer
 is guarantied to appear exactly once in each chunk of size
-<tt class="rst-docutils literal"><span class="pre">high-low</span></tt>. (That is, by default a permutation is returned.)</p>
+<tt class="rst-docutils literal">high - low</tt>. (That is, by default a permutation is returned.)</p>
 <p>As for <code>numpy.randint</code>, the value range is [low, high-1] or [0, low-1]
 if <tt class="rst-docutils literal">high is None</tt>.</p>
 <pre class="py-doctest">
@@ -552,11 +1490,16 @@ np.asarray(data)[randint_derandomized(0, len(data), ndata)]
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">rankdata</span>(a):
     
+    <span class="py-keyword">def</span> <span class="py-defname">rankdata</span><span class="function-signature">(a)</span>:
+    
+    <a class="headerLink" href="#rankdata" title="cocopp.toolsstats.rankdata">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Ranks the data in a, dealing with ties appropriately.</p>
 <p>Equal values are assigned a rank that is the average of the ranks that
@@ -588,11 +1531,16 @@ This array is first flattened.</li>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">ranksum_statistic</span>(N1, N2):
     
+    <span class="py-keyword">def</span> <span class="py-defname">ranksum_statistic</span><span class="function-signature">(N1, N2)</span>:
+    
+    <a class="headerLink" href="#ranksum_statistic" title="cocopp.toolsstats.ranksum_statistic">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Returns the U test statistic of the rank-sum (Mann-Whitney-Wilcoxon) test.</p>
 <p><a class="rst-reference external" href="http://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U" target="_top">http://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U</a>
@@ -610,11 +1558,16 @@ Small sample sizes (direct method).</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">ranksumtest</span>(x, y):
     
+    <span class="py-keyword">def</span> <span class="py-defname">ranksumtest</span><span class="function-signature">(x, y)</span>:
+    
+    <a class="headerLink" href="#ranksumtest" title="cocopp.toolsstats.ranksumtest">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Calculates the rank sum statistics for the two input data sets
 <tt class="rst-docutils literal">x</tt> and <tt class="rst-docutils literal">y</tt> and returns z and p.</p>
@@ -634,14 +1587,23 @@ in the two-tailed p-value. Should be test drived...</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">significance_all_best_vs_other</span>(datasets, targets, best_alg_idx=None):
     
+    <span class="py-keyword">def</span> <span class="py-defname">significance_all_best_vs_other</span><span class="function-signature">(datasets, targets, best_alg_idx=None)</span>:
+    
+    <a class="headerLink" href="#significance_all_best_vs_other" title="cocopp.toolsstats.significance_all_best_vs_other">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     
-    
-    <div>returns a list of <tt class="rst-docutils literal">(z, p)</tt> tuples, each is the result for the ranksumtest
-for the respective target value in targets and the index list of best algorithm.<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">datasets</span></td><td class="fieldArgDesc">is a list of DataSet from different algorithms, otherwise on the same function and dimension (which is not necessarily checked)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">targets</span></td><td class="fieldArgDesc">is a list of target values,</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">best​_alg​_idx</span></td><td class="fieldArgDesc">for each target the best algorithm to be tested against the others</td></tr></table></div>
+    <div><p>returns a list of <tt class="rst-docutils literal">(z, p)</tt> tuples, each results from the ranksum
+tests for the respective target value for each algorithm against the
+best algorithm defined from the index list. Each <tt class="rst-docutils literal">(z, p)</tt> is either
+the first <tt class="rst-docutils literal">z</tt> when <tt class="rst-docutils literal">z &gt;= 0</tt> (best algorithm is worse) in which case
+<tt class="rst-docutils literal">p</tt> is set to 1, or, when <tt class="rst-docutils literal">z &lt; 0</tt>, it is the pair with the
+largest observed <tt class="rst-docutils literal">p</tt>.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">datasets</span></td><td class="fieldArgDesc">is a list of DataSet from different algorithms, otherwise on the same function and dimension (which is not necessarily checked)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">targets</span></td><td class="fieldArgDesc">is a list of target values,</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">best<wbr></wbr>_alg<wbr></wbr>_idx</span></td><td class="fieldArgDesc">for each target the best algorithm to be tested against the others</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -654,11 +1616,16 @@ for the respective target value in targets and the index list of best algorithm.
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">significancetest</span>(entry0, entry1, targets):
     
+    <span class="py-keyword">def</span> <span class="py-defname">significancetest</span><span class="function-signature">(entry0, entry1, targets)</span>:
+    
+    <a class="headerLink" href="#significancetest" title="cocopp.toolsstats.significancetest">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Compute the rank-sum test between two data sets.</p>
 <p>For a given target function value, the performances of two
@@ -670,9 +1637,10 @@ budget in an unsuccessful trial.</p>
 trials could be very long.</p>
 <p>TODO: we would want to correct for imbalanced instances if the more
 frequent instances are more different than the less frequent instances.</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">entry0</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">entry1</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">targets</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">​Data​Set entry0</span></td><td class="fieldArgDesc">-- data set 0</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">​Data​Set entry1</span></td><td class="fieldArgDesc">-- data set 1</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">list targets</span></td><td class="fieldArgDesc">-- list of target function values</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">list of (z, p) for each target function values in
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">entry0</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">entry1</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">targets</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg"><wbr></wbr>Data<wbr></wbr>Set entry0</span></td><td class="fieldArgDesc">-- data set 0</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg"><wbr></wbr>Data<wbr></wbr>Set entry1</span></td><td class="fieldArgDesc">-- data set 1</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">list targets</span></td><td class="fieldArgDesc">-- list of target function values</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">list of (z, p) for each target function values in
 input argument targets. z and p are values returned by the
-ranksumtest method.</td></tr></table></div>
+ranksumtest method. The z value is for <code>entry0</code> where a
+larger value is better, because the test data are [-Df, 1/evals].</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -685,11 +1653,16 @@ ranksumtest method.</td></tr></table></div>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">simulated_evals</span>(evals, nfails, samplesize=<a href="cocopp.genericsettings.html#simulated_runlength_bootstrap_sample_size" class="internal-link" title="cocopp.genericsettings.simulated_runlength_bootstrap_sample_size">genericsettings.simulated_runlength_bootstrap_sample_size</a>, randint=<a href="#randint_derandomized" class="internal-link" title="cocopp.toolsstats.randint_derandomized">randint_derandomized</a>):
     
+    <span class="py-keyword">def</span> <span class="py-defname">simulated_evals</span><span class="function-signature">(evals, nfails, samplesize=<a href="cocopp.genericsettings.html#simulated_runlength_bootstrap_sample_size" class="internal-link" title="cocopp.genericsettings.simulated_runlength_bootstrap_sample_size">genericsettings.simulated_runlength_bootstrap_sample_size</a>, randint=<a href="#randint_derandomized" class="internal-link" title="cocopp.toolsstats.randint_derandomized">randint_derandomized</a>)</span>:
+    
+    <a class="headerLink" href="#simulated_evals" title="cocopp.toolsstats.simulated_evals">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Obsolete: see <code><a href="cocopp.pproc.DataSet.html#evals_with_simulated_restarts" class="internal-link" title="cocopp.pproc.DataSet.evals_with_simulated_restarts">DataSet.evals_with_simulated_restarts</a></code> instead.</p>
 <p>Return <code>samplesize</code> "simulated" run lengths (#evaluations), sorted.</p>
@@ -738,11 +1711,16 @@ exception is raised.</dd>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">sliding_window_data</span>(data, width=2, operator=np.median, number_of_stats=0, only_finite_data=True):
     
+    <span class="py-keyword">def</span> <span class="py-defname">sliding_window_data</span><span class="function-signature">(data, width=2, operator=np.median, number_of_stats=0, only_finite_data=True)</span>:
+    
+    <a class="headerLink" href="#sliding_window_data" title="cocopp.toolsstats.sliding_window_data">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>width is an absolute number, the resulting data has
 the same length as the original data and the window width
@@ -762,11 +1740,16 @@ is between width/2 at the border and width in the middle.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">sp</span>(data, maxvalue=np.Inf, issuccessful=None, allowinf=True):
     
+    <span class="py-keyword">def</span> <span class="py-defname">sp</span><span class="function-signature">(data, maxvalue=np.inf, issuccessful=None, allowinf=True)</span>:
+    
+    <a class="headerLink" href="#sp" title="cocopp.toolsstats.sp">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>sp(data, issuccessful=None) computes the sum of the function
 evaluations over all runs divided by the number of success,
@@ -802,11 +1785,16 @@ True or non-zero</dd>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">sp1</span>(data, maxvalue=np.Inf, issuccessful=None):
     
+    <span class="py-keyword">def</span> <span class="py-defname">sp1</span><span class="function-signature">(data, maxvalue=np.inf, issuccessful=None)</span>:
+    
+    <a class="headerLink" href="#sp1" title="cocopp.toolsstats.sp1">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>sp1(data, maxvalue=Inf, issuccessful=None) computes a
 mean value over successful entries in data divided by
@@ -825,7 +1813,7 @@ True or non-zero</dd>
 </dd>
 <dt>Returns: (SP1, success_rate, nb_of_successful_entries), where</dt>
 <dd>SP1 is the mean over successful entries in data divided
-by the success rate. SP1 equals np.Inf when the success
+by the success rate. SP1 equals np.inf when the success
 rate is zero.</dd>
 </dl>
 </div>
@@ -841,11 +1829,16 @@ rate is zero.</dd>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">zprob</span>(z):
     
+    <span class="py-keyword">def</span> <span class="py-defname">zprob</span><span class="function-signature">(z)</span>:
+    
+    <a class="headerLink" href="#zprob" title="cocopp.toolsstats.zprob">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Returns the area under the normal curve 'to the left of' the given z value.</p>
 <p><a class="rst-reference external" href="http://www.nmr.mgh.harvard.edu/Neural_Systems_Group/gary/python.html" target="_top">http://www.nmr.mgh.harvard.edu/Neural_Systems_Group/gary/python.html</a></p>
@@ -857,7 +1850,7 @@ rate is zero.</dd>
 <li>for any z, 2.0*(1.0-zprob(abs(z))) = 2-tail probability</li>
 </ul>
 </blockquote>
-<p>Adapted from z.c in Gary Perlman's |Stat.  Can handle multiple dimensions.</p>
+<p>Adapted from z.c in Gary Perlman's <a href="#system-message-1"><span class="rst-problematic" id="rst-problematic-1">|</span></a>Stat.  Can handle multiple dimensions.</p>
 <p>Usage:   azprob(z)    where z is a z-value</p>
 </div>
   </div>
@@ -872,11 +1865,16 @@ rate is zero.</dd>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">_has_len</span>(thing):
     
+    <span class="py-keyword">def</span> <span class="py-defname">_has_len</span><span class="function-signature">(thing)</span>:
+    
+    <a class="headerLink" href="#_has_len" title="cocopp.toolsstats._has_len">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -891,28 +1889,42 @@ rate is zero.</dd>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">_randint_derandomized_generator</span>(low, high=None, size=None):
     
+    <span class="py-keyword">def</span> <span class="py-defname">_randint_derandomized_generator</span><span class="function-signature">(low, high=None, size=None)</span>:
+    
+    <a class="headerLink" href="#_randint_derandomized_generator" title="cocopp.toolsstats._randint_derandomized_generator">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     
-    
-    <div>the generator for <code><a href="#randint_derandomized" class="internal-link" title="cocopp.toolsstats.randint_derandomized">randint_derandomized</a></code></div>
+    <div><p>the generator for <code><a href="#randint_derandomized" class="internal-link" title="cocopp.toolsstats.randint_derandomized">randint_derandomized</a></code></p></div>
   </div>
 </div>
-
+        </div>
+      
       </div>
     </div>
 
     <footer class="navbar navbar-default">
+
   
   <div class="container">
     <a href="index.html">API Documentation</a> for cocopp,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.2.1 at 2022-03-01 09:40:36.
+    23.9.1 at 2024-07-11 01:05:24.
   </div>
-</footer>
 
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
     <script src="pydoctor.js" type="text/javascript"></script>
 
   </body>

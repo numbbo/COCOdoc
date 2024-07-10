@@ -7,11 +7,11 @@
   <head>
     
     <title>cocopp.readalign.HArrayMultiReader</title>
-    <meta name="generator" content="pydoctor 22.2.1"> 
+    <meta name="generator" content="pydoctor 23.9.1"> 
         
     </meta>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.75" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="apidocs.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
@@ -21,60 +21,518 @@
 
     
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default mainnavbar">
+      
   
-  <div class="container">
+  <div class="container-fluid">
+
 
     <div class="navbar-header">
       
       <div class="navlinks">
-          <span class="navbar-brand">
-            cocopp <a href="index.html">API Documentation</a>
-          </span>
+        <span class="navbar-brand">
+          cocopp <a href="index.html">API Documentation</a>
+        </span>
 
-          <a href="moduleIndex.html">
-            Modules
-          </a>
+        <a href="moduleIndex.html">
+          Modules
+        </a>
 
-          <a href="classIndex.html">
-            Classes
-          </a>
+        <a href="classIndex.html">
+          Classes
+        </a>
 
-          <a href="nameIndex.html">
-            Names
-          </a>
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
       </div>
 
-    </div>
-  </div>
-</nav>
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
 
-    
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
 
-    <div class="container">
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
 
-      <div class="page-header">
-        <h1 class="class"><code><code><a href="index.html" class="internal-link">cocopp</a></code><wbr></wbr>.<code><a href="cocopp.readalign.html" class="internal-link" title="cocopp.readalign">readalign</a></code><wbr></wbr>.<code><a href="cocopp.readalign.HArrayMultiReader.html" class="internal-link" title="cocopp.readalign.HArrayMultiReader">HArrayMultiReader</a></code></code></h1>
-        <div id="showPrivate">
-          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
         </div>
       </div>
 
-      <div class="categoryHeader">
-        class documentation
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="cocopp.readalign.HArrayMultiReader.html" class="internal-link" title="This class"><wbr></wbr>HArray<wbr></wbr>Multi<wbr></wbr>Reader</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="cocopp.readalign.HArrayMultiReader.__init__">__init__</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.ArrayMultiReader.html#currentLine" class="internal-link" title="cocopp.readalign.ArrayMultiReader.currentLine">current<wbr></wbr>Line</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.HMultiReader.html#align" class="internal-link" title="cocopp.readalign.HMultiReader.align">align</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.HMultiReader.html#calculateCurrentValue" class="internal-link" title="cocopp.readalign.HMultiReader.calculateCurrentValue">calculate<wbr></wbr>Current<wbr></wbr>Value</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.HMultiReader.html#getInitialValue" class="internal-link" title="cocopp.readalign.HMultiReader.getInitialValue">get<wbr></wbr>Initial<wbr></wbr>Value</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.HMultiReader.html#isFinished" class="internal-link" title="cocopp.readalign.HMultiReader.isFinished">is<wbr></wbr>Finished</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.HMultiReader.html#newCurrentValue" class="internal-link" title="cocopp.readalign.HMultiReader.newCurrentValue">new<wbr></wbr>Current<wbr></wbr>Value</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.MultiReader.html#currentValues" class="internal-link" title="cocopp.readalign.MultiReader.currentValues">current<wbr></wbr>Values</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.MultiReader.html#nextValues" class="internal-link" title="cocopp.readalign.MultiReader.nextValues">next<wbr></wbr>Values</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#idxCurrentF" class="internal-link" title="cocopp.readalign.HArrayMultiReader.idxCurrentF">idx<wbr></wbr>Current<wbr></wbr>F</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#idxCurrentFOld" class="internal-link" title="cocopp.readalign.HArrayMultiReader.idxCurrentFOld">idx<wbr></wbr>Current<wbr></wbr>FOld</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#isNegative" class="internal-link" title="cocopp.readalign.HArrayMultiReader.isNegative">is<wbr></wbr>Negative</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#nbPtsF" class="internal-link" title="cocopp.readalign.HArrayMultiReader.nbPtsF">nb<wbr></wbr>Pts<wbr></wbr>F</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.ArrayMultiReader.html#idx" class="internal-link" title="cocopp.readalign.ArrayMultiReader.idx">idx</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.HMultiReader.html#idxData" class="internal-link" title="cocopp.readalign.HMultiReader.idxData">idx<wbr></wbr>Data</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.MultiReader.html#isHArray" class="internal-link" title="cocopp.readalign.MultiReader.isHArray">is<wbr></wbr>HArray</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="cocopp.readalign.html" class="internal-link" title="The parent of this class">readalign</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.ArrayMultiReader.html" class="internal-link" title="cocopp.readalign.ArrayMultiReader"><wbr></wbr>Array<wbr></wbr>Multi<wbr></wbr>Reader</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.HArrayMultiReader.html" class="internal-link" title="cocopp.readalign.HArrayMultiReader"><wbr></wbr>HArray<wbr></wbr>Multi<wbr></wbr>Reader</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.HMultiReader.html" class="internal-link" title="cocopp.readalign.HMultiReader"><wbr></wbr>HMulti<wbr></wbr>Reader</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.MultiReader.html" class="internal-link" title="cocopp.readalign.MultiReader"><wbr></wbr>Multi<wbr></wbr>Reader</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.VArrayMultiReader.html" class="internal-link" title="cocopp.readalign.VArrayMultiReader"><wbr></wbr>VArray<wbr></wbr>Multi<wbr></wbr>Reader</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.VArrayMultiReaderNew.html" class="internal-link" title="cocopp.readalign.VArrayMultiReaderNew"><wbr></wbr>VArray<wbr></wbr>Multi<wbr></wbr>Reader<wbr></wbr>New</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.VMultiReader.html" class="internal-link" title="cocopp.readalign.VMultiReader"><wbr></wbr>VMulti<wbr></wbr>Reader</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.html#align_data" class="internal-link" title="cocopp.readalign.align_data">align<wbr></wbr>_data</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.html#alignArrayData" class="internal-link" title="cocopp.readalign.alignArrayData">align<wbr></wbr>Array<wbr></wbr>Data</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.html#is_close" class="internal-link" title="cocopp.readalign.is_close">is<wbr></wbr>_close</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.html#openfile" class="internal-link" title="cocopp.readalign.openfile">openfile</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.html#split" class="internal-link" title="cocopp.readalign.split">split</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
       </div>
 
-      <div class="extrasDocstring">
-        <p><code><span class="py-keyword">class</span> <span class="py-defname">HArrayMultiReader</span>(<a href="cocopp.readalign.ArrayMultiReader.html" class="internal-link" title="cocopp.readalign.ArrayMultiReader">ArrayMultiReader</a>, <a href="cocopp.readalign.HMultiReader.html" class="internal-link" title="cocopp.readalign.HMultiReader">HMultiReader</a>):</code></p>
-        <p><a href="classIndex.html#cocopp.readalign.HArrayMultiReader">View In Hierarchy</a></p>
-      </div>
+      <div id="main" class="">
+        
 
-      <div class="moduleDocstring">
-        <div>Wrapper class of <em>aligned</em> data arrays to be aligned horizontally.</div>
-      </div>
+        
 
-      <div id="splitTables">
-        <table class="children sortable" id="id123">
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">cocopp</a></code><wbr></wbr>.<code><a href="cocopp.readalign.html" class="internal-link" title="cocopp.readalign">readalign</a></code><wbr></wbr>.<code><a href="cocopp.readalign.HArrayMultiReader.html" class="internal-link" title="cocopp.readalign.HArrayMultiReader">HArrayMultiReader</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">HArrayMultiReader</span>(<a href="cocopp.readalign.ArrayMultiReader.html" class="internal-link" title="cocopp.readalign.ArrayMultiReader">ArrayMultiReader</a>, <a href="cocopp.readalign.HMultiReader.html" class="internal-link" title="cocopp.readalign.HMultiReader">HMultiReader</a>):</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="cocopp.readalign.HArrayMultiReader.__init__">HArrayMultiReader(data)</a></code></p>
+          <p><a href="classIndex.html#cocopp.readalign.HArrayMultiReader">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>Wrapper class of <em>aligned</em> data arrays to be aligned horizontally.</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id105">
   
   
   <tr class="method">
@@ -85,36 +543,36 @@
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="#idxCurrentF" class="internal-link" title="cocopp.readalign.HArrayMultiReader.idxCurrentF">idx​Current​F</a></code></td>
+    <td><code><a href="#idxCurrentF" class="internal-link" title="cocopp.readalign.HArrayMultiReader.idxCurrentF">idx<wbr></wbr>Current<wbr></wbr>F</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="#idxCurrentFOld" class="internal-link" title="cocopp.readalign.HArrayMultiReader.idxCurrentFOld">idx​Current​FOld</a></code></td>
+    <td><code><a href="#idxCurrentFOld" class="internal-link" title="cocopp.readalign.HArrayMultiReader.idxCurrentFOld">idx<wbr></wbr>Current<wbr></wbr>FOld</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="#isNegative" class="internal-link" title="cocopp.readalign.HArrayMultiReader.isNegative">is​Negative</a></code></td>
+    <td><code><a href="#isNegative" class="internal-link" title="cocopp.readalign.HArrayMultiReader.isNegative">is<wbr></wbr>Negative</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="#nbPtsF" class="internal-link" title="cocopp.readalign.HArrayMultiReader.nbPtsF">nb​Pts​F</a></code></td>
+    <td><code><a href="#nbPtsF" class="internal-link" title="cocopp.readalign.HArrayMultiReader.nbPtsF">nb<wbr></wbr>Pts<wbr></wbr>F</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
-        
-          <p class="inheritedFrom">
-            Inherited from <code><a href="cocopp.readalign.ArrayMultiReader.html" class="internal-link" title="cocopp.readalign.ArrayMultiReader">ArrayMultiReader</a></code>:
-          </p>
-          <table class="children sortable" id="id124">
+          
+            <p class="inheritedFrom">
+              Inherited from <code><a href="cocopp.readalign.ArrayMultiReader.html" class="internal-link" title="cocopp.readalign.ArrayMultiReader">ArrayMultiReader</a></code>:
+            </p>
+            <table class="children sortable" id="id106">
   
   
   <tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.readalign.ArrayMultiReader.html#currentLine" class="internal-link" title="cocopp.readalign.ArrayMultiReader.currentLine">current​Line</a></code></td>
+    <td><code><a href="cocopp.readalign.ArrayMultiReader.html#currentLine" class="internal-link" title="cocopp.readalign.ArrayMultiReader.currentLine">current<wbr></wbr>Line</a></code></td>
     <td>Aggregates currentLines information.</td>
   </tr><tr class="baseclassvariable">
     
@@ -123,40 +581,11 @@
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
-          
-          <p class="inheritedFrom">
-            Inherited from <code><a href="cocopp.readalign.MultiReader.html" class="internal-link" title="cocopp.readalign.MultiReader">MultiReader</a></code> (via <code><a href="cocopp.readalign.ArrayMultiReader.html" class="internal-link" title="cocopp.readalign.ArrayMultiReader">ArrayMultiReader</a></code>):
-          </p>
-          <table class="children sortable" id="id125">
-  
-  
-  <tr class="baseclass">
-    
-    <td>Class</td>
-    <td><code><a href="cocopp.readalign.MultiReader.SingleReader.html" class="internal-link" title="cocopp.readalign.MultiReader.SingleReader">​Single​Reader</a></code></td>
-    <td>Single data array reader class.</td>
-  </tr><tr class="basemethod">
-    
-    <td>Method</td>
-    <td><code><a href="cocopp.readalign.MultiReader.html#currentValues" class="internal-link" title="cocopp.readalign.MultiReader.currentValues">current​Values</a></code></td>
-    <td>Gets the list of the current alignment values.</td>
-  </tr><tr class="basemethod">
-    
-    <td>Method</td>
-    <td><code><a href="cocopp.readalign.MultiReader.html#nextValues" class="internal-link" title="cocopp.readalign.MultiReader.nextValues">next​Values</a></code></td>
-    <td>Gets the list of the next alignment values.</td>
-  </tr><tr class="baseinstancevariable">
-    
-    <td>Instance Variable</td>
-    <td><code><a href="cocopp.readalign.MultiReader.html#isHArray" class="internal-link" title="cocopp.readalign.MultiReader.isHArray">is​HArray</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
-  </tr>
-</table>
-          
-          <p class="inheritedFrom">
-            Inherited from <code><a href="cocopp.readalign.HMultiReader.html" class="internal-link" title="cocopp.readalign.HMultiReader">HMultiReader</a></code>:
-          </p>
-          <table class="children sortable" id="id126">
+            
+            <p class="inheritedFrom">
+              Inherited from <code><a href="cocopp.readalign.HMultiReader.html" class="internal-link" title="cocopp.readalign.HMultiReader">HMultiReader</a></code> (via <code><a href="cocopp.readalign.ArrayMultiReader.html" class="internal-link" title="cocopp.readalign.ArrayMultiReader">ArrayMultiReader</a></code>):
+            </p>
+            <table class="children sortable" id="id107">
   
   
   <tr class="basemethod">
@@ -167,77 +596,66 @@
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.readalign.HMultiReader.html#calculateCurrentValue" class="internal-link" title="cocopp.readalign.HMultiReader.calculateCurrentValue">calculate​Current​Value</a></code></td>
+    <td><code><a href="cocopp.readalign.HMultiReader.html#calculateCurrentValue" class="internal-link" title="cocopp.readalign.HMultiReader.calculateCurrentValue">calculate<wbr></wbr>Current<wbr></wbr>Value</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.readalign.HMultiReader.html#getInitialValue" class="internal-link" title="cocopp.readalign.HMultiReader.getInitialValue">get​Initial​Value</a></code></td>
+    <td><code><a href="cocopp.readalign.HMultiReader.html#getInitialValue" class="internal-link" title="cocopp.readalign.HMultiReader.getInitialValue">get<wbr></wbr>Initial<wbr></wbr>Value</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.readalign.HMultiReader.html#isFinished" class="internal-link" title="cocopp.readalign.HMultiReader.isFinished">is​Finished</a></code></td>
+    <td><code><a href="cocopp.readalign.HMultiReader.html#isFinished" class="internal-link" title="cocopp.readalign.HMultiReader.isFinished">is<wbr></wbr>Finished</a></code></td>
     <td>Is finished when we found the last alignment value reached.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.readalign.HMultiReader.html#newCurrentValue" class="internal-link" title="cocopp.readalign.HMultiReader.newCurrentValue">new​Current​Value</a></code></td>
+    <td><code><a href="cocopp.readalign.HMultiReader.html#newCurrentValue" class="internal-link" title="cocopp.readalign.HMultiReader.newCurrentValue">new<wbr></wbr>Current<wbr></wbr>Value</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.readalign.HMultiReader.html#idx" class="internal-link" title="cocopp.readalign.HMultiReader.idx">idx</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
-  </tr><tr class="baseinstancevariable">
-    
-    <td>Instance Variable</td>
-    <td><code><a href="cocopp.readalign.HMultiReader.html#idxData" class="internal-link" title="cocopp.readalign.HMultiReader.idxData">idx​Data</a></code></td>
+    <td><code><a href="cocopp.readalign.HMultiReader.html#idxData" class="internal-link" title="cocopp.readalign.HMultiReader.idxData">idx<wbr></wbr>Data</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
-          
-          <p class="inheritedFrom">
-            Inherited from <code><a href="cocopp.readalign.MultiReader.html" class="internal-link" title="cocopp.readalign.MultiReader">MultiReader</a></code> (via <code><a href="cocopp.readalign.HMultiReader.html" class="internal-link" title="cocopp.readalign.HMultiReader">HMultiReader</a></code>):
-          </p>
-          <table class="children sortable" id="id127">
+            
+            <p class="inheritedFrom">
+              Inherited from <code><a href="cocopp.readalign.MultiReader.html" class="internal-link" title="cocopp.readalign.MultiReader">MultiReader</a></code> (via <code><a href="cocopp.readalign.ArrayMultiReader.html" class="internal-link" title="cocopp.readalign.ArrayMultiReader">ArrayMultiReader</a></code>, <code><a href="cocopp.readalign.HMultiReader.html" class="internal-link" title="cocopp.readalign.HMultiReader">HMultiReader</a></code>):
+            </p>
+            <table class="children sortable" id="id108">
   
   
   <tr class="baseclass">
     
     <td>Class</td>
-    <td><code><a href="cocopp.readalign.MultiReader.SingleReader.html" class="internal-link" title="cocopp.readalign.MultiReader.SingleReader">​Single​Reader</a></code></td>
+    <td><code><a href="cocopp.readalign.MultiReader.SingleReader.html" class="internal-link" title="cocopp.readalign.MultiReader.SingleReader"><wbr></wbr>Single<wbr></wbr>Reader</a></code></td>
     <td>Single data array reader class.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.readalign.MultiReader.html#currentLine" class="internal-link" title="cocopp.readalign.MultiReader.currentLine">current​Line</a></code></td>
-    <td>Aggregates currentLines information.</td>
-  </tr><tr class="basemethod">
-    
-    <td>Method</td>
-    <td><code><a href="cocopp.readalign.MultiReader.html#currentValues" class="internal-link" title="cocopp.readalign.MultiReader.currentValues">current​Values</a></code></td>
+    <td><code><a href="cocopp.readalign.MultiReader.html#currentValues" class="internal-link" title="cocopp.readalign.MultiReader.currentValues">current<wbr></wbr>Values</a></code></td>
     <td>Gets the list of the current alignment values.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.readalign.MultiReader.html#nextValues" class="internal-link" title="cocopp.readalign.MultiReader.nextValues">next​Values</a></code></td>
+    <td><code><a href="cocopp.readalign.MultiReader.html#nextValues" class="internal-link" title="cocopp.readalign.MultiReader.nextValues">next<wbr></wbr>Values</a></code></td>
     <td>Gets the list of the next alignment values.</td>
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.readalign.MultiReader.html#isHArray" class="internal-link" title="cocopp.readalign.MultiReader.isHArray">is​HArray</a></code></td>
+    <td><code><a href="cocopp.readalign.MultiReader.html#isHArray" class="internal-link" title="cocopp.readalign.MultiReader.isHArray">is<wbr></wbr>HArray</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
-          
+            
 
-          
-      </div>
+            
+        </div>
 
-      <div id="childList">
-
-        <div class="basemethod">
+        <div id="childList">
+          <div class="basemethod">
   
   
   <a name="cocopp.readalign.HArrayMultiReader.__init__">
@@ -248,14 +666,19 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, data):
     
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, data)</span>:
+    
+    <a class="headerLink" href="#__init__" title="cocopp.readalign.HArrayMultiReader.__init__">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     <div class="interfaceinfo">overrides <code><a href="cocopp.readalign.ArrayMultiReader.html#__init__" class="internal-link">cocopp.readalign.ArrayMultiReader.__init__</a></code></div>
-    
-    <div>accepts a list of arrays or a <code><a href="cocopp.readalign.MultiReader.html" class="internal-link" title="cocopp.readalign.MultiReader">MultiReader</a></code> (i.e. a list of
-<code><a href="cocopp.readalign.MultiReader.SingleReader.html" class="internal-link" title="cocopp.readalign.MultiReader.SingleReader">SingleReader</a></code>) as input <code><a href="cocopp.readalign.MultiReader.SingleReader.html#data" class="internal-link" title="cocopp.readalign.MultiReader.SingleReader.data">data</a></code> type</div>
+    <div><p>accepts a list of arrays or a <code><a href="cocopp.readalign.MultiReader.html" class="internal-link" title="cocopp.readalign.MultiReader">MultiReader</a></code> (i.e. a list of
+<code><a href="cocopp.readalign.MultiReader.SingleReader.html" class="internal-link" title="cocopp.readalign.MultiReader.SingleReader">SingleReader</a></code>) as input <code><a href="cocopp.readalign.MultiReader.SingleReader.html#data" class="internal-link" title="cocopp.readalign.MultiReader.SingleReader.data">data</a></code> type</p></div>
   </div>
 </div><div class="baseinstancevariable">
   
@@ -270,10 +693,14 @@
     
     <span class="py-defname">idxCurrentF</span> =
     
+    <a class="headerLink" href="#idxCurrentF" title="cocopp.readalign.HArrayMultiReader.idxCurrentF">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     <div class="interfaceinfo">overrides <code><a href="cocopp.readalign.HMultiReader.html#idxCurrentF" class="internal-link">cocopp.readalign.HMultiReader.idxCurrentF</a></code></div>
-    
     <div><p class="undocumented">Undocumented</p></div>
     
   </div>
@@ -290,10 +717,14 @@
     
     <span class="py-defname">idxCurrentFOld</span>: <code>float</code> =
     
+    <a class="headerLink" href="#idxCurrentFOld" title="cocopp.readalign.HArrayMultiReader.idxCurrentFOld">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     <div class="interfaceinfo">overrides <code><a href="cocopp.readalign.HMultiReader.html#idxCurrentFOld" class="internal-link">cocopp.readalign.HMultiReader.idxCurrentFOld</a></code></div>
-    
     <div><p class="undocumented">Undocumented</p></div>
     
   </div>
@@ -310,10 +741,14 @@
     
     <span class="py-defname">isNegative</span>: <code>bool</code> =
     
+    <a class="headerLink" href="#isNegative" title="cocopp.readalign.HArrayMultiReader.isNegative">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     <div class="interfaceinfo">overrides <code><a href="cocopp.readalign.HMultiReader.html#isNegative" class="internal-link">cocopp.readalign.HMultiReader.isNegative</a></code></div>
-    
     <div><p class="undocumented">Undocumented</p></div>
     
   </div>
@@ -330,27 +765,40 @@
     
     <span class="py-defname">nbPtsF</span> =
     
+    <a class="headerLink" href="#nbPtsF" title="cocopp.readalign.HArrayMultiReader.nbPtsF">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     <div class="interfaceinfo">overrides <code><a href="cocopp.readalign.HMultiReader.html#nbPtsF" class="internal-link">cocopp.readalign.HMultiReader.nbPtsF</a></code></div>
-    
     <div><p class="undocumented">Undocumented</p></div>
     
   </div>
 </div>
-
+        </div>
+      
       </div>
     </div>
 
     <footer class="navbar navbar-default">
+
   
   <div class="container">
     <a href="index.html">API Documentation</a> for cocopp,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.2.1 at 2022-03-01 09:40:36.
+    23.9.1 at 2024-07-11 01:05:24.
   </div>
-</footer>
 
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
     <script src="pydoctor.js" type="text/javascript"></script>
 
   </body>

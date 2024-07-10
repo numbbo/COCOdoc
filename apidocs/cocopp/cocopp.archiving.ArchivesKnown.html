@@ -7,11 +7,11 @@
   <head>
     
     <title>cocopp.archiving.ArchivesKnown</title>
-    <meta name="generator" content="pydoctor 22.2.1"> 
+    <meta name="generator" content="pydoctor 23.9.1"> 
         
     </meta>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.75" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="apidocs.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
@@ -21,76 +21,864 @@
 
     
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default mainnavbar">
+      
   
-  <div class="container">
+  <div class="container-fluid">
+
 
     <div class="navbar-header">
       
       <div class="navlinks">
-          <span class="navbar-brand">
-            cocopp <a href="index.html">API Documentation</a>
-          </span>
+        <span class="navbar-brand">
+          cocopp <a href="index.html">API Documentation</a>
+        </span>
 
-          <a href="moduleIndex.html">
-            Modules
-          </a>
+        <a href="moduleIndex.html">
+          Modules
+        </a>
 
-          <a href="classIndex.html">
-            Classes
-          </a>
+        <a href="classIndex.html">
+          Classes
+        </a>
 
-          <a href="nameIndex.html">
-            Names
-          </a>
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
       </div>
 
-    </div>
-  </div>
-</nav>
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
 
-    
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
 
-    <div class="container">
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
 
-      <div class="page-header">
-        <h1 class="class"><code><code><a href="index.html" class="internal-link">cocopp</a></code><wbr></wbr>.<code><a href="cocopp.archiving.html" class="internal-link" title="cocopp.archiving">archiving</a></code><wbr></wbr>.<code><a href="cocopp.archiving.ArchivesKnown.html" class="internal-link" title="cocopp.archiving.ArchivesKnown">ArchivesKnown</a></code></code></h1>
-        <div id="showPrivate">
-          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
         </div>
       </div>
 
-      <div class="categoryHeader">
-        class documentation
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="cocopp.archiving.ArchivesKnown.html" class="internal-link" title="This class"><wbr></wbr>Archives<wbr></wbr>Known</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Inherited Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#register" class="internal-link" title="cocopp.archiving.ListOfArchives.register">register</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#lists" class="internal-link" title="cocopp.archiving.ListOfArchives.lists">lists</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#__init__" class="internal-link" title="cocopp.archiving.ListOfArchives.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#remote_update" class="internal-link" title="cocopp.archiving.ListOfArchives.remote_update">remote<wbr></wbr>_update</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#save" class="internal-link" title="cocopp.archiving.ListOfArchives.save">save</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#update" class="internal-link" title="cocopp.archiving.ListOfArchives.update">update</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.toolsdivers.StrList.html#__call__" class="internal-link" title="cocopp.toolsdivers.StrList.__call__">__call__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.toolsdivers.StrList.html#find" class="internal-link" title="cocopp.toolsdivers.StrList.find">find</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.toolsdivers.StrList.html#find_indices" class="internal-link" title="cocopp.toolsdivers.StrList.find_indices">find<wbr></wbr>_indices</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.toolsdivers.StrList.html#print" class="internal-link" title="cocopp.toolsdivers.StrList.print">print</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#_file" class="internal-link" title="cocopp.archiving.ListOfArchives._file">_file</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#_fullfile" class="internal-link" title="cocopp.archiving.ListOfArchives._fullfile">_fullfile</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#_name" class="internal-link" title="cocopp.archiving.ListOfArchives._name">_name</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#_makepathsabsolute" class="internal-link" title="cocopp.archiving.ListOfArchives._makepathsabsolute">_makepathsabsolute</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#_remove_double_entries" class="internal-link" title="cocopp.archiving.ListOfArchives._remove_double_entries">_remove<wbr></wbr>_double<wbr></wbr>_entries</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#_save_walk" class="internal-link" title="cocopp.archiving.ListOfArchives._save_walk">_save<wbr></wbr>_walk</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#_walk" class="internal-link" title="cocopp.archiving.ListOfArchives._walk">_walk</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#listing_file" class="internal-link" title="cocopp.archiving.ArchivesKnown.listing_file">listing<wbr></wbr>_file</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#search_folder" class="internal-link" title="cocopp.archiving.ListOfArchives.search_folder">search<wbr></wbr>_folder</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#name" class="internal-link" title="cocopp.archiving.ListOfArchives.name">name</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.toolsdivers.StrList.html#as_string" class="internal-link" title="cocopp.toolsdivers.StrList.as_string">as<wbr></wbr>_string</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.toolsdivers.StrList.html#found" class="internal-link" title="cocopp.toolsdivers.StrList.found">found</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html#_last_walk" class="internal-link" title="cocopp.archiving.ListOfArchives._last_walk">_last<wbr></wbr>_walk</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.toolsdivers.StrList.html#_names_found" class="internal-link" title="cocopp.toolsdivers.StrList._names_found">_names<wbr></wbr>_found</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="cocopp.archiving.html" class="internal-link" title="The parent of this class">archiving</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ArchivesKnown.html" class="internal-link" title="cocopp.archiving.ArchivesKnown"><wbr></wbr>Archives<wbr></wbr>Known</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ArchivesLocal.html" class="internal-link" title="cocopp.archiving.ArchivesLocal"><wbr></wbr>Archives<wbr></wbr>Local</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.COCOBBOBBiobjDataArchive.html" class="internal-link" title="cocopp.archiving.COCOBBOBBiobjDataArchive"><wbr></wbr>COCOBBOBBiobj<wbr></wbr>Data<wbr></wbr>Archive</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.COCOBBOBDataArchive.html" class="internal-link" title="cocopp.archiving.COCOBBOBDataArchive"><wbr></wbr>COCOBBOBData<wbr></wbr>Archive</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.COCOBBOBNoisyDataArchive.html" class="internal-link" title="cocopp.archiving.COCOBBOBNoisyDataArchive"><wbr></wbr>COCOBBOBNoisy<wbr></wbr>Data<wbr></wbr>Archive</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.COCODataArchive.html" class="internal-link" title="cocopp.archiving.COCODataArchive"><wbr></wbr>COCOData<wbr></wbr>Archive</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.ListOfArchives.html" class="internal-link" title="cocopp.archiving.ListOfArchives"><wbr></wbr>List<wbr></wbr>Of<wbr></wbr>Archives</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.OfficialArchives.html" class="internal-link" title="cocopp.archiving.OfficialArchives"><wbr></wbr>Official<wbr></wbr>Archives</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.RemoteListOfArchives.html" class="internal-link" title="cocopp.archiving.RemoteListOfArchives"><wbr></wbr>Remote<wbr></wbr>List<wbr></wbr>Of<wbr></wbr>Archives</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving._old_ArchivesOfficial.html" class="internal-link" title="cocopp.archiving._old_ArchivesOfficial">_old_<wbr></wbr>Archives<wbr></wbr>Official</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#create" class="internal-link" title="cocopp.archiving.create">create</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#get" class="internal-link" title="cocopp.archiving.get">get</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#read_definition_file" class="internal-link" title="cocopp.archiving.read_definition_file">read<wbr></wbr>_definition<wbr></wbr>_file</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#_abs_path" class="internal-link" title="cocopp.archiving._abs_path">_abs<wbr></wbr>_path</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#_definition_file_to_read" class="internal-link" title="cocopp.archiving._definition_file_to_read">_definition<wbr></wbr>_file<wbr></wbr>_to<wbr></wbr>_read</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#_definition_file_to_write" class="internal-link" title="cocopp.archiving._definition_file_to_write">_definition<wbr></wbr>_file<wbr></wbr>_to<wbr></wbr>_write</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#_download_definitions" class="internal-link" title="cocopp.archiving._download_definitions">_download<wbr></wbr>_definitions</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#_get_remote" class="internal-link" title="cocopp.archiving._get_remote">_get<wbr></wbr>_remote</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#_hash" class="internal-link" title="cocopp.archiving._hash">_hash</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#_is_url" class="internal-link" title="cocopp.archiving._is_url">_is<wbr></wbr>_url</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#_make_backup" class="internal-link" title="cocopp.archiving._make_backup">_make<wbr></wbr>_backup</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#_makedirs" class="internal-link" title="cocopp.archiving._makedirs">_makedirs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#_old_move_official_local_data" class="internal-link" title="cocopp.archiving._old_move_official_local_data">_old<wbr></wbr>_move<wbr></wbr>_official<wbr></wbr>_local<wbr></wbr>_data</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#_repr_definitions" class="internal-link" title="cocopp.archiving._repr_definitions">_repr<wbr></wbr>_definitions</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#_str_to_list" class="internal-link" title="cocopp.archiving._str_to_list">_str<wbr></wbr>_to<wbr></wbr>_list</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#_url_add" class="internal-link" title="cocopp.archiving._url_add">_url<wbr></wbr>_add</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#_url_to_folder_name" class="internal-link" title="cocopp.archiving._url_to_folder_name">_url<wbr></wbr>_to<wbr></wbr>_folder<wbr></wbr>_name</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#__author__" class="internal-link" title="cocopp.archiving.__author__">__author__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#backup_last_filename" class="internal-link" title="cocopp.archiving.backup_last_filename">backup<wbr></wbr>_last<wbr></wbr>_filename</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#coco_url" class="internal-link" title="cocopp.archiving.coco_url">coco<wbr></wbr>_url</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#coco_urls" class="internal-link" title="cocopp.archiving.coco_urls">coco<wbr></wbr>_urls</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#cocopp_home" class="internal-link" title="cocopp.archiving.cocopp_home">cocopp<wbr></wbr>_home</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#default_archive_location" class="internal-link" title="cocopp.archiving.default_archive_location">default<wbr></wbr>_archive<wbr></wbr>_location</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#default_definition_filename" class="internal-link" title="cocopp.archiving.default_definition_filename">default<wbr></wbr>_definition<wbr></wbr>_filename</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#listing_file_extension" class="internal-link" title="cocopp.archiving.listing_file_extension">listing<wbr></wbr>_file<wbr></wbr>_extension</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#listing_file_start" class="internal-link" title="cocopp.archiving.listing_file_start">listing<wbr></wbr>_file<wbr></wbr>_start</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html#official_archives" class="internal-link" title="cocopp.archiving.official_archives">official<wbr></wbr>_archives</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
       </div>
 
-      <div class="extrasDocstring">
-        <p><code><span class="py-keyword">class</span> <span class="py-defname">ArchivesKnown</span>(<a href="cocopp.archiving.ListOfArchives.html" class="internal-link" title="cocopp.archiving.ListOfArchives">ListOfArchives</a>):</code></p>
-        <p><a href="classIndex.html#cocopp.archiving.ArchivesKnown">View In Hierarchy</a></p>
-      </div>
+      <div id="main" class="">
+        
 
-      <div class="moduleDocstring">
-        <div><p>Known (and already used) remote COCO data archives.</p>
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">cocopp</a></code><wbr></wbr>.<code><a href="cocopp.archiving.html" class="internal-link" title="cocopp.archiving">archiving</a></code><wbr></wbr>.<code><a href="cocopp.archiving.ArchivesKnown.html" class="internal-link" title="cocopp.archiving.ArchivesKnown">ArchivesKnown</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ArchivesKnown</span>(<a href="cocopp.archiving.ListOfArchives.html" class="internal-link" title="cocopp.archiving.ListOfArchives">ListOfArchives</a>):</code></p><p>Constructor: <code><a href="cocopp.archiving.ListOfArchives.html#__init__" class="internal-link" title="cocopp.archiving.ListOfArchives.__init__">ArchivesKnown(listing_name)</a></code></p>
+          <p><a href="classIndex.html#cocopp.archiving.ArchivesKnown">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>Known (and already used) remote COCO data archives.</p>
 <p>These include the official archives from <code><a href="cocopp.archiving.OfficialArchives.html" class="internal-link" title="cocopp.archiving.OfficialArchives">OfficialArchives</a></code>.</p>
 </div>
-      </div>
+        </div>
 
-      <div id="splitTables">
-        <table class="children sortable" id="id26">
+        <div id="splitTables">
+          <table class="children sortable" id="id27">
   
   
-  <tr class="classvariable">
+  <tr class="instancevariable">
     
-    <td>Class Variable</td>
-    <td><code><a href="#listing_file" class="internal-link" title="cocopp.archiving.ArchivesKnown.listing_file">listing​_file</a></code></td>
+    <td>Instance Variable</td>
+    <td><code><a href="#listing_file" class="internal-link" title="cocopp.archiving.ArchivesKnown.listing_file">listing<wbr></wbr>_file</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
-        
-          <p class="inheritedFrom">
-            Inherited from <code><a href="cocopp.archiving.ListOfArchives.html" class="internal-link" title="cocopp.archiving.ListOfArchives">ListOfArchives</a></code>:
-          </p>
-          <table class="children sortable" id="id27">
+          
+            <p class="inheritedFrom">
+              Inherited from <code><a href="cocopp.archiving.ListOfArchives.html" class="internal-link" title="cocopp.archiving.ListOfArchives">ListOfArchives</a></code>:
+            </p>
+            <table class="children sortable" id="id28">
   
   
   <tr class="baseclassmethod">
@@ -111,7 +899,7 @@
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.archiving.ListOfArchives.html#remote_update" class="internal-link" title="cocopp.archiving.ListOfArchives.remote_update">remote​_update</a></code></td>
+    <td><code><a href="cocopp.archiving.ListOfArchives.html#remote_update" class="internal-link" title="cocopp.archiving.ListOfArchives.remote_update">remote<wbr></wbr>_update</a></code></td>
     <td>join in the respective list from <tt class="rst-docutils literal"><span class="pre">coco_url.rsplit('/')[0]</span> + <span class="pre">'/data-archives'</span></tt>.</td>
   </tr><tr class="basemethod">
     
@@ -126,7 +914,7 @@
   </tr><tr class="baseclassvariable">
     
     <td>Class Variable</td>
-    <td><code><a href="cocopp.archiving.ListOfArchives.html#search_folder" class="internal-link" title="cocopp.archiving.ListOfArchives.search_folder">search​_folder</a></code></td>
+    <td><code><a href="cocopp.archiving.ListOfArchives.html#search_folder" class="internal-link" title="cocopp.archiving.ListOfArchives.search_folder">search<wbr></wbr>_folder</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseproperty">
     
@@ -136,57 +924,57 @@
   </tr><tr class="basestaticmethod private">
     
     <td>Static Method</td>
-    <td><code><a href="cocopp.archiving.ListOfArchives.html#_file" class="internal-link" title="cocopp.archiving.ListOfArchives._file">​_file</a></code></td>
+    <td><code><a href="cocopp.archiving.ListOfArchives.html#_file" class="internal-link" title="cocopp.archiving.ListOfArchives._file">_file</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="basestaticmethod private">
     
     <td>Static Method</td>
-    <td><code><a href="cocopp.archiving.ListOfArchives.html#_fullfile" class="internal-link" title="cocopp.archiving.ListOfArchives._fullfile">​_fullfile</a></code></td>
+    <td><code><a href="cocopp.archiving.ListOfArchives.html#_fullfile" class="internal-link" title="cocopp.archiving.ListOfArchives._fullfile">_fullfile</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="basestaticmethod private">
     
     <td>Static Method</td>
-    <td><code><a href="cocopp.archiving.ListOfArchives.html#_name" class="internal-link" title="cocopp.archiving.ListOfArchives._name">​_name</a></code></td>
+    <td><code><a href="cocopp.archiving.ListOfArchives.html#_name" class="internal-link" title="cocopp.archiving.ListOfArchives._name">_name</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="basemethod private">
     
     <td>Method</td>
-    <td><code><a href="cocopp.archiving.ListOfArchives.html#_makepathsabsolute" class="internal-link" title="cocopp.archiving.ListOfArchives._makepathsabsolute">​_makepathsabsolute</a></code></td>
+    <td><code><a href="cocopp.archiving.ListOfArchives.html#_makepathsabsolute" class="internal-link" title="cocopp.archiving.ListOfArchives._makepathsabsolute">_makepathsabsolute</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="basemethod private">
     
     <td>Method</td>
-    <td><code><a href="cocopp.archiving.ListOfArchives.html#_remove_double_entries" class="internal-link" title="cocopp.archiving.ListOfArchives._remove_double_entries">​_remove​_double​_entries</a></code></td>
+    <td><code><a href="cocopp.archiving.ListOfArchives.html#_remove_double_entries" class="internal-link" title="cocopp.archiving.ListOfArchives._remove_double_entries">_remove<wbr></wbr>_double<wbr></wbr>_entries</a></code></td>
     <td>keep the first of duplicated entries</td>
   </tr><tr class="basemethod private">
     
     <td>Method</td>
-    <td><code><a href="cocopp.archiving.ListOfArchives.html#_save_walk" class="internal-link" title="cocopp.archiving.ListOfArchives._save_walk">​_save​_walk</a></code></td>
-    <td>extend <code>self</code> by elements of <code><a href="#_last_walk" class="internal-link" title="cocopp.archiving.ListOfArchives._last_walk">_last_walk</a></code> not in <code>self</code> and <code><a href="#save" class="internal-link" title="cocopp.archiving.ListOfArchives.save">save</a></code></td>
+    <td><code><a href="cocopp.archiving.ListOfArchives.html#_save_walk" class="internal-link" title="cocopp.archiving.ListOfArchives._save_walk">_save<wbr></wbr>_walk</a></code></td>
+    <td>extend <code>self</code> by elements of <code><a href="cocopp.archiving.ListOfArchives.html#_last_walk" class="internal-link" title="cocopp.archiving.ListOfArchives._last_walk">_last_walk</a></code> not in <code>self</code> and <code><a href="cocopp.archiving.ListOfArchives.html#save" class="internal-link" title="cocopp.archiving.ListOfArchives.save">save</a></code></td>
   </tr><tr class="basemethod private">
     
     <td>Method</td>
-    <td><code><a href="cocopp.archiving.ListOfArchives.html#_walk" class="internal-link" title="cocopp.archiving.ListOfArchives._walk">​_walk</a></code></td>
+    <td><code><a href="cocopp.archiving.ListOfArchives.html#_walk" class="internal-link" title="cocopp.archiving.ListOfArchives._walk">_walk</a></code></td>
     <td>recursive search for COCO data archives in <code>folder</code> on disk.</td>
   </tr><tr class="baseinstancevariable private">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.archiving.ListOfArchives.html#_last_walk" class="internal-link" title="cocopp.archiving.ListOfArchives._last_walk">​_last​_walk</a></code></td>
+    <td><code><a href="cocopp.archiving.ListOfArchives.html#_last_walk" class="internal-link" title="cocopp.archiving.ListOfArchives._last_walk">_last<wbr></wbr>_walk</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
-          
-          <p class="inheritedFrom">
-            Inherited from <code><a href="cocopp.toolsdivers.StrList.html" class="internal-link" title="cocopp.toolsdivers.StrList">StrList</a></code> (via <code><a href="cocopp.archiving.ListOfArchives.html" class="internal-link" title="cocopp.archiving.ListOfArchives">ListOfArchives</a></code>):
-          </p>
-          <table class="children sortable" id="id28">
+            
+            <p class="inheritedFrom">
+              Inherited from <code><a href="cocopp.toolsdivers.StrList.html" class="internal-link" title="cocopp.toolsdivers.StrList">StrList</a></code> (via <code><a href="cocopp.archiving.ListOfArchives.html" class="internal-link" title="cocopp.archiving.ListOfArchives">ListOfArchives</a></code>):
+            </p>
+            <table class="children sortable" id="id29">
   
   
   <tr class="basemethod">
     
     <td>Method</td>
     <td><code><a href="cocopp.toolsdivers.StrList.html#__call__" class="internal-link" title="cocopp.toolsdivers.StrList.__call__">__call__</a></code></td>
-    <td>alias to <code><a href="#find" class="internal-link" title="cocopp.toolsdivers.StrList.find">find</a></code></td>
+    <td>alias to <code><a href="cocopp.toolsdivers.StrList.html#find" class="internal-link" title="cocopp.toolsdivers.StrList.find">find</a></code></td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
@@ -195,8 +983,8 @@
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.toolsdivers.StrList.html#find_indices" class="internal-link" title="cocopp.toolsdivers.StrList.find_indices">find​_indices</a></code></td>
-    <td>same as <code><a href="#find" class="internal-link" title="cocopp.toolsdivers.StrList.find">find</a></code> but returns indices instead of names</td>
+    <td><code><a href="cocopp.toolsdivers.StrList.html#find_indices" class="internal-link" title="cocopp.toolsdivers.StrList.find_indices">find<wbr></wbr>_indices</a></code></td>
+    <td>same as <code><a href="cocopp.toolsdivers.StrList.html#find" class="internal-link" title="cocopp.toolsdivers.StrList.find">find</a></code> but returns indices instead of names</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
@@ -205,28 +993,27 @@
   </tr><tr class="baseproperty">
     
     <td>Property</td>
-    <td><code><a href="cocopp.toolsdivers.StrList.html#as_string" class="internal-link" title="cocopp.toolsdivers.StrList.as_string">as​_string</a></code></td>
+    <td><code><a href="cocopp.toolsdivers.StrList.html#as_string" class="internal-link" title="cocopp.toolsdivers.StrList.as_string">as<wbr></wbr>_string</a></code></td>
     <td>return space separated string concatenation surrounded by spaces.</td>
   </tr><tr class="baseproperty">
     
     <td>Property</td>
     <td><code><a href="cocopp.toolsdivers.StrList.html#found" class="internal-link" title="cocopp.toolsdivers.StrList.found">found</a></code></td>
-    <td><code><a href="cocopp.toolsdivers.StrList.html" class="internal-link" title="cocopp.toolsdivers.StrList">StrList</a></code> of elements found during the last call to <code><a href="#find" class="internal-link" title="cocopp.toolsdivers.StrList.find">find</a></code>.</td>
+    <td><code><a href="cocopp.toolsdivers.StrList.html" class="internal-link" title="cocopp.toolsdivers.StrList">StrList</a></code> of elements found during the last call to <code><a href="cocopp.toolsdivers.StrList.html#find" class="internal-link" title="cocopp.toolsdivers.StrList.find">find</a></code>.</td>
   </tr><tr class="baseinstancevariable private">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.toolsdivers.StrList.html#_names_found" class="internal-link" title="cocopp.toolsdivers.StrList._names_found">​_names​_found</a></code></td>
+    <td><code><a href="cocopp.toolsdivers.StrList.html#_names_found" class="internal-link" title="cocopp.toolsdivers.StrList._names_found">_names<wbr></wbr>_found</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
-          
+            
 
-          
-      </div>
+            
+        </div>
 
-      <div id="childList">
-
-        <div class="baseclassvariable">
+        <div id="childList">
+          <div class="baseinstancevariable">
   
   
   <a name="cocopp.archiving.ArchivesKnown.listing_file">
@@ -239,27 +1026,40 @@
     
     <span class="py-defname">listing_file</span> =
     
+    <a class="headerLink" href="#listing_file" title="cocopp.archiving.ArchivesKnown.listing_file">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     <div class="interfaceinfo">overrides <code><a href="cocopp.archiving.ListOfArchives.html#listing_file" class="internal-link">cocopp.archiving.ListOfArchives.listing_file</a></code></div>
-    
     <div><p class="undocumented">Undocumented</p></div>
     
   </div>
 </div>
-
+        </div>
+      
       </div>
     </div>
 
     <footer class="navbar navbar-default">
+
   
   <div class="container">
     <a href="index.html">API Documentation</a> for cocopp,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.2.1 at 2022-03-01 09:40:36.
+    23.9.1 at 2024-07-11 01:05:24.
   </div>
-</footer>
 
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
     <script src="pydoctor.js" type="text/javascript"></script>
 
   </body>

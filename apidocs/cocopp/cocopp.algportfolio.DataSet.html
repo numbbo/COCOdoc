@@ -7,11 +7,11 @@
   <head>
     
     <title>cocopp.algportfolio.DataSet</title>
-    <meta name="generator" content="pydoctor 22.2.1"> 
+    <meta name="generator" content="pydoctor 23.9.1"> 
         
     </meta>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.75" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="apidocs.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
@@ -21,56 +21,1174 @@
 
     
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default mainnavbar">
+      
   
-  <div class="container">
+  <div class="container-fluid">
+
 
     <div class="navbar-header">
       
       <div class="navlinks">
-          <span class="navbar-brand">
-            cocopp <a href="index.html">API Documentation</a>
-          </span>
+        <span class="navbar-brand">
+          cocopp <a href="index.html">API Documentation</a>
+        </span>
 
-          <a href="moduleIndex.html">
-            Modules
-          </a>
+        <a href="moduleIndex.html">
+          Modules
+        </a>
 
-          <a href="classIndex.html">
-            Classes
-          </a>
+        <a href="classIndex.html">
+          Classes
+        </a>
 
-          <a href="nameIndex.html">
-            Names
-          </a>
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
       </div>
 
-    </div>
-  </div>
-</nav>
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
 
-    
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
 
-    <div class="container">
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
 
-      <div class="page-header">
-        <h1 class="class"><code><code><a href="index.html" class="internal-link">cocopp</a></code><wbr></wbr>.<code><a href="cocopp.algportfolio.html" class="internal-link" title="cocopp.algportfolio">algportfolio</a></code><wbr></wbr>.<code><a href="cocopp.algportfolio.DataSet.html" class="internal-link" title="cocopp.algportfolio.DataSet">DataSet</a></code></code></h1>
-        <div id="showPrivate">
-          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
         </div>
       </div>
 
-      <div class="categoryHeader">
-        class documentation
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="cocopp.algportfolio.DataSet.html" class="internal-link" title="This class"><wbr></wbr>Data<wbr></wbr>Set</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="cocopp.algportfolio.DataSet.__init__">__init__</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#__eq__" class="internal-link" title="cocopp.pproc.DataSet.__eq__">__eq__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#__ne__" class="internal-link" title="cocopp.pproc.DataSet.__ne__">__ne__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#__repr__" class="internal-link" title="cocopp.pproc.DataSet.__repr__">__repr__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#bootstrap_sample_size" class="internal-link" title="cocopp.pproc.DataSet.bootstrap_sample_size">bootstrap<wbr></wbr>_sample<wbr></wbr>_size</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#computeERTfromEvals" class="internal-link" title="cocopp.pproc.DataSet.computeERTfromEvals">compute<wbr></wbr>ERTfrom<wbr></wbr>Evals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#consistency_check" class="internal-link" title="cocopp.pproc.DataSet.consistency_check">consistency<wbr></wbr>_check</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#createDictInstance" class="internal-link" title="cocopp.pproc.DataSet.createDictInstance">create<wbr></wbr>Dict<wbr></wbr>Instance</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#createDictInstanceCount" class="internal-link" title="cocopp.pproc.DataSet.createDictInstanceCount">create<wbr></wbr>Dict<wbr></wbr>Instance<wbr></wbr>Count</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#detAverageEvals" class="internal-link" title="cocopp.pproc.DataSet.detAverageEvals">det<wbr></wbr>Average<wbr></wbr>Evals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#detERT" class="internal-link" title="cocopp.pproc.DataSet.detERT">det<wbr></wbr>ERT</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#detEvals" class="internal-link" title="cocopp.pproc.DataSet.detEvals">det<wbr></wbr>Evals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#detEvals_by_instance" class="internal-link" title="cocopp.pproc.DataSet.detEvals_by_instance">det<wbr></wbr>Evals_by_instance</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#detSuccesses" class="internal-link" title="cocopp.pproc.DataSet.detSuccesses">det<wbr></wbr>Successes</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#detSuccessRates" class="internal-link" title="cocopp.pproc.DataSet.detSuccessRates">det<wbr></wbr>Success<wbr></wbr>Rates</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#evals_with_simulated_restarts" class="internal-link" title="cocopp.pproc.DataSet.evals_with_simulated_restarts">evals<wbr></wbr>_with<wbr></wbr>_simulated<wbr></wbr>_restarts</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#generateRLData" class="internal-link" title="cocopp.pproc.DataSet.generateRLData">generate<wbr></wbr>RLData</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#get_data_format" class="internal-link" title="cocopp.pproc.DataSet.get_data_format">get<wbr></wbr>_data<wbr></wbr>_format</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#info" class="internal-link" title="cocopp.pproc.DataSet.info">info</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#info_str" class="internal-link" title="cocopp.pproc.DataSet.info_str">info<wbr></wbr>_str</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#instance_index_lists" class="internal-link" title="cocopp.pproc.DataSet.instance_index_lists">instance<wbr></wbr>_index<wbr></wbr>_lists</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#isBiobjective" class="internal-link" title="cocopp.pproc.DataSet.isBiobjective">is<wbr></wbr>Biobjective</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#median_evals" class="internal-link" title="cocopp.pproc.DataSet.median_evals">median<wbr></wbr>_evals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#mMaxEvals" class="internal-link" title="cocopp.pproc.DataSet.mMaxEvals">m<wbr></wbr>Max<wbr></wbr>Evals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#nbRuns" class="internal-link" title="cocopp.pproc.DataSet.nbRuns">nb<wbr></wbr>Runs</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#pickle" class="internal-link" title="cocopp.pproc.DataSet.pickle">pickle</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#plot" class="internal-link" title="cocopp.pproc.DataSet.plot">plot</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#plot_funvals" class="internal-link" title="cocopp.pproc.DataSet.plot_funvals">plot<wbr></wbr>_funvals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#splitByTrials" class="internal-link" title="cocopp.pproc.DataSet.splitByTrials">split<wbr></wbr>By<wbr></wbr>Trials</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#successes_by_instance" class="internal-link" title="cocopp.pproc.DataSet.successes_by_instance">successes<wbr></wbr>_by<wbr></wbr>_instance</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_largest_finite_index" class="internal-link" title="cocopp.pproc.DataSet._largest_finite_index">_largest<wbr></wbr>_finite<wbr></wbr>_index</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#__parseHeader" class="internal-link" title="cocopp.pproc.DataSet.__parseHeader">__parse<wbr></wbr>Header</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_argsort" class="internal-link" title="cocopp.pproc.DataSet._argsort">_argsort</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_balanced_evals_row" class="internal-link" title="cocopp.pproc.DataSet._balanced_evals_row">_balanced<wbr></wbr>_evals<wbr></wbr>_row</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_complement_data" class="internal-link" title="cocopp.pproc.DataSet._complement_data">_complement<wbr></wbr>_data</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_cut_data" class="internal-link" title="cocopp.pproc.DataSet._cut_data">_cut<wbr></wbr>_data</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_data_differ" class="internal-link" title="cocopp.pproc.DataSet._data_differ">_data<wbr></wbr>_differ</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_detEvals2" class="internal-link" title="cocopp.pproc.DataSet._detEvals2">_det<wbr></wbr>Evals2</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_detMaxEvals" class="internal-link" title="cocopp.pproc.DataSet._detMaxEvals">_det<wbr></wbr>Max<wbr></wbr>Evals</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_evals_appended_compute" class="internal-link" title="cocopp.pproc.DataSet._evals_appended_compute">_evals<wbr></wbr>_appended<wbr></wbr>_compute</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_evals_with_simulated_restarts" class="internal-link" title="cocopp.pproc.DataSet._evals_with_simulated_restarts">_evals<wbr></wbr>_with<wbr></wbr>_simulated<wbr></wbr>_restarts</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_number_of_better_runs" class="internal-link" title="cocopp.pproc.DataSet._number_of_better_runs">_number<wbr></wbr>_of<wbr></wbr>_better<wbr></wbr>_runs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_old_plot" class="internal-link" title="cocopp.pproc.DataSet._old_plot">_old<wbr></wbr>_plot</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_update_evals_balanced" class="internal-link" title="cocopp.pproc.DataSet._update_evals_balanced">_update<wbr></wbr>_evals<wbr></wbr>_balanced</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_WIP_number_of_better_runs" class="internal-link" title="cocopp.pproc.DataSet._WIP_number_of_better_runs">_<wbr></wbr>WIP_number_of_better_runs</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#algId" class="internal-link" title="cocopp.algportfolio.DataSet.algId">alg<wbr></wbr>Id</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#comment" class="internal-link" title="cocopp.algportfolio.DataSet.comment">comment</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#dim" class="internal-link" title="cocopp.algportfolio.DataSet.dim">dim</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#finalfunvals" class="internal-link" title="cocopp.algportfolio.DataSet.finalfunvals">finalfunvals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#funcId" class="internal-link" title="cocopp.algportfolio.DataSet.funcId">func<wbr></wbr>Id</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#funvals" class="internal-link" title="cocopp.algportfolio.DataSet.funvals">funvals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#instancenumbers" class="internal-link" title="cocopp.algportfolio.DataSet.instancenumbers">instancenumbers</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_evals" class="internal-link" title="cocopp.algportfolio.DataSet._evals">_evals</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_maxevals" class="internal-link" title="cocopp.algportfolio.DataSet._maxevals">_maxevals</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#algs" class="internal-link" title="cocopp.pproc.DataSet.algs">algs</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#dataFiles" class="internal-link" title="cocopp.pproc.DataSet.dataFiles">data<wbr></wbr>Files</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#indexFiles" class="internal-link" title="cocopp.pproc.DataSet.indexFiles">index<wbr></wbr>Files</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#isFinalized" class="internal-link" title="cocopp.pproc.DataSet.isFinalized">is<wbr></wbr>Finalized</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#pickleFile" class="internal-link" title="cocopp.pproc.DataSet.pickleFile">pickle<wbr></wbr>File</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#readfinalFminusFtarget" class="internal-link" title="cocopp.pproc.DataSet.readfinalFminusFtarget">readfinal<wbr></wbr>Fminus<wbr></wbr>Ftarget</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#readmaxevals" class="internal-link" title="cocopp.pproc.DataSet.readmaxevals">readmaxevals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#reference_values" class="internal-link" title="cocopp.pproc.DataSet.reference_values">reference<wbr></wbr>_values</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#success_ratio" class="internal-link" title="cocopp.pproc.DataSet.success_ratio">success<wbr></wbr>_ratio</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#budget_effective_estimates" class="internal-link" title="cocopp.pproc.DataSet.budget_effective_estimates">budget<wbr></wbr>_effective<wbr></wbr>_estimates</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#ert" class="internal-link" title="cocopp.pproc.DataSet.ert">ert</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#evals" class="internal-link" title="cocopp.pproc.DataSet.evals">evals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#evals_appended" class="internal-link" title="cocopp.pproc.DataSet.evals_appended">evals<wbr></wbr>_appended</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#evals_are_appended" class="internal-link" title="cocopp.pproc.DataSet.evals_are_appended">evals<wbr></wbr>_are<wbr></wbr>_appended</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#instance_multipliers" class="internal-link" title="cocopp.pproc.DataSet.instance_multipliers">instance<wbr></wbr>_multipliers</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#instancenumbers_balanced" class="internal-link" title="cocopp.pproc.DataSet.instancenumbers_balanced">instancenumbers<wbr></wbr>_balanced</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#max_eval" class="internal-link" title="cocopp.pproc.DataSet.max_eval">max<wbr></wbr>_eval</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#maxevals" class="internal-link" title="cocopp.pproc.DataSet.maxevals">maxevals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#maxfgevals" class="internal-link" title="cocopp.pproc.DataSet.maxfgevals">maxfgevals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#nbRuns_raw" class="internal-link" title="cocopp.pproc.DataSet.nbRuns_raw">nb<wbr></wbr>Runs_raw</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#number_of_constraints" class="internal-link" title="cocopp.pproc.DataSet.number_of_constraints">number<wbr></wbr>_of<wbr></wbr>_constraints</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#suite_name" class="internal-link" title="cocopp.pproc.DataSet.suite_name">suite<wbr></wbr>_name</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#target" class="internal-link" title="cocopp.pproc.DataSet.target">target</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#trial_count_by_instance" class="internal-link" title="cocopp.pproc.DataSet.trial_count_by_instance">trial<wbr></wbr>_count<wbr></wbr>_by<wbr></wbr>_instance</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_attributes" class="internal-link" title="cocopp.pproc.DataSet._attributes">_attributes</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_ert" class="internal-link" title="cocopp.pproc.DataSet._ert">_ert</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_ert_nb_of_data" class="internal-link" title="cocopp.pproc.DataSet._ert_nb_of_data">_ert<wbr></wbr>_nb<wbr></wbr>_of<wbr></wbr>_data</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_evals_appended" class="internal-link" title="cocopp.pproc.DataSet._evals_appended">_evals<wbr></wbr>_appended</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_evals_balanced" class="internal-link" title="cocopp.pproc.DataSet._evals_balanced">_evals<wbr></wbr>_balanced</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_evals_balanced_raw_data_columns" class="internal-link" title="cocopp.pproc.DataSet._evals_balanced_raw_data_columns">_evals<wbr></wbr>_balanced<wbr></wbr>_raw<wbr></wbr>_data<wbr></wbr>_columns</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_extra_attr" class="internal-link" title="cocopp.pproc.DataSet._extra_attr">_extra<wbr></wbr>_attr</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_lasttdatfilelines" class="internal-link" title="cocopp.pproc.DataSet._lasttdatfilelines">_lasttdatfilelines</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_maxevals_appended" class="internal-link" title="cocopp.pproc.DataSet._maxevals_appended">_maxevals<wbr></wbr>_appended</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_target" class="internal-link" title="cocopp.pproc.DataSet._target">_target</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_budget_estimates" class="internal-link" title="cocopp.pproc.DataSet._budget_estimates">_budget<wbr></wbr>_estimates</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_instance_repetitions" class="internal-link" title="cocopp.pproc.DataSet._instance_repetitions">_instance<wbr></wbr>_repetitions</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.DataSet.html#_need_balancing" class="internal-link" title="cocopp.pproc.DataSet._need_balancing">_need<wbr></wbr>_balancing</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="cocopp.algportfolio.html" class="internal-link" title="The parent of this class">algportfolio</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.algportfolio.DataSet.html" class="internal-link" title="cocopp.algportfolio.DataSet"><wbr></wbr>Data<wbr></wbr>Set</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.algportfolio.Usage.html" class="internal-link" title="cocopp.algportfolio.Usage"><wbr></wbr>Usage</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.algportfolio.html#build" class="internal-link" title="cocopp.algportfolio.build">build</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
       </div>
 
-      <div class="extrasDocstring">
-        <p><code><span class="py-keyword">class</span> <span class="py-defname">DataSet</span>(<a href="cocopp.pproc.DataSet.html" class="internal-link" title="cocopp.pproc.DataSet">pp.DataSet</a>):</code></p>
-        <p><a href="classIndex.html#cocopp.algportfolio.DataSet">View In Hierarchy</a></p>
-      </div>
+      <div id="main" class="">
+        
 
-      <div class="moduleDocstring">
-        <div><p>Unit element of algorithm portfolio data set.</p>
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">cocopp</a></code><wbr></wbr>.<code><a href="cocopp.algportfolio.html" class="internal-link" title="cocopp.algportfolio">algportfolio</a></code><wbr></wbr>.<code><a href="cocopp.algportfolio.DataSet.html" class="internal-link" title="cocopp.algportfolio.DataSet">DataSet</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">DataSet</span>(<a href="cocopp.pproc.DataSet.html" class="internal-link" title="cocopp.pproc.DataSet">pp.DataSet</a>):</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="cocopp.algportfolio.DataSet.__init__">DataSet(dslist)</a></code></p>
+          <p><a href="classIndex.html#cocopp.algportfolio.DataSet">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>Unit element of algorithm portfolio data set.</p>
 <dl class="rst-docutils">
 <dt>Modified class attributes:</dt>
 <dd><ul class="rst-first rst-last rst-simple">
@@ -80,10 +1198,10 @@
 </dd>
 </dl>
 </div>
-      </div>
+        </div>
 
-      <div id="splitTables">
-        <table class="children sortable" id="id6">
+        <div id="splitTables">
+          <table class="children sortable" id="id7">
   
   
   <tr class="method">
@@ -94,7 +1212,7 @@
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="#algId" class="internal-link" title="cocopp.algportfolio.DataSet.algId">alg​Id</a></code></td>
+    <td><code><a href="#algId" class="internal-link" title="cocopp.algportfolio.DataSet.algId">alg<wbr></wbr>Id</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="instancevariable">
     
@@ -114,7 +1232,7 @@
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="#funcId" class="internal-link" title="cocopp.algportfolio.DataSet.funcId">func​Id</a></code></td>
+    <td><code><a href="#funcId" class="internal-link" title="cocopp.algportfolio.DataSet.funcId">func<wbr></wbr>Id</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="instancevariable">
     
@@ -129,20 +1247,20 @@
   </tr><tr class="instancevariable private">
     
     <td>Instance Variable</td>
-    <td><code><a href="#_evals" class="internal-link" title="cocopp.algportfolio.DataSet._evals">​_evals</a></code></td>
-    <td><span class="undocumented">No summary</span></td>
+    <td><code><a href="#_evals" class="internal-link" title="cocopp.algportfolio.DataSet._evals">_evals</a></code></td>
+    <td><tt class="rst-docutils literal">_evals</tt> are the central data and later accessed via the <code><a href="cocopp.pproc.DataSet.html#evals" class="internal-link" title="cocopp.pproc.DataSet.evals">evals</a></code> property. Each line <tt class="rst-docutils literal">_evals[i]</tt> has a (target) function value in <tt class="rst-docutils literal"><span class="pre">_evals[i][0]</span></tt> and the function evaluation for which this target was reached the first time in trials 1,...</td>
   </tr><tr class="instancevariable private">
     
     <td>Instance Variable</td>
-    <td><code><a href="#_maxevals" class="internal-link" title="cocopp.algportfolio.DataSet._maxevals">​_maxevals</a></code></td>
+    <td><code><a href="#_maxevals" class="internal-link" title="cocopp.algportfolio.DataSet._maxevals">_maxevals</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
-        
-          <p class="inheritedFrom">
-            Inherited from <code><a href="cocopp.pproc.DataSet.html" class="internal-link" title="cocopp.pproc.DataSet">DataSet</a></code>:
-          </p>
-          <table class="children sortable" id="id7">
+          
+            <p class="inheritedFrom">
+              Inherited from <code><a href="cocopp.pproc.DataSet.html" class="internal-link" title="cocopp.pproc.DataSet">DataSet</a></code>:
+            </p>
+            <table class="children sortable" id="id8">
   
   
   <tr class="basemethod">
@@ -163,67 +1281,72 @@
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#bootstrap_sample_size" class="internal-link" title="cocopp.pproc.DataSet.bootstrap_sample_size">bootstrap​_sample​_size</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#bootstrap_sample_size" class="internal-link" title="cocopp.pproc.DataSet.bootstrap_sample_size">bootstrap<wbr></wbr>_sample<wbr></wbr>_size</a></code></td>
     <td>return minimum size not smaller than <code>sample_size</code> such that modulo self.nbRuns() == 0</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#computeERTfromEvals" class="internal-link" title="cocopp.pproc.DataSet.computeERTfromEvals">compute​ERTfrom​Evals</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#computeERTfromEvals" class="internal-link" title="cocopp.pproc.DataSet.computeERTfromEvals">compute<wbr></wbr>ERTfrom<wbr></wbr>Evals</a></code></td>
     <td>Sets the attributes ert and target from the attribute evals.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#consistency_check" class="internal-link" title="cocopp.pproc.DataSet.consistency_check">consistency​_check</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#consistency_check" class="internal-link" title="cocopp.pproc.DataSet.consistency_check">consistency<wbr></wbr>_check</a></code></td>
     <td>checks consistency of data set according to - number of instances - instances used</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#createDictInstance" class="internal-link" title="cocopp.pproc.DataSet.createDictInstance">create​Dict​Instance</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#createDictInstance" class="internal-link" title="cocopp.pproc.DataSet.createDictInstance">create<wbr></wbr>Dict<wbr></wbr>Instance</a></code></td>
     <td>Returns a dictionary of the instances.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#createDictInstanceCount" class="internal-link" title="cocopp.pproc.DataSet.createDictInstanceCount">create​Dict​Instance​Count</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#createDictInstanceCount" class="internal-link" title="cocopp.pproc.DataSet.createDictInstanceCount">create<wbr></wbr>Dict<wbr></wbr>Instance<wbr></wbr>Count</a></code></td>
     <td>Returns a dictionary of the instances and their count.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#detAverageEvals" class="internal-link" title="cocopp.pproc.DataSet.detAverageEvals">det​Average​Evals</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#detAverageEvals" class="internal-link" title="cocopp.pproc.DataSet.detAverageEvals">det<wbr></wbr>Average<wbr></wbr>Evals</a></code></td>
     <td>Determine the average number of f-evals for each target in <tt class="rst-docutils literal">targets</tt> list.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#detERT" class="internal-link" title="cocopp.pproc.DataSet.detERT">det​ERT</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#detERT" class="internal-link" title="cocopp.pproc.DataSet.detERT">det<wbr></wbr>ERT</a></code></td>
     <td>Determine the expected running time (ERT) to reach target values. The value is numpy.inf, if the target was never reached.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#detEvals" class="internal-link" title="cocopp.pproc.DataSet.detEvals">det​Evals</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#detEvals" class="internal-link" title="cocopp.pproc.DataSet.detEvals">det<wbr></wbr>Evals</a></code></td>
     <td>return <tt class="rst-docutils literal">len(targets)</tt> data rows <tt class="rst-docutils literal">self.evals[i, 1:]</tt>.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#detSuccesses" class="internal-link" title="cocopp.pproc.DataSet.detSuccesses">det​Successes</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#detEvals_by_instance" class="internal-link" title="cocopp.pproc.DataSet.detEvals_by_instance">det<wbr></wbr>Evals_by_instance</a></code></td>
+    <td>return result of <code><a href="cocopp.pproc.DataSet.html#detEvals" class="internal-link" title="cocopp.pproc.DataSet.detEvals">detEvals</a></code> for each instance individually</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#detSuccesses" class="internal-link" title="cocopp.pproc.DataSet.detSuccesses">det<wbr></wbr>Successes</a></code></td>
     <td>return the number of successful runs for each target.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#detSuccessRates" class="internal-link" title="cocopp.pproc.DataSet.detSuccessRates">det​Success​Rates</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#detSuccessRates" class="internal-link" title="cocopp.pproc.DataSet.detSuccessRates">det<wbr></wbr>Success<wbr></wbr>Rates</a></code></td>
     <td>return a np.array with the success rate for each target in targets, easiest target first.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#evals_with_simulated_restarts" class="internal-link" title="cocopp.pproc.DataSet.evals_with_simulated_restarts">evals​_with​_simulated​_restarts</a></code></td>
-    <td>Return a len(targets) list of <tt class="rst-docutils literal">samplesize</tt> "simulated" run lengths (#evaluations, sorted) with a similar interface as <code><a href="#detEvals" class="internal-link" title="cocopp.pproc.DataSet.detEvals">detEvals</a></code>.</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#evals_with_simulated_restarts" class="internal-link" title="cocopp.pproc.DataSet.evals_with_simulated_restarts">evals<wbr></wbr>_with<wbr></wbr>_simulated<wbr></wbr>_restarts</a></code></td>
+    <td>Return a <tt class="rst-docutils literal">len(targets)</tt> <code>list</code> of <tt class="rst-docutils literal">samplesize</tt> "simulated runtimes"</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#generateRLData" class="internal-link" title="cocopp.pproc.DataSet.generateRLData">generate​RLData</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#generateRLData" class="internal-link" title="cocopp.pproc.DataSet.generateRLData">generate<wbr></wbr>RLData</a></code></td>
     <td>Determine the running lengths for reaching the target values.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#get_data_format" class="internal-link" title="cocopp.pproc.DataSet.get_data_format">get​_data​_format</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#get_data_format" class="internal-link" title="cocopp.pproc.DataSet.get_data_format">get<wbr></wbr>_data<wbr></wbr>_format</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="basemethod">
     
@@ -233,22 +1356,32 @@
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#isBiobjective" class="internal-link" title="cocopp.pproc.DataSet.isBiobjective">is​Biobjective</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#info_str" class="internal-link" title="cocopp.pproc.DataSet.info_str">info<wbr></wbr>_str</a></code></td>
+    <td>return print info as string</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#instance_index_lists" class="internal-link" title="cocopp.pproc.DataSet.instance_index_lists">instance<wbr></wbr>_index<wbr></wbr>_lists</a></code></td>
+    <td>return <code>OrderedDict</code> of index lists for each instance.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#isBiobjective" class="internal-link" title="cocopp.pproc.DataSet.isBiobjective">is<wbr></wbr>Biobjective</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#median_evals" class="internal-link" title="cocopp.pproc.DataSet.median_evals">median​_evals</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#median_evals" class="internal-link" title="cocopp.pproc.DataSet.median_evals">median<wbr></wbr>_evals</a></code></td>
     <td>return median for each row in <code>self.evals</code>, unsuccessful runs count.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#mMaxEvals" class="internal-link" title="cocopp.pproc.DataSet.mMaxEvals">m​Max​Evals</a></code></td>
-    <td>Returns the maximum number of function evaluations over all runs (trials), obsolete and replaced by attribute <code><a href="#max_eval" class="internal-link" title="cocopp.pproc.DataSet.max_eval">max_eval</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#mMaxEvals" class="internal-link" title="cocopp.pproc.DataSet.mMaxEvals">m<wbr></wbr>Max<wbr></wbr>Evals</a></code></td>
+    <td>Returns the maximum number of function evaluations over all runs (trials), obsolete and replaced by attribute <code><a href="cocopp.pproc.DataSet.html#max_eval" class="internal-link" title="cocopp.pproc.DataSet.max_eval">max_eval</a></code></td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#nbRuns" class="internal-link" title="cocopp.pproc.DataSet.nbRuns">nb​Runs</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#nbRuns" class="internal-link" title="cocopp.pproc.DataSet.nbRuns">nb<wbr></wbr>Runs</a></code></td>
     <td>Returns the number of runs depending on <code><a href="cocopp.genericsettings.html#balance_instances" class="internal-link" title="cocopp.genericsettings.balance_instances">genericsettings.balance_instances</a></code>.</td>
   </tr><tr class="basemethod">
     
@@ -259,17 +1392,22 @@
     
     <td>Method</td>
     <td><code><a href="cocopp.pproc.DataSet.html#plot" class="internal-link" title="cocopp.pproc.DataSet.plot">plot</a></code></td>
-    <td>plot all data from <code><a href="#evals" class="internal-link" title="cocopp.pproc.DataSet.evals">evals</a></code> attribute and the median.</td>
+    <td>plot all data from <code><a href="cocopp.pproc.DataSet.html#evals" class="internal-link" title="cocopp.pproc.DataSet.evals">evals</a></code> attribute and the median.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#plot_funvals" class="internal-link" title="cocopp.pproc.DataSet.plot_funvals">plot​_funvals</a></code></td>
-    <td>plot data of <code><a href="#funvals" class="internal-link" title="cocopp.pproc.DataSet.funvals">funvals</a></code> attribute, versatile</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#plot_funvals" class="internal-link" title="cocopp.pproc.DataSet.plot_funvals">plot<wbr></wbr>_funvals</a></code></td>
+    <td>plot data of <code><a href="cocopp.pproc.DataSet.html#funvals" class="internal-link" title="cocopp.pproc.DataSet.funvals">funvals</a></code> attribute, versatile</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#splitByTrials" class="internal-link" title="cocopp.pproc.DataSet.splitByTrials">split​By​Trials</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#splitByTrials" class="internal-link" title="cocopp.pproc.DataSet.splitByTrials">split<wbr></wbr>By<wbr></wbr>Trials</a></code></td>
     <td>Splits the post-processed data arrays by trials.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#successes_by_instance" class="internal-link" title="cocopp.pproc.DataSet.successes_by_instance">successes<wbr></wbr>_by<wbr></wbr>_instance</a></code></td>
+    <td>return <code>OrderedDict</code> with number of successes for each instance</td>
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
@@ -278,27 +1416,27 @@
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#dataFiles" class="internal-link" title="cocopp.pproc.DataSet.dataFiles">data​Files</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#dataFiles" class="internal-link" title="cocopp.pproc.DataSet.dataFiles">data<wbr></wbr>Files</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#indexFiles" class="internal-link" title="cocopp.pproc.DataSet.indexFiles">index​Files</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#indexFiles" class="internal-link" title="cocopp.pproc.DataSet.indexFiles">index<wbr></wbr>Files</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#isFinalized" class="internal-link" title="cocopp.pproc.DataSet.isFinalized">is​Finalized</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#isFinalized" class="internal-link" title="cocopp.pproc.DataSet.isFinalized">is<wbr></wbr>Finalized</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#pickleFile" class="internal-link" title="cocopp.pproc.DataSet.pickleFile">pickle​File</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#pickleFile" class="internal-link" title="cocopp.pproc.DataSet.pickleFile">pickle<wbr></wbr>File</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#readfinalFminusFtarget" class="internal-link" title="cocopp.pproc.DataSet.readfinalFminusFtarget">readfinal​Fminus​Ftarget</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#readfinalFminusFtarget" class="internal-link" title="cocopp.pproc.DataSet.readfinalFminusFtarget">readfinal<wbr></wbr>Fminus<wbr></wbr>Ftarget</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable">
     
@@ -308,23 +1446,23 @@
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#reference_values" class="internal-link" title="cocopp.pproc.DataSet.reference_values">reference​_values</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#reference_values" class="internal-link" title="cocopp.pproc.DataSet.reference_values">reference<wbr></wbr>_values</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#success_ratio" class="internal-link" title="cocopp.pproc.DataSet.success_ratio">success​_ratio</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
-  </tr><tr class="baseinstancevariable">
-    
-    <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#target" class="internal-link" title="cocopp.pproc.DataSet.target">target</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#success_ratio" class="internal-link" title="cocopp.pproc.DataSet.success_ratio">success<wbr></wbr>_ratio</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseproperty">
     
     <td>Property</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#budget_effective_estimates" class="internal-link" title="cocopp.pproc.DataSet.budget_effective_estimates">budget<wbr></wbr>_effective<wbr></wbr>_estimates</a></code></td>
+    <td>return <code>OrderedDict</code> of <tt class="rst-docutils literal">sum(maxevals) / max(1, #successes)</tt></td>
+  </tr><tr class="baseproperty">
+    
+    <td>Property</td>
     <td><code><a href="cocopp.pproc.DataSet.html#ert" class="internal-link" title="cocopp.pproc.DataSet.ert">ert</a></code></td>
-    <td>expected runtimes for the targets in <code><a href="#target" class="internal-link" title="cocopp.pproc.DataSet.target">target</a></code>.</td>
+    <td>expected runtimes for the targets in <code><a href="cocopp.pproc.DataSet.html#target" class="internal-link" title="cocopp.pproc.DataSet.target">target</a></code>.</td>
   </tr><tr class="baseproperty">
     
     <td>Property</td>
@@ -333,22 +1471,27 @@
   </tr><tr class="baseproperty">
     
     <td>Property</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#evals_appended" class="internal-link" title="cocopp.pproc.DataSet.evals_appended">evals​_appended</a></code></td>
-    <td>like the <code><a href="#evals" class="internal-link" title="cocopp.pproc.DataSet.evals">evals</a></code> property-attribute but here instances with the same ID are aggregated (appended).</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#evals_appended" class="internal-link" title="cocopp.pproc.DataSet.evals_appended">evals<wbr></wbr>_appended</a></code></td>
+    <td>Is this abandoned?</td>
   </tr><tr class="baseproperty">
     
     <td>Property</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#evals_are_appended" class="internal-link" title="cocopp.pproc.DataSet.evals_are_appended">evals​_are​_appended</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#evals_are_appended" class="internal-link" title="cocopp.pproc.DataSet.evals_are_appended">evals<wbr></wbr>_are<wbr></wbr>_appended</a></code></td>
     <td>return <code>True</code> if <code>self.evals_appended</code> consist of appended trials (same instances are appended)</td>
   </tr><tr class="baseproperty">
     
     <td>Property</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#instance_multipliers" class="internal-link" title="cocopp.pproc.DataSet.instance_multipliers">instance​_multipliers</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#instance_multipliers" class="internal-link" title="cocopp.pproc.DataSet.instance_multipliers">instance<wbr></wbr>_multipliers</a></code></td>
     <td>number of repetitions per instance to balance a skewed instance distribution.</td>
   </tr><tr class="baseproperty">
     
     <td>Property</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#max_eval" class="internal-link" title="cocopp.pproc.DataSet.max_eval">max​_eval</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#instancenumbers_balanced" class="internal-link" title="cocopp.pproc.DataSet.instancenumbers_balanced">instancenumbers<wbr></wbr>_balanced</a></code></td>
+    <td>return instancenumbers extended with balancing_instancenumbers</td>
+  </tr><tr class="baseproperty">
+    
+    <td>Property</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#max_eval" class="internal-link" title="cocopp.pproc.DataSet.max_eval">max<wbr></wbr>_eval</a></code></td>
     <td>maximum number of function evaluations over all runs (trials),</td>
   </tr><tr class="baseproperty">
     
@@ -363,138 +1506,177 @@
   </tr><tr class="baseproperty">
     
     <td>Property</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#nbRuns_raw" class="internal-link" title="cocopp.pproc.DataSet.nbRuns_raw">nb​Runs_raw</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#nbRuns_raw" class="internal-link" title="cocopp.pproc.DataSet.nbRuns_raw">nb<wbr></wbr>Runs_raw</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseproperty">
     
     <td>Property</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#number_of_constraints" class="internal-link" title="cocopp.pproc.DataSet.number_of_constraints">number​_of​_constraints</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#number_of_constraints" class="internal-link" title="cocopp.pproc.DataSet.number_of_constraints">number<wbr></wbr>_of<wbr></wbr>_constraints</a></code></td>
     <td>number of constraints of the function/problem the <code><a href="cocopp.pproc.DataSet.html" class="internal-link" title="cocopp.pproc.DataSet">DataSet</a></code> is based upon.</td>
   </tr><tr class="baseproperty">
     
     <td>Property</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#suite_name" class="internal-link" title="cocopp.pproc.DataSet.suite_name">suite​_name</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#suite_name" class="internal-link" title="cocopp.pproc.DataSet.suite_name">suite<wbr></wbr>_name</a></code></td>
     <td>Returns a string, with the name of the DataSet's underlying test suite.</td>
+  </tr><tr class="baseproperty">
+    
+    <td>Property</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#target" class="internal-link" title="cocopp.pproc.DataSet.target">target</a></code></td>
+    <td>target values (<code>np.array</code>) corresponding to <code><a href="cocopp.pproc.DataSet.html#ert" class="internal-link" title="cocopp.pproc.DataSet.ert">ert</a></code> (which all have finite values)</td>
+  </tr><tr class="baseproperty">
+    
+    <td>Property</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#trial_count_by_instance" class="internal-link" title="cocopp.pproc.DataSet.trial_count_by_instance">trial<wbr></wbr>_count<wbr></wbr>_by<wbr></wbr>_instance</a></code></td>
+    <td>return <code>Counter</code> <code>dict</code> with number of trials (actually) done for each instance</td>
   </tr><tr class="basestaticmethod private">
     
     <td>Static Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_largest_finite_index" class="internal-link" title="cocopp.pproc.DataSet._largest_finite_index">​_largest​_finite​_index</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_largest_finite_index" class="internal-link" title="cocopp.pproc.DataSet._largest_finite_index">_largest<wbr></wbr>_finite<wbr></wbr>_index</a></code></td>
     <td>return <code>i</code> such that <tt class="rst-docutils literal">isfinite(ar[i]) and not isfinite(ar[i+1])</tt>,</td>
   </tr><tr class="basemethod private">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#__parseHeader" class="internal-link" title="cocopp.pproc.DataSet.__parseHeader">__parse​Header</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#__parseHeader" class="internal-link" title="cocopp.pproc.DataSet.__parseHeader">__parse<wbr></wbr>Header</a></code></td>
     <td>Extract data from a header line in an index entry.</td>
   </tr><tr class="basemethod private">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_argsort" class="internal-link" title="cocopp.pproc.DataSet._argsort">​_argsort</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_argsort" class="internal-link" title="cocopp.pproc.DataSet._argsort">_argsort</a></code></td>
     <td>return index array for a sorted order of trials.</td>
   </tr><tr class="basemethod private">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_balanced_evals_row" class="internal-link" title="cocopp.pproc.DataSet._balanced_evals_row">​_balanced​_evals​_row</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_balanced_evals_row" class="internal-link" title="cocopp.pproc.DataSet._balanced_evals_row">_balanced<wbr></wbr>_evals<wbr></wbr>_row</a></code></td>
     <td>append evaluations to <code>evals_row</code> to achieve a balanced instance distribution.</td>
   </tr><tr class="basemethod private">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_complement_data" class="internal-link" title="cocopp.pproc.DataSet._complement_data">​_complement​_data</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_complement_data" class="internal-link" title="cocopp.pproc.DataSet._complement_data">_complement<wbr></wbr>_data</a></code></td>
     <td>insert a line for each target value, never used (detEvals(targets) does the job on the fly)</td>
   </tr><tr class="basemethod private">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_cut_data" class="internal-link" title="cocopp.pproc.DataSet._cut_data">​_cut​_data</a></code></td>
-    <td><span class="undocumented">No summary</span></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_cut_data" class="internal-link" title="cocopp.pproc.DataSet._cut_data">_cut<wbr></wbr>_data</a></code></td>
+    <td>attributes <code><a href="cocopp.pproc.DataSet.html#target" class="internal-link" title="cocopp.pproc.DataSet.target">target</a></code>, <code><a href="cocopp.pproc.DataSet.html#evals" class="internal-link" title="cocopp.pproc.DataSet.evals">evals</a></code>, and <code><a href="cocopp.pproc.DataSet.html#ert" class="internal-link" title="cocopp.pproc.DataSet.ert">ert</a></code> are truncated to target values not much smaller than defined in attribute <code>precision</code> (typically <tt class="rst-docutils literal"><span class="pre">1e-8</span></tt>). Attribute <code><a href="cocopp.pproc.DataSet.html#maxevals" class="internal-link" title="cocopp.pproc.DataSet.maxevals">maxevals</a></code> is recomputed for columns that reach the final target precision...</td>
   </tr><tr class="basemethod private">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_detEvals2" class="internal-link" title="cocopp.pproc.DataSet._detEvals2">_det​Evals2</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_data_differ" class="internal-link" title="cocopp.pproc.DataSet._data_differ">_data<wbr></wbr>_differ</a></code></td>
+    <td>return a list of targets for which <code><a href="cocopp.firstsession.html#ds" class="internal-link" title="cocopp.firstsession.ds">ds</a></code> differs from <code>self</code></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_detEvals2" class="internal-link" title="cocopp.pproc.DataSet._detEvals2">_det<wbr></wbr>Evals2</a></code></td>
     <td>Determine the number of evaluations to reach target values.</td>
   </tr><tr class="basemethod private">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_detMaxEvals" class="internal-link" title="cocopp.pproc.DataSet._detMaxEvals">_det​Max​Evals</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_detMaxEvals" class="internal-link" title="cocopp.pproc.DataSet._detMaxEvals">_det<wbr></wbr>Max<wbr></wbr>Evals</a></code></td>
     <td>computes for each data column of _evals the (maximal) evaluation until final_target was reached, or <tt class="rst-docutils literal">self.maxevals</tt> otherwise.</td>
   </tr><tr class="basemethod private">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_evals_appended_compute" class="internal-link" title="cocopp.pproc.DataSet._evals_appended_compute">​_evals​_appended​_compute</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_evals_appended_compute" class="internal-link" title="cocopp.pproc.DataSet._evals_appended_compute">_evals<wbr></wbr>_appended<wbr></wbr>_compute</a></code></td>
     <td>create evals-array with appended instances.</td>
   </tr><tr class="basemethod private">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_old_plot" class="internal-link" title="cocopp.pproc.DataSet._old_plot">​_old​_plot</a></code></td>
-    <td>plot data from <code><a href="#evals" class="internal-link" title="cocopp.pproc.DataSet.evals">evals</a></code> attribute.</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_evals_with_simulated_restarts" class="internal-link" title="cocopp.pproc.DataSet._evals_with_simulated_restarts">_evals<wbr></wbr>_with<wbr></wbr>_simulated<wbr></wbr>_restarts</a></code></td>
+    <td>return simulated runtimes for each 1D-array in <code>evals_list</code>.</td>
   </tr><tr class="basemethod private">
     
     <td>Method</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_update_evals_balanced" class="internal-link" title="cocopp.pproc.DataSet._update_evals_balanced">​_update​_evals​_balanced</a></code></td>
-    <td>update attribute <code><a href="#_evals_balanced" class="internal-link" title="cocopp.pproc.DataSet._evals_balanced">_evals_balanced</a></code> if necessary.</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_number_of_better_runs" class="internal-link" title="cocopp.pproc.DataSet._number_of_better_runs">_number<wbr></wbr>_of<wbr></wbr>_better<wbr></wbr>_runs</a></code></td>
+    <td>return the number of <tt class="rst-docutils literal">self.evals(target)</tt> that are smaller</td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_old_plot" class="internal-link" title="cocopp.pproc.DataSet._old_plot">_old<wbr></wbr>_plot</a></code></td>
+    <td>plot data from <code><a href="cocopp.pproc.DataSet.html#evals" class="internal-link" title="cocopp.pproc.DataSet.evals">evals</a></code> attribute.</td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_update_evals_balanced" class="internal-link" title="cocopp.pproc.DataSet._update_evals_balanced">_update<wbr></wbr>_evals<wbr></wbr>_balanced</a></code></td>
+    <td>update attribute <code><a href="cocopp.pproc.DataSet.html#_evals_balanced" class="internal-link" title="cocopp.pproc.DataSet._evals_balanced">_evals_balanced</a></code> if necessary.</td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_WIP_number_of_better_runs" class="internal-link" title="cocopp.pproc.DataSet._WIP_number_of_better_runs">_<wbr></wbr>WIP_number_of_better_runs</a></code></td>
+    <td>return the number of <tt class="rst-docutils literal"><span class="pre">self.evals([target])</span></tt> that are better</td>
   </tr><tr class="baseclassvariable private">
     
     <td>Class Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_attributes" class="internal-link" title="cocopp.pproc.DataSet._attributes">​_attributes</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_attributes" class="internal-link" title="cocopp.pproc.DataSet._attributes">_attributes</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable private">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_ert" class="internal-link" title="cocopp.pproc.DataSet._ert">​_ert</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_ert" class="internal-link" title="cocopp.pproc.DataSet._ert">_ert</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable private">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_ert_nb_of_data" class="internal-link" title="cocopp.pproc.DataSet._ert_nb_of_data">​_ert​_nb​_of​_data</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_ert_nb_of_data" class="internal-link" title="cocopp.pproc.DataSet._ert_nb_of_data">_ert<wbr></wbr>_nb<wbr></wbr>_of<wbr></wbr>_data</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable private">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_evals_appended" class="internal-link" title="cocopp.pproc.DataSet._evals_appended">​_evals​_appended</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_evals_appended" class="internal-link" title="cocopp.pproc.DataSet._evals_appended">_evals<wbr></wbr>_appended</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable private">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_evals_balanced" class="internal-link" title="cocopp.pproc.DataSet._evals_balanced">​_evals​_balanced</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_evals_balanced" class="internal-link" title="cocopp.pproc.DataSet._evals_balanced">_evals<wbr></wbr>_balanced</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable private">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_evals_balanced_raw_data_columns" class="internal-link" title="cocopp.pproc.DataSet._evals_balanced_raw_data_columns">​_evals​_balanced​_raw​_data​_columns</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_evals_balanced_raw_data_columns" class="internal-link" title="cocopp.pproc.DataSet._evals_balanced_raw_data_columns">_evals<wbr></wbr>_balanced<wbr></wbr>_raw<wbr></wbr>_data<wbr></wbr>_columns</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable private">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_extra_attr" class="internal-link" title="cocopp.pproc.DataSet._extra_attr">​_extra​_attr</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_extra_attr" class="internal-link" title="cocopp.pproc.DataSet._extra_attr">_extra<wbr></wbr>_attr</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable private">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_lasttdatfilelines" class="internal-link" title="cocopp.pproc.DataSet._lasttdatfilelines">​_lasttdatfilelines</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_lasttdatfilelines" class="internal-link" title="cocopp.pproc.DataSet._lasttdatfilelines">_lasttdatfilelines</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable private">
     
     <td>Instance Variable</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_maxevals_appended" class="internal-link" title="cocopp.pproc.DataSet._maxevals_appended">​_maxevals​_appended</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_maxevals_appended" class="internal-link" title="cocopp.pproc.DataSet._maxevals_appended">_maxevals<wbr></wbr>_appended</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_target" class="internal-link" title="cocopp.pproc.DataSet._target">_target</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseproperty private">
     
     <td>Property</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_instance_repetitions" class="internal-link" title="cocopp.pproc.DataSet._instance_repetitions">​_instance​_repetitions</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_budget_estimates" class="internal-link" title="cocopp.pproc.DataSet._budget_estimates">_budget<wbr></wbr>_estimates</a></code></td>
+    <td>return <code>OrderedDict</code> of sum(maxevals) for each (raw data) instance.</td>
+  </tr><tr class="baseproperty private">
+    
+    <td>Property</td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_instance_repetitions" class="internal-link" title="cocopp.pproc.DataSet._instance_repetitions">_instance<wbr></wbr>_repetitions</a></code></td>
     <td>return the number of runs that repeated a previous instance.</td>
   </tr><tr class="baseproperty private">
     
     <td>Property</td>
-    <td><code><a href="cocopp.pproc.DataSet.html#_need_balancing" class="internal-link" title="cocopp.pproc.DataSet._need_balancing">​_need​_balancing</a></code></td>
+    <td><code><a href="cocopp.pproc.DataSet.html#_need_balancing" class="internal-link" title="cocopp.pproc.DataSet._need_balancing">_need<wbr></wbr>_balancing</a></code></td>
     <td>return True of gs.balance_instances and self.instance_multipliers are &gt;1</td>
   </tr>
 </table>
-          
+            
 
-          
-      </div>
+            
+        </div>
 
-      <div id="childList">
-
-        <div class="basemethod">
+        <div id="childList">
+          <div class="basemethod">
   
   
   <a name="cocopp.algportfolio.DataSet.__init__">
@@ -505,13 +1687,18 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, dslist):
     
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, dslist)</span>:
+    
+    <a class="headerLink" href="#__init__" title="cocopp.algportfolio.DataSet.__init__">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     <div class="interfaceinfo">overrides <code><a href="cocopp.pproc.DataSet.html#__init__" class="internal-link">cocopp.pproc.DataSet.__init__</a></code></div>
-    
-    <div>Instantiate one algorithm portfolio data set.<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dslist</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dict dslist</span></td><td class="fieldArgDesc">list of <code><a href="cocopp.pproc.DataSetList.html" class="internal-link" title="cocopp.pproc.DataSetList">pproc.DataSetList</a></code>
+    <div><p>Instantiate one algorithm portfolio data set.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dslist</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dict dslist</span></td><td class="fieldArgDesc">list of <code><a href="cocopp.pproc.DataSetList.html" class="internal-link" title="cocopp.pproc.DataSetList">pproc.DataSetList</a></code>
 instances.</td></tr></table></div>
   </div>
 </div><div class="baseinstancevariable">
@@ -527,9 +1714,13 @@ instances.</td></tr></table></div>
     
     <span class="py-defname">algId</span> =
     
+    <a class="headerLink" href="#algId" title="cocopp.algportfolio.DataSet.algId">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -547,10 +1738,14 @@ instances.</td></tr></table></div>
     
     <span class="py-defname">comment</span> =
     
+    <a class="headerLink" href="#comment" title="cocopp.algportfolio.DataSet.comment">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     <div class="interfaceinfo">overrides <code><a href="cocopp.pproc.DataSet.html#comment" class="internal-link">cocopp.pproc.DataSet.comment</a></code></div>
-    
     <div><p class="undocumented">Undocumented</p></div>
     
   </div>
@@ -567,9 +1762,13 @@ instances.</td></tr></table></div>
     
     <span class="py-defname">dim</span> =
     
+    <a class="headerLink" href="#dim" title="cocopp.algportfolio.DataSet.dim">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -587,9 +1786,13 @@ instances.</td></tr></table></div>
     
     <span class="py-defname">finalfunvals</span> =
     
+    <a class="headerLink" href="#finalfunvals" title="cocopp.algportfolio.DataSet.finalfunvals">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    <div class="interfaceinfo">overrides <code><a href="cocopp.pproc.DataSet.html#finalfunvals" class="internal-link">cocopp.pproc.DataSet.finalfunvals</a></code></div>
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -607,9 +1810,13 @@ instances.</td></tr></table></div>
     
     <span class="py-defname">funcId</span> =
     
+    <a class="headerLink" href="#funcId" title="cocopp.algportfolio.DataSet.funcId">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -627,10 +1834,14 @@ instances.</td></tr></table></div>
     
     <span class="py-defname">funvals</span> =
     
+    <a class="headerLink" href="#funvals" title="cocopp.algportfolio.DataSet.funvals">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     <div class="interfaceinfo">overrides <code><a href="cocopp.pproc.DataSet.html#funvals" class="internal-link">cocopp.pproc.DataSet.funvals</a></code></div>
-    
     <div><p class="undocumented">Undocumented</p></div>
     
   </div>
@@ -647,10 +1858,14 @@ instances.</td></tr></table></div>
     
     <span class="py-defname">instancenumbers</span> =
     
+    <a class="headerLink" href="#instancenumbers" title="cocopp.algportfolio.DataSet.instancenumbers">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     <div class="interfaceinfo">overrides <code><a href="cocopp.pproc.DataSet.html#instancenumbers" class="internal-link">cocopp.pproc.DataSet.instancenumbers</a></code></div>
-    
     <div><p class="undocumented">Undocumented</p></div>
     
   </div>
@@ -667,15 +1882,19 @@ instances.</td></tr></table></div>
     
     <span class="py-defname">_evals</span> =
     
+    <a class="headerLink" href="#_evals" title="cocopp.algportfolio.DataSet._evals">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     <div class="interfaceinfo">overrides <code><a href="cocopp.pproc.DataSet.html#_evals" class="internal-link">cocopp.pproc.DataSet._evals</a></code></div>
-    
-    <div><tt class="rst-docutils literal">_evals</tt> are the central data and later accessed via the <code><a href="#evals" class="internal-link" title="cocopp.pproc.DataSet.evals">evals</a></code>
+    <div><p><tt class="rst-docutils literal">_evals</tt> are the central data and later accessed via the <code><a href="#evals" class="internal-link" title="cocopp.pproc.DataSet.evals">evals</a></code>
 property. Each line <tt class="rst-docutils literal">_evals[i]</tt> has a (target) function value
 in <tt class="rst-docutils literal"><span class="pre">_evals[i][0]</span></tt> and the function evaluation for which this
 target was reached the first time in trials 1,... in
-<tt class="rst-docutils literal"><span class="pre">_evals[i][1:]</span></tt>.</div>
+<tt class="rst-docutils literal"><span class="pre">_evals[i][1:]</span></tt>.</p></div>
     
   </div>
 </div><div class="baseinstancevariable private">
@@ -691,27 +1910,40 @@ target was reached the first time in trials 1,... in
     
     <span class="py-defname">_maxevals</span> =
     
+    <a class="headerLink" href="#_maxevals" title="cocopp.algportfolio.DataSet._maxevals">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     <div class="interfaceinfo">overrides <code><a href="cocopp.pproc.DataSet.html#_maxevals" class="internal-link">cocopp.pproc.DataSet._maxevals</a></code></div>
-    
     <div><p class="undocumented">Undocumented</p></div>
     
   </div>
 </div>
-
+        </div>
+      
       </div>
     </div>
 
     <footer class="navbar navbar-default">
+
   
   <div class="container">
     <a href="index.html">API Documentation</a> for cocopp,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.2.1 at 2022-03-01 09:40:36.
+    23.9.1 at 2024-07-11 01:05:24.
   </div>
-</footer>
 
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
     <script src="pydoctor.js" type="text/javascript"></script>
 
   </body>

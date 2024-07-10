@@ -7,11 +7,11 @@
   <head>
     
     <title>cocopp.pptex</title>
-    <meta name="generator" content="pydoctor 22.2.1"> 
+    <meta name="generator" content="pydoctor 23.9.1"> 
         
     </meta>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.75" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="apidocs.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
@@ -21,91 +21,886 @@
 
     
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default mainnavbar">
+      
   
-  <div class="container">
+  <div class="container-fluid">
+
 
     <div class="navbar-header">
       
       <div class="navlinks">
-          <span class="navbar-brand">
-            cocopp <a href="index.html">API Documentation</a>
-          </span>
+        <span class="navbar-brand">
+          cocopp <a href="index.html">API Documentation</a>
+        </span>
 
-          <a href="moduleIndex.html">
-            Modules
-          </a>
+        <a href="moduleIndex.html">
+          Modules
+        </a>
 
-          <a href="classIndex.html">
-            Classes
-          </a>
+        <a href="classIndex.html">
+          Classes
+        </a>
 
-          <a href="nameIndex.html">
-            Names
-          </a>
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
       </div>
 
-    </div>
-  </div>
-</nav>
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
 
-    
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
 
-    <div class="container">
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
 
-      <div class="page-header">
-        <h1 class="module"><code><code><a href="index.html" class="internal-link">cocopp</a></code><wbr></wbr>.<code><a href="cocopp.pptex.html" class="internal-link" title="cocopp.pptex">pptex</a></code></code></h1>
-        <div id="showPrivate">
-          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
         </div>
       </div>
 
-      <div class="categoryHeader">
-        module documentation
-      </div>
+    </div>
 
-      <div class="extrasDocstring">
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
         
-        <p></p>
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code class="thisobject"><a href="cocopp.pptex.html" class="internal-link" title="This module">pptex</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pptex.DataTable.html" class="internal-link" title="cocopp.pptex.DataTable"><wbr></wbr>Data<wbr></wbr>Table</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pptex.Error.html" class="internal-link" title="cocopp.pptex.Error"><wbr></wbr>Error</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pptex.WrongInputSizeError.html" class="internal-link" title="cocopp.pptex.WrongInputSizeError"><wbr></wbr>Wrong<wbr></wbr>Input<wbr></wbr>Size<wbr></wbr>Error</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#color_to_latex" class="internal-link" title="cocopp.pptex.color_to_latex">color<wbr></wbr>_to<wbr></wbr>_latex</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#marker_to_html" class="internal-link" title="cocopp.pptex.marker_to_html">marker<wbr></wbr>_to<wbr></wbr>_html</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#marker_to_latex" class="internal-link" title="cocopp.pptex.marker_to_latex">marker<wbr></wbr>_to<wbr></wbr>_latex</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#numtotext" class="internal-link" title="cocopp.pptex.numtotext">numtotext</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#tableLaTeX" class="internal-link" title="cocopp.pptex.tableLaTeX">table<wbr></wbr>La<wbr></wbr>Te<wbr></wbr>X</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#tableLaTeXStar" class="internal-link" title="cocopp.pptex.tableLaTeXStar">table<wbr></wbr>La<wbr></wbr>Te<wbr></wbr>XStar</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#tableXLaTeX" class="internal-link" title="cocopp.pptex.tableXLaTeX">table<wbr></wbr>XLa<wbr></wbr>Te<wbr></wbr>X</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#writeFEvals" class="internal-link" title="cocopp.pptex.writeFEvals">write<wbr></wbr>FEvals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#writeFEvals2" class="internal-link" title="cocopp.pptex.writeFEvals2">write<wbr></wbr>FEvals2</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#writeFEvalsMaxPrec" class="internal-link" title="cocopp.pptex.writeFEvalsMaxPrec">write<wbr></wbr>FEvals<wbr></wbr>Max<wbr></wbr>Prec</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#writeFEvalsMaxSymbols" class="internal-link" title="cocopp.pptex.writeFEvalsMaxSymbols">write<wbr></wbr>FEvals<wbr></wbr>Max<wbr></wbr>Symbols</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#writeLabels" class="internal-link" title="cocopp.pptex.writeLabels">write<wbr></wbr>Labels</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#alphabet" class="internal-link" title="cocopp.pptex.alphabet">alphabet</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#html_marker_map" class="internal-link" title="cocopp.pptex.html_marker_map">html<wbr></wbr>_marker<wbr></wbr>_map</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#latex_color_map" class="internal-link" title="cocopp.pptex.latex_color_map">latex<wbr></wbr>_color<wbr></wbr>_map</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#latex_color_map_old" class="internal-link" title="cocopp.pptex.latex_color_map_old">latex<wbr></wbr>_color<wbr></wbr>_map<wbr></wbr>_old</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#latex_marker_map" class="internal-link" title="cocopp.pptex.latex_marker_map">latex<wbr></wbr>_marker<wbr></wbr>_map</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="index.html" class="internal-link" title="The parent of this module">cocopp</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.comp2.html" class="internal-link" title="cocopp.comp2">comp2</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.compall.html" class="internal-link" title="cocopp.compall">compall</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.algportfolio.html" class="internal-link" title="cocopp.algportfolio">algportfolio</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html" class="internal-link" title="cocopp.archiving">archiving</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.bestalg.html" class="internal-link" title="cocopp.bestalg">bestalg</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.bwsettings.html" class="internal-link" title="cocopp.bwsettings">bwsettings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.captions.html" class="internal-link" title="cocopp.captions">captions</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.cococommands.html" class="internal-link" title="cocopp.cococommands">cococommands</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.config.html" class="internal-link" title="cocopp.config">config</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.dataformatsettings.html" class="internal-link" title="cocopp.dataformatsettings">dataformatsettings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.findfiles.html" class="internal-link" title="cocopp.findfiles">findfiles</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.firstsession.html" class="internal-link" title="cocopp.firstsession">firstsession</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.genericsettings.html" class="internal-link" title="cocopp.genericsettings">genericsettings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.grayscalesettings.html" class="internal-link" title="cocopp.grayscalesettings">grayscalesettings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.htmldesc.html" class="internal-link" title="cocopp.htmldesc">htmldesc</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.old_line_styles.html" class="internal-link" title="cocopp.old_line_styles">old<wbr></wbr>_line<wbr></wbr>_styles</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppconverrorbars.html" class="internal-link" title="cocopp.ppconverrorbars">ppconverrorbars</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppfig.html" class="internal-link" title="cocopp.ppfig">ppfig</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppfigcons1.html" class="internal-link" title="cocopp.ppfigcons1">ppfigcons1</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppfigdim.html" class="internal-link" title="cocopp.ppfigdim">ppfigdim</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppfigparam.html" class="internal-link" title="cocopp.ppfigparam">ppfigparam</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pplogloss.html" class="internal-link" title="cocopp.pplogloss">pplogloss</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pprldistr.html" class="internal-link" title="cocopp.pprldistr">pprldistr</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pprldistr2009_hardestRLB.html" class="internal-link" title="cocopp.pprldistr2009_hardestRLB">pprldistr2009_hardest<wbr></wbr>RLB</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.html" class="internal-link" title="cocopp.pproc">pproc</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppsingle.html" class="internal-link" title="cocopp.ppsingle">ppsingle</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pptable.html" class="internal-link" title="cocopp.pptable">pptable</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pptex.html" class="internal-link" title="cocopp.pptex">pptex</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.preparehtml.html" class="internal-link" title="cocopp.preparehtml">preparehtml</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.preparetexforhtml.html" class="internal-link" title="cocopp.preparetexforhtml">preparetexforhtml</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.html" class="internal-link" title="cocopp.readalign">readalign</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.rungeneric.html" class="internal-link" title="cocopp.rungeneric">rungeneric</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.rungeneric1.html" class="internal-link" title="cocopp.rungeneric1">rungeneric1</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.rungenericmany.html" class="internal-link" title="cocopp.rungenericmany">rungenericmany</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.sanitycheck.html" class="internal-link" title="cocopp.sanitycheck">sanitycheck</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.test.html" class="internal-link" title="cocopp.test">test</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.testbedsettings.html" class="internal-link" title="cocopp.testbedsettings">testbedsettings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.toolsdivers.html" class="internal-link" title="cocopp.toolsdivers">toolsdivers</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.toolsstats.html" class="internal-link" title="cocopp.toolsstats">toolsstats</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.__main__.html" class="internal-link" title="cocopp.__main__">__main__</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp._version.html" class="internal-link" title="cocopp._version">_version</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.Interface.html" class="internal-link" title="cocopp.Interface"><wbr></wbr>Interface</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
       </div>
 
-      <div class="moduleDocstring">
-        <div>Routines for writing TeX for tables.</div>
-      </div>
+      <div id="main" class="">
+        
 
-      <div id="splitTables">
-        <table class="children sortable" id="id100">
+        
+
+        <div class="page-header">
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">cocopp</a></code><wbr></wbr>.<code><a href="cocopp.pptex.html" class="internal-link" title="cocopp.pptex">pptex</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          module documentation
+        </div>
+
+        <div class="extrasDocstring">
+          
+          <p></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>Routines for writing TeX for tables.</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id84">
   
   
   <tr class="class">
     
     <td>Class</td>
-    <td><code><a href="cocopp.pptex.DataTable.html" class="internal-link" title="cocopp.pptex.DataTable">​Data​Table</a></code></td>
+    <td><code><a href="cocopp.pptex.DataTable.html" class="internal-link" title="cocopp.pptex.DataTable"><wbr></wbr>Data<wbr></wbr>Table</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
-  </tr><tr class="class">
+  </tr><tr class="exception">
     
-    <td>Class</td>
-    <td><code><a href="cocopp.pptex.Error.html" class="internal-link" title="cocopp.pptex.Error">​Error</a></code></td>
+    <td>Exception</td>
+    <td><code><a href="cocopp.pptex.Error.html" class="internal-link" title="cocopp.pptex.Error"><wbr></wbr>Error</a></code></td>
     <td>Base class for errors.</td>
-  </tr><tr class="class">
+  </tr><tr class="exception">
     
-    <td>Class</td>
-    <td><code><a href="cocopp.pptex.WrongInputSizeError.html" class="internal-link" title="cocopp.pptex.WrongInputSizeError">​Wrong​Input​Size​Error</a></code></td>
+    <td>Exception</td>
+    <td><code><a href="cocopp.pptex.WrongInputSizeError.html" class="internal-link" title="cocopp.pptex.WrongInputSizeError"><wbr></wbr>Wrong<wbr></wbr>Input<wbr></wbr>Size<wbr></wbr>Error</a></code></td>
     <td>Error if an array has the wrong size for the following operation.</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#color_to_latex" class="internal-link" title="cocopp.pptex.color_to_latex">color​_to​_latex</a></code></td>
+    <td><code><a href="#color_to_latex" class="internal-link" title="cocopp.pptex.color_to_latex">color<wbr></wbr>_to<wbr></wbr>_latex</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#marker_to_html" class="internal-link" title="cocopp.pptex.marker_to_html">marker​_to​_html</a></code></td>
+    <td><code><a href="#marker_to_html" class="internal-link" title="cocopp.pptex.marker_to_html">marker<wbr></wbr>_to<wbr></wbr>_html</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#marker_to_latex" class="internal-link" title="cocopp.pptex.marker_to_latex">marker​_to​_latex</a></code></td>
+    <td><code><a href="#marker_to_latex" class="internal-link" title="cocopp.pptex.marker_to_latex">marker<wbr></wbr>_to<wbr></wbr>_latex</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function">
     
@@ -115,42 +910,42 @@
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#tableLaTeX" class="internal-link" title="cocopp.pptex.tableLaTeX">table​La​Te​X</a></code></td>
+    <td><code><a href="#tableLaTeX" class="internal-link" title="cocopp.pptex.tableLaTeX">table<wbr></wbr>La<wbr></wbr>Te<wbr></wbr>X</a></code></td>
     <td>Generates a tabular from a sequence of sequence of strings.</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#tableLaTeXStar" class="internal-link" title="cocopp.pptex.tableLaTeXStar">table​La​Te​XStar</a></code></td>
+    <td><code><a href="#tableLaTeXStar" class="internal-link" title="cocopp.pptex.tableLaTeXStar">table<wbr></wbr>La<wbr></wbr>Te<wbr></wbr>XStar</a></code></td>
     <td>Generates a tabular* from a sequence of sequence of strings</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#tableXLaTeX" class="internal-link" title="cocopp.pptex.tableXLaTeX">table​XLa​Te​X</a></code></td>
+    <td><code><a href="#tableXLaTeX" class="internal-link" title="cocopp.pptex.tableXLaTeX">table<wbr></wbr>XLa<wbr></wbr>Te<wbr></wbr>X</a></code></td>
     <td>Generates a tabular from a sequence of sequence of strings.</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#writeFEvals" class="internal-link" title="cocopp.pptex.writeFEvals">write​FEvals</a></code></td>
+    <td><code><a href="#writeFEvals" class="internal-link" title="cocopp.pptex.writeFEvals">write<wbr></wbr>FEvals</a></code></td>
     <td>Returns string representation of a number of function evaluations.</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#writeFEvals2" class="internal-link" title="cocopp.pptex.writeFEvals2">write​FEvals2</a></code></td>
+    <td><code><a href="#writeFEvals2" class="internal-link" title="cocopp.pptex.writeFEvals2">write<wbr></wbr>FEvals2</a></code></td>
     <td>Returns string representation of a number of function evaluations.</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#writeFEvalsMaxPrec" class="internal-link" title="cocopp.pptex.writeFEvalsMaxPrec">write​FEvals​Max​Prec</a></code></td>
+    <td><code><a href="#writeFEvalsMaxPrec" class="internal-link" title="cocopp.pptex.writeFEvalsMaxPrec">write<wbr></wbr>FEvals<wbr></wbr>Max<wbr></wbr>Prec</a></code></td>
     <td>Return a string representation of a number.</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#writeFEvalsMaxSymbols" class="internal-link" title="cocopp.pptex.writeFEvalsMaxSymbols">write​FEvals​Max​Symbols</a></code></td>
+    <td><code><a href="#writeFEvalsMaxSymbols" class="internal-link" title="cocopp.pptex.writeFEvalsMaxSymbols">write<wbr></wbr>FEvals<wbr></wbr>Max<wbr></wbr>Symbols</a></code></td>
     <td>Return the smallest string representation of a number.</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#writeLabels" class="internal-link" title="cocopp.pptex.writeLabels">write​Labels</a></code></td>
+    <td><code><a href="#writeLabels" class="internal-link" title="cocopp.pptex.writeLabels">write<wbr></wbr>Labels</a></code></td>
     <td>Format text to be output by LaTeX.</td>
   </tr><tr class="variable">
     
@@ -160,33 +955,32 @@
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#html_marker_map" class="internal-link" title="cocopp.pptex.html_marker_map">html​_marker​_map</a></code></td>
+    <td><code><a href="#html_marker_map" class="internal-link" title="cocopp.pptex.html_marker_map">html<wbr></wbr>_marker<wbr></wbr>_map</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#latex_color_map" class="internal-link" title="cocopp.pptex.latex_color_map">latex​_color​_map</a></code></td>
+    <td><code><a href="#latex_color_map" class="internal-link" title="cocopp.pptex.latex_color_map">latex<wbr></wbr>_color<wbr></wbr>_map</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#latex_color_map_old" class="internal-link" title="cocopp.pptex.latex_color_map_old">latex​_color​_map​_old</a></code></td>
+    <td><code><a href="#latex_color_map_old" class="internal-link" title="cocopp.pptex.latex_color_map_old">latex<wbr></wbr>_color<wbr></wbr>_map<wbr></wbr>_old</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#latex_marker_map" class="internal-link" title="cocopp.pptex.latex_marker_map">latex​_marker​_map</a></code></td>
+    <td><code><a href="#latex_marker_map" class="internal-link" title="cocopp.pptex.latex_marker_map">latex<wbr></wbr>_marker<wbr></wbr>_map</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
-        
-
           
-      </div>
 
-      <div id="childList">
+            
+        </div>
 
-        <div class="basefunction">
+        <div id="childList">
+          <div class="basefunction">
   
   
   <a name="cocopp.pptex.color_to_latex">
@@ -197,11 +991,16 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">color_to_latex</span>(color):
     
+    <span class="py-keyword">def</span> <span class="py-defname">color_to_latex</span><span class="function-signature">(color)</span>:
+    
+    <a class="headerLink" href="#color_to_latex" title="cocopp.pptex.color_to_latex">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -216,11 +1015,16 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">marker_to_html</span>(marker):
     
+    <span class="py-keyword">def</span> <span class="py-defname">marker_to_html</span><span class="function-signature">(marker)</span>:
+    
+    <a class="headerLink" href="#marker_to_html" title="cocopp.pptex.marker_to_html">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -235,11 +1039,16 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">marker_to_latex</span>(marker):
     
+    <span class="py-keyword">def</span> <span class="py-defname">marker_to_latex</span><span class="function-signature">(marker)</span>:
+    
+    <a class="headerLink" href="#marker_to_latex" title="cocopp.pptex.marker_to_latex">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -254,11 +1063,16 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">numtotext</span>(n):
     
+    <span class="py-keyword">def</span> <span class="py-defname">numtotext</span><span class="function-signature">(n)</span>:
+    
+    <a class="headerLink" href="#numtotext" title="cocopp.pptex.numtotext">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Returns a text from a positive integer.</p>
 <p>Is to be used for generating command names: they cannot include number
@@ -277,16 +1091,21 @@ characters.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">tableLaTeX</span>(table, spec, extra_eol=(), add_begin_tabular=True, add_end_tabular=True):
     
+    <span class="py-keyword">def</span> <span class="py-defname">tableLaTeX</span><span class="function-signature">(table, spec, extra_eol=(), add_begin_tabular=True, add_end_tabular=True)</span>:
+    
+    <a class="headerLink" href="#tableLaTeX" title="cocopp.pptex.tableLaTeX">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     
-    
-    <div>Generates a tabular from a sequence of sequence of strings.<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">table</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">spec</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">extra​_eol</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">add​_begin​_tabular</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">add​_end​_tabular</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">seq table</span></td><td class="fieldArgDesc">sequence of sequence of strings</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">string spec</span></td><td class="fieldArgDesc">string for table specification, see
-<a class="rst-reference external" href="http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular_environment" target="_top">http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular_environment</a></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">seq extra​_eol</span></td><td class="fieldArgDesc">sequence of string the same length as the table
+    <div><p>Generates a tabular from a sequence of sequence of strings.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">table</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">spec</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">extra<wbr></wbr>_eol</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">add<wbr></wbr>_begin<wbr></wbr>_tabular</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">add<wbr></wbr>_end<wbr></wbr>_tabular</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">seq table</span></td><td class="fieldArgDesc">sequence of sequence of strings</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">string spec</span></td><td class="fieldArgDesc">string for table specification, see
+<a class="rst-reference external" href="http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular_environment" target="_top">http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular_environment</a></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">seq extra<wbr></wbr>_eol</span></td><td class="fieldArgDesc">sequence of string the same length as the table
 (same number of lines) which are added at the
-end of each line.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bool add​_begin​_tabular</span></td><td class="fieldArgDesc">bool value that specifies if begin tabular is added.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bool add​_end​_tabular</span></td><td class="fieldArgDesc">bool value that specifies if end tabular is added.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">sequence of strings of a LaTeX tabular.</td></tr></table></div>
+end of each line.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bool add<wbr></wbr>_begin<wbr></wbr>_tabular</span></td><td class="fieldArgDesc">bool value that specifies if begin tabular is added.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bool add<wbr></wbr>_end<wbr></wbr>_tabular</span></td><td class="fieldArgDesc">bool value that specifies if end tabular is added.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">sequence of strings of a LaTeX tabular.</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -299,13 +1118,18 @@ end of each line.</td></tr><tr><td class="fieldArgContainer"><span class="fieldA
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">tableLaTeXStar</span>(table, width, spec, extraeol=()):
     
+    <span class="py-keyword">def</span> <span class="py-defname">tableLaTeXStar</span><span class="function-signature">(table, width, spec, extraeol=())</span>:
+    
+    <a class="headerLink" href="#tableLaTeXStar" title="cocopp.pptex.tableLaTeXStar">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     
-    
-    <div>Generates a tabular* from a sequence of sequence of strings<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">table</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">width</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">spec</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">extraeol</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">seq table</span></td><td class="fieldArgDesc">sequence of sequence of strings</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">string width</span></td><td class="fieldArgDesc">string for the width of the table</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">strin spec</span></td><td class="fieldArgDesc">string for table specification, see
+    <div><p>Generates a tabular* from a sequence of sequence of strings</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">table</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">width</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">spec</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">extraeol</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">seq table</span></td><td class="fieldArgDesc">sequence of sequence of strings</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">string width</span></td><td class="fieldArgDesc">string for the width of the table</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">strin spec</span></td><td class="fieldArgDesc">string for table specification, see
 <a class="rst-reference external" href="http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular_environment" target="_top">http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular_environment</a></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">seq extraeol</span></td><td class="fieldArgDesc">sequence of string the same length as the table
 (same number of lines) which are added at the
 end of each line.</td></tr></table></div>
@@ -321,16 +1145,21 @@ end of each line.</td></tr></table></div>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">tableXLaTeX</span>(table, spec, extra_eol=(), add_begin_tabular=True, add_end_tabular=True):
     
+    <span class="py-keyword">def</span> <span class="py-defname">tableXLaTeX</span><span class="function-signature">(table, spec, extra_eol=(), add_begin_tabular=True, add_end_tabular=True)</span>:
+    
+    <a class="headerLink" href="#tableXLaTeX" title="cocopp.pptex.tableXLaTeX">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     
-    
-    <div>Generates a tabular from a sequence of sequence of strings.<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">table</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">spec</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">extra​_eol</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">add​_begin​_tabular</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">add​_end​_tabular</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">seq table</span></td><td class="fieldArgDesc">sequence of sequence of strings</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">string spec</span></td><td class="fieldArgDesc">string for table specification, see
-<a class="rst-reference external" href="http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular_environment" target="_top">http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular_environment</a></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">seq extra​_eol</span></td><td class="fieldArgDesc">sequence of string the same length as the table
+    <div><p>Generates a tabular from a sequence of sequence of strings.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">table</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">spec</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">extra<wbr></wbr>_eol</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">add<wbr></wbr>_begin<wbr></wbr>_tabular</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">add<wbr></wbr>_end<wbr></wbr>_tabular</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">seq table</span></td><td class="fieldArgDesc">sequence of sequence of strings</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">string spec</span></td><td class="fieldArgDesc">string for table specification, see
+<a class="rst-reference external" href="http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular_environment" target="_top">http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular_environment</a></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">seq extra<wbr></wbr>_eol</span></td><td class="fieldArgDesc">sequence of string the same length as the table
 (same number of lines) which are added at the
-end of each line.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bool add​_begin​_tabular</span></td><td class="fieldArgDesc">bool value that specifies if begin tabular is added.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bool add​_end​_tabular</span></td><td class="fieldArgDesc">bool value that specifies if end tabular is added.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">sequence of strings of a LaTeX tabular.</td></tr></table></div>
+end of each line.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bool add<wbr></wbr>_begin<wbr></wbr>_tabular</span></td><td class="fieldArgDesc">bool value that specifies if begin tabular is added.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bool add<wbr></wbr>_end<wbr></wbr>_tabular</span></td><td class="fieldArgDesc">bool value that specifies if end tabular is added.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">sequence of strings of a LaTeX tabular.</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -343,13 +1172,18 @@ end of each line.</td></tr><tr><td class="fieldArgContainer"><span class="fieldA
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">writeFEvals</span>(fevals, precision=<span class="rst-variable-quote">'</span><span class="rst-variable-string">.2</span><span class="rst-variable-quote">'</span>):
     
+    <span class="py-keyword">def</span> <span class="py-defname">writeFEvals</span><span class="function-signature">(fevals, precision=<span class="rst-variable-quote">'</span><span class="rst-variable-string">.2</span><span class="rst-variable-quote">'</span>)</span>:
+    
+    <a class="headerLink" href="#writeFEvals" title="cocopp.pptex.writeFEvals">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     
-    
-    <div>Returns string representation of a number of function evaluations.</div>
+    <div><p>Returns string representation of a number of function evaluations.</p></div>
   </div>
 </div><div class="basefunction">
   
@@ -362,11 +1196,16 @@ end of each line.</td></tr><tr><td class="fieldArgContainer"><span class="fieldA
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">writeFEvals2</span>(fevals, precision=2, maxdigits=None, isscientific=False):
     
+    <span class="py-keyword">def</span> <span class="py-defname">writeFEvals2</span><span class="function-signature">(fevals, precision=2, maxdigits=None, isscientific=False)</span>:
+    
+    <a class="headerLink" href="#writeFEvals2" title="cocopp.pptex.writeFEvals2">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Returns string representation of a number of function evaluations.</p>
 <p>This method is supposed to be used for filling up a LaTeX tabular.</p>
@@ -406,11 +1245,16 @@ the full representation and a modified scientific representation.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">writeFEvalsMaxPrec</span>(entry, SIG, maxfloatrepr=100000.0):
     
+    <span class="py-keyword">def</span> <span class="py-defname">writeFEvalsMaxPrec</span><span class="function-signature">(entry, SIG, maxfloatrepr=100000.0)</span>:
+    
+    <a class="headerLink" href="#writeFEvalsMaxPrec" title="cocopp.pptex.writeFEvalsMaxPrec">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Return a string representation of a number.</p>
 <p>Two alternatives:</p>
@@ -435,11 +1279,16 @@ or ERT.</td></tr></table></div>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">writeFEvalsMaxSymbols</span>(fevals, maxsymbols, isscientific=False):
     
+    <span class="py-keyword">def</span> <span class="py-defname">writeFEvalsMaxSymbols</span><span class="function-signature">(fevals, maxsymbols, isscientific=False)</span>:
+    
+    <a class="headerLink" href="#writeFEvalsMaxSymbols" title="cocopp.pptex.writeFEvalsMaxSymbols">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Return the smallest string representation of a number.</p>
 <p>This method is only concerned with the maximum number of significant
@@ -464,13 +1313,18 @@ or ERT.</td></tr></table></div>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">writeLabels</span>(label):
     
+    <span class="py-keyword">def</span> <span class="py-defname">writeLabels</span><span class="function-signature">(label)</span>:
+    
+    <a class="headerLink" href="#writeLabels" title="cocopp.pptex.writeLabels">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     
-    
-    <div>Format text to be output by LaTeX.</div>
+    <div><p>Format text to be output by LaTeX.</p></div>
   </div>
 </div><div class="basevariable">
   
@@ -485,9 +1339,13 @@ or ERT.</td></tr></table></div>
     
     <span class="py-defname">alphabet</span>: <code>str</code> =
     
+    <a class="headerLink" href="#alphabet" title="cocopp.pptex.alphabet">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -505,9 +1363,13 @@ or ERT.</td></tr></table></div>
     
     <span class="py-defname">html_marker_map</span>: <code>dict[<wbr></wbr>str, <wbr></wbr>str]</code> =
     
+    <a class="headerLink" href="#html_marker_map" title="cocopp.pptex.html_marker_map">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -525,9 +1387,13 @@ or ERT.</td></tr></table></div>
     
     <span class="py-defname">latex_color_map</span>: <code>dict[<wbr></wbr>str, <wbr></wbr>str]</code> =
     
+    <a class="headerLink" href="#latex_color_map" title="cocopp.pptex.latex_color_map">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -545,9 +1411,13 @@ or ERT.</td></tr></table></div>
     
     <span class="py-defname">latex_color_map_old</span>: <code>dict[<wbr></wbr>str, <wbr></wbr>str]</code> =
     
+    <a class="headerLink" href="#latex_color_map_old" title="cocopp.pptex.latex_color_map_old">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -565,27 +1435,40 @@ or ERT.</td></tr></table></div>
     
     <span class="py-defname">latex_marker_map</span>: <code>dict[<wbr></wbr>str, <wbr></wbr>str]</code> =
     
+    <a class="headerLink" href="#latex_marker_map" title="cocopp.pptex.latex_marker_map">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
   </div>
 </div>
-
+        </div>
+      
       </div>
     </div>
 
     <footer class="navbar navbar-default">
+
   
   <div class="container">
     <a href="index.html">API Documentation</a> for cocopp,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.2.1 at 2022-03-01 09:40:36.
+    23.9.1 at 2024-07-11 01:05:24.
   </div>
-</footer>
 
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
     <script src="pydoctor.js" type="text/javascript"></script>
 
   </body>

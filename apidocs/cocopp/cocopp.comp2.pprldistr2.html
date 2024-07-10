@@ -7,11 +7,11 @@
   <head>
     
     <title>cocopp.comp2.pprldistr2</title>
-    <meta name="generator" content="pydoctor 22.2.1"> 
+    <meta name="generator" content="pydoctor 23.9.1"> 
         
     </meta>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.75" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="apidocs.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
@@ -21,60 +21,339 @@
 
     
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default mainnavbar">
+      
   
-  <div class="container">
+  <div class="container-fluid">
+
 
     <div class="navbar-header">
       
       <div class="navlinks">
-          <span class="navbar-brand">
-            cocopp <a href="index.html">API Documentation</a>
-          </span>
+        <span class="navbar-brand">
+          cocopp <a href="index.html">API Documentation</a>
+        </span>
 
-          <a href="moduleIndex.html">
-            Modules
-          </a>
+        <a href="moduleIndex.html">
+          Modules
+        </a>
 
-          <a href="classIndex.html">
-            Classes
-          </a>
+        <a href="classIndex.html">
+          Classes
+        </a>
 
-          <a href="nameIndex.html">
-            Names
-          </a>
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
       </div>
 
-    </div>
-  </div>
-</nav>
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
 
-    
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
 
-    <div class="container">
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
 
-      <div class="page-header">
-        <h1 class="module"><code><code><a href="index.html" class="internal-link">cocopp</a></code><wbr></wbr>.<code><a href="cocopp.comp2.html" class="internal-link" title="cocopp.comp2">comp2</a></code><wbr></wbr>.<code><a href="cocopp.comp2.pprldistr2.html" class="internal-link" title="cocopp.comp2.pprldistr2">pprldistr2</a></code></code></h1>
-        <div id="showPrivate">
-          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
         </div>
       </div>
 
-      <div class="categoryHeader">
-        module documentation
-      </div>
+    </div>
 
-      <div class="extrasDocstring">
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
         
-        <p></p>
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code class="thisobject"><a href="cocopp.comp2.pprldistr2.html" class="internal-link" title="This module">pprldistr2</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#beautify" class="internal-link" title="cocopp.comp2.pprldistr2.beautify">beautify</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#computeERT" class="internal-link" title="cocopp.comp2.pprldistr2.computeERT">compute<wbr></wbr>ERT</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#main" class="internal-link" title="cocopp.comp2.pprldistr2.main">main</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#plotLogAbs" class="internal-link" title="cocopp.comp2.pprldistr2.plotLogAbs">plot<wbr></wbr>Log<wbr></wbr>Abs</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#plotLogRel" class="internal-link" title="cocopp.comp2.pprldistr2.plotLogRel">plot<wbr></wbr>Log<wbr></wbr>Rel</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#evalfmax" class="internal-link" title="cocopp.comp2.pprldistr2.evalfmax">evalfmax</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#fmax" class="internal-link" title="cocopp.comp2.pprldistr2.fmax">fmax</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#rldStyles" class="internal-link" title="cocopp.comp2.pprldistr2.rldStyles">rld<wbr></wbr>Styles</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="cocopp.comp2.html" class="internal-link" title="The parent of this module">comp2</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.comp2.ppfig2.html" class="internal-link" title="cocopp.comp2.ppfig2">ppfig2</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.comp2.pprldistr2.html" class="internal-link" title="cocopp.comp2.pprldistr2">pprldistr2</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.comp2.ppscatter.html" class="internal-link" title="cocopp.comp2.ppscatter">ppscatter</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+        
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
       </div>
 
-      <div class="moduleDocstring">
-        <div>Creates run length distribution figures for the comparison of 2 algorithms.</div>
-      </div>
+      <div id="main" class="">
+        
 
-      <div id="splitTables">
-        <table class="children sortable" id="id39">
+        
+
+        <div class="page-header">
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">cocopp</a></code><wbr></wbr>.<code><a href="cocopp.comp2.html" class="internal-link" title="cocopp.comp2">comp2</a></code><wbr></wbr>.<code><a href="cocopp.comp2.pprldistr2.html" class="internal-link" title="cocopp.comp2.pprldistr2">pprldistr2</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          module documentation
+        </div>
+
+        <div class="extrasDocstring">
+          
+          <p></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>Creates run length distribution figures for the comparison of 2 algorithms.</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id41">
   
   
   <tr class="function">
@@ -85,7 +364,7 @@
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#computeERT" class="internal-link" title="cocopp.comp2.pprldistr2.computeERT">compute​ERT</a></code></td>
+    <td><code><a href="#computeERT" class="internal-link" title="cocopp.comp2.pprldistr2.computeERT">compute<wbr></wbr>ERT</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function">
     
@@ -95,12 +374,12 @@
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#plotLogAbs" class="internal-link" title="cocopp.comp2.pprldistr2.plotLogAbs">plot​Log​Abs</a></code></td>
+    <td><code><a href="#plotLogAbs" class="internal-link" title="cocopp.comp2.pprldistr2.plotLogAbs">plot<wbr></wbr>Log<wbr></wbr>Abs</a></code></td>
     <td>Creates ECDF of run length ratios.</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#plotLogRel" class="internal-link" title="cocopp.comp2.pprldistr2.plotLogRel">plot​Log​Rel</a></code></td>
+    <td><code><a href="#plotLogRel" class="internal-link" title="cocopp.comp2.pprldistr2.plotLogRel">plot<wbr></wbr>Log<wbr></wbr>Rel</a></code></td>
     <td>Creates one run length distribution from a sequence of indexEntries.</td>
   </tr><tr class="variable">
     
@@ -115,18 +394,17 @@
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#rldStyles" class="internal-link" title="cocopp.comp2.pprldistr2.rldStyles">rld​Styles</a></code></td>
+    <td><code><a href="#rldStyles" class="internal-link" title="cocopp.comp2.pprldistr2.rldStyles">rld<wbr></wbr>Styles</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
-        
-
           
-      </div>
 
-      <div id="childList">
+            
+        </div>
 
-        <div class="basefunction">
+        <div id="childList">
+          <div class="basefunction">
   
   
   <a name="cocopp.comp2.pprldistr2.beautify">
@@ -137,13 +415,18 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">beautify</span>(handles):
     
+    <span class="py-keyword">def</span> <span class="py-defname">beautify</span><span class="function-signature">(handles)</span>:
+    
+    <a class="headerLink" href="#beautify" title="cocopp.comp2.pprldistr2.beautify">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     
-    
-    <div>Format the figure of the run length distribution.</div>
+    <div><p>Format the figure of the run length distribution.</p></div>
   </div>
 </div><div class="basefunction">
   
@@ -156,11 +439,16 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">computeERT</span>(fevals, maxevals):
     
+    <span class="py-keyword">def</span> <span class="py-defname">computeERT</span><span class="function-signature">(fevals, maxevals)</span>:
+    
+    <a class="headerLink" href="#computeERT" title="cocopp.comp2.pprldistr2.computeERT">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -175,17 +463,22 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">main</span>(dsList0, dsList1, dim, targetsOfInterest=None, outputdir=<span class="rst-variable-quote">'</span><span class="rst-variable-string"></span><span class="rst-variable-quote">'</span>, info=<span class="rst-variable-quote">'</span><span class="rst-variable-string">default</span><span class="rst-variable-quote">'</span>):
     
+    <span class="py-keyword">def</span> <span class="py-defname">main</span><span class="function-signature">(dsList0, dsList1, dim, targetsOfInterest=None, outputdir=<span class="rst-variable-quote">'</span><span class="rst-variable-string"></span><span class="rst-variable-quote">'</span>, info=<span class="rst-variable-quote">'</span><span class="rst-variable-string">default</span><span class="rst-variable-quote">'</span>)</span>:
+    
+    <a class="headerLink" href="#main" title="cocopp.comp2.pprldistr2.main">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Generate figures of empirical cumulative distribution functions.</p>
 <p>Outputs:
 Image files of the empirical cumulative distribution functions.</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ds​List0</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ds​List1</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dim</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">targets​Of​Interest</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">outputdir</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">info</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">​Data​Set​List ds​List0</span></td><td class="fieldArgDesc">data set of reference algorithm</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">​Data​Set​List ds​List1</span></td><td class="fieldArgDesc">data set of algorithm of concern</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">int dim</span></td><td class="fieldArgDesc">dimension</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">​Target​Values targets​Of​Interest</span></td><td class="fieldArgDesc">target function values to be
-displayed</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bool is​Storing​XMax</span></td><td class="fieldArgDesc">if set to True, the first call BeautifyVD
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ds<wbr></wbr>List0</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ds<wbr></wbr>List1</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dim</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">targets<wbr></wbr>Of<wbr></wbr>Interest</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">outputdir</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">info</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg"><wbr></wbr>Data<wbr></wbr>Set<wbr></wbr>List ds<wbr></wbr>List0</span></td><td class="fieldArgDesc">data set of reference algorithm</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg"><wbr></wbr>Data<wbr></wbr>Set<wbr></wbr>List ds<wbr></wbr>List1</span></td><td class="fieldArgDesc">data set of algorithm of concern</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">int dim</span></td><td class="fieldArgDesc">dimension</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg"><wbr></wbr>Target<wbr></wbr>Values targets<wbr></wbr>Of<wbr></wbr>Interest</span></td><td class="fieldArgDesc">target function values to be
+displayed</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bool is<wbr></wbr>Storing<wbr></wbr>XMax</span></td><td class="fieldArgDesc">if set to True, the first call BeautifyVD
 sets the globals <code><a href="#fmax" class="internal-link" title="cocopp.comp2.pprldistr2.fmax">fmax</a></code> and
 <code>maxEvals</code> and all subsequent
 calls will use these values as rightmost
@@ -202,13 +495,18 @@ xlim in the generated figures.</td></tr><tr><td class="fieldArgContainer"><span 
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">plotLogAbs</span>(dsList0, dsList1, dim, targetValuesToReach):
     
+    <span class="py-keyword">def</span> <span class="py-defname">plotLogAbs</span><span class="function-signature">(dsList0, dsList1, dim, targetValuesToReach)</span>:
+    
+    <a class="headerLink" href="#plotLogAbs" title="cocopp.comp2.pprldistr2.plotLogAbs">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     
-    
-    <div>Creates ECDF of run length ratios.<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ds​List0</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ds​List1</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dim</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">target​Values​To​Reach</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">​Data​Set​List ds​List0</span></td><td class="fieldArgDesc">reference</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">​Data​Set​List ds​List1</span></td><td class="fieldArgDesc">data set list of algorithm of interest</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">int dim</span></td><td class="fieldArgDesc">dimension</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">​Target​Values target​Values​To​Reach</span></td><td class="fieldArgDesc">target function values</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">handles</td></tr></table></div>
+    <div><p>Creates ECDF of run length ratios.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ds<wbr></wbr>List0</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ds<wbr></wbr>List1</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dim</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">target<wbr></wbr>Values<wbr></wbr>To<wbr></wbr>Reach</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg"><wbr></wbr>Data<wbr></wbr>Set<wbr></wbr>List ds<wbr></wbr>List0</span></td><td class="fieldArgDesc">reference</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg"><wbr></wbr>Data<wbr></wbr>Set<wbr></wbr>List ds<wbr></wbr>List1</span></td><td class="fieldArgDesc">data set list of algorithm of interest</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">int dim</span></td><td class="fieldArgDesc">dimension</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg"><wbr></wbr>Target<wbr></wbr>Values target<wbr></wbr>Values<wbr></wbr>To<wbr></wbr>Reach</span></td><td class="fieldArgDesc">target function values</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">handles</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -221,11 +519,16 @@ xlim in the generated figures.</td></tr><tr><td class="fieldArgContainer"><span 
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">plotLogRel</span>(indexEntries0, indexEntries1, isByInstance=True):
     
+    <span class="py-keyword">def</span> <span class="py-defname">plotLogRel</span><span class="function-signature">(indexEntries0, indexEntries1, isByInstance=True)</span>:
+    
+    <a class="headerLink" href="#plotLogRel" title="cocopp.comp2.pprldistr2.plotLogRel">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Creates one run length distribution from a sequence of indexEntries.</p>
 <p>The function and dimension are given.
@@ -252,9 +555,13 @@ funcs -- number of different function considered.</p>
     
     <span class="py-defname">evalfmax</span> =
     
+    <a class="headerLink" href="#evalfmax" title="cocopp.comp2.pprldistr2.evalfmax">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -272,9 +579,13 @@ funcs -- number of different function considered.</p>
     
     <span class="py-defname">fmax</span> =
     
+    <a class="headerLink" href="#fmax" title="cocopp.comp2.pprldistr2.fmax">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -292,27 +603,40 @@ funcs -- number of different function considered.</p>
     
     <span class="py-defname">rldStyles</span>: <code>tuple</code> =
     
+    <a class="headerLink" href="#rldStyles" title="cocopp.comp2.pprldistr2.rldStyles">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
   </div>
 </div>
-
+        </div>
+      
       </div>
     </div>
 
     <footer class="navbar navbar-default">
+
   
   <div class="container">
     <a href="index.html">API Documentation</a> for cocopp,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.2.1 at 2022-03-01 09:40:36.
+    23.9.1 at 2024-07-11 01:05:24.
   </div>
-</footer>
 
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
     <script src="pydoctor.js" type="text/javascript"></script>
 
   </body>

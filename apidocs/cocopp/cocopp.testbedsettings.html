@@ -7,11 +7,11 @@
   <head>
     
     <title>cocopp.testbedsettings</title>
-    <meta name="generator" content="pydoctor 22.2.1"> 
+    <meta name="generator" content="pydoctor 23.9.1"> 
         
     </meta>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.75" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="apidocs.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
@@ -21,332 +21,1506 @@
 
     
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default mainnavbar">
+      
   
-  <div class="container">
+  <div class="container-fluid">
+
 
     <div class="navbar-header">
       
       <div class="navlinks">
-          <span class="navbar-brand">
-            cocopp <a href="index.html">API Documentation</a>
-          </span>
+        <span class="navbar-brand">
+          cocopp <a href="index.html">API Documentation</a>
+        </span>
 
-          <a href="moduleIndex.html">
-            Modules
-          </a>
+        <a href="moduleIndex.html">
+          Modules
+        </a>
 
-          <a href="classIndex.html">
-            Classes
-          </a>
+        <a href="classIndex.html">
+          Classes
+        </a>
 
-          <a href="nameIndex.html">
-            Names
-          </a>
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
       </div>
 
-    </div>
-  </div>
-</nav>
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
 
-    
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
 
-    <div class="container">
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
 
-      <div class="page-header">
-        <h1 class="module"><code><code><a href="index.html" class="internal-link">cocopp</a></code><wbr></wbr>.<code><a href="cocopp.testbedsettings.html" class="internal-link" title="cocopp.testbedsettings">testbedsettings</a></code></code></h1>
-        <div id="showPrivate">
-          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
         </div>
       </div>
 
-      <div class="categoryHeader">
-        module documentation
-      </div>
+    </div>
 
-      <div class="extrasDocstring">
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
         
-        <p></p>
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code class="thisobject"><a href="cocopp.testbedsettings.html" class="internal-link" title="This module">testbedsettings</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.testbedsettings.BBOBLargeScaleJOINEDTestbed.html" class="internal-link" title="cocopp.testbedsettings.BBOBLargeScaleJOINEDTestbed"><wbr></wbr>BBOBLarge<wbr></wbr>Scale<wbr></wbr>JOINEDTestbed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.testbedsettings.BBOBLargeScaleTestbed.html" class="internal-link" title="cocopp.testbedsettings.BBOBLargeScaleTestbed"><wbr></wbr>BBOBLarge<wbr></wbr>Scale<wbr></wbr>Testbed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.testbedsettings.CONSBBOBTestbed.html" class="internal-link" title="cocopp.testbedsettings.CONSBBOBTestbed"><wbr></wbr>CONSBBOBTestbed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.testbedsettings.GECCOBBOBBiObjMixintTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBBOBBiObjMixintTestbed"><wbr></wbr>GECCOBBOBBi<wbr></wbr>Obj<wbr></wbr>Mixint<wbr></wbr>Testbed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.testbedsettings.GECCOBBOBMixintTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBBOBMixintTestbed"><wbr></wbr>GECCOBBOBMixint<wbr></wbr>Testbed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.testbedsettings.GECCOBBOBNoisyTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBBOBNoisyTestbed"><wbr></wbr>GECCOBBOBNoisy<wbr></wbr>Testbed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.testbedsettings.GECCOBBOBTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBBOBTestbed"><wbr></wbr>GECCOBBOBTestbed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.testbedsettings.GECCOBiObjBBOBTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBiObjBBOBTestbed"><wbr></wbr>GECCOBi<wbr></wbr>Obj<wbr></wbr>BBOBTestbed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.testbedsettings.GECCOBiObjExtBBOBTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBiObjExtBBOBTestbed"><wbr></wbr>GECCOBi<wbr></wbr>Obj<wbr></wbr>Ext<wbr></wbr>BBOBTestbed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.testbedsettings.SboxCostJOINEDTestbed.html" class="internal-link" title="cocopp.testbedsettings.SboxCostJOINEDTestbed"><wbr></wbr>Sbox<wbr></wbr>Cost<wbr></wbr>JOINEDTestbed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.testbedsettings.SBOXCOSTTestbed.html" class="internal-link" title="cocopp.testbedsettings.SBOXCOSTTestbed"><wbr></wbr>SBOXCOSTTestbed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.testbedsettings.Testbed.html" class="internal-link" title="cocopp.testbedsettings.Testbed"><wbr></wbr>Testbed</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#copy_reference_values" class="internal-link" title="cocopp.testbedsettings.copy_reference_values">copy<wbr></wbr>_reference<wbr></wbr>_values</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_first_reference_values" class="internal-link" title="cocopp.testbedsettings.get_first_reference_values">get<wbr></wbr>_first<wbr></wbr>_reference<wbr></wbr>_values</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_reference_values" class="internal-link" title="cocopp.testbedsettings.get_reference_values">get<wbr></wbr>_reference<wbr></wbr>_values</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_short_names" class="internal-link" title="cocopp.testbedsettings.get_short_names">get<wbr></wbr>_short<wbr></wbr>_names</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_testbed_from_suite" class="internal-link" title="cocopp.testbedsettings.get_testbed_from_suite">get<wbr></wbr>_testbed<wbr></wbr>_from<wbr></wbr>_suite</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#load_current_testbed" class="internal-link" title="cocopp.testbedsettings.load_current_testbed">load<wbr></wbr>_current<wbr></wbr>_testbed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#reset_current_testbed" class="internal-link" title="cocopp.testbedsettings.reset_current_testbed">reset<wbr></wbr>_current<wbr></wbr>_testbed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#reset_reference_values" class="internal-link" title="cocopp.testbedsettings.reset_reference_values">reset<wbr></wbr>_reference<wbr></wbr>_values</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#SuiteClass" class="internal-link" title="cocopp.testbedsettings.SuiteClass"><wbr></wbr>Suite<wbr></wbr>Class</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#update_reference_values" class="internal-link" title="cocopp.testbedsettings.update_reference_values">update<wbr></wbr>_reference<wbr></wbr>_values</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#all_scenarios" class="internal-link" title="cocopp.testbedsettings.all_scenarios">all<wbr></wbr>_scenarios</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#current_testbed" class="internal-link" title="cocopp.testbedsettings.current_testbed">current<wbr></wbr>_testbed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#default_suite_bi" class="internal-link" title="cocopp.testbedsettings.default_suite_bi">default<wbr></wbr>_suite<wbr></wbr>_bi</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#default_suite_single" class="internal-link" title="cocopp.testbedsettings.default_suite_single">default<wbr></wbr>_suite<wbr></wbr>_single</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#default_suite_single_noisy" class="internal-link" title="cocopp.testbedsettings.default_suite_single_noisy">default<wbr></wbr>_suite<wbr></wbr>_single<wbr></wbr>_noisy</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#default_testbed_bi" class="internal-link" title="cocopp.testbedsettings.default_testbed_bi">default<wbr></wbr>_testbed<wbr></wbr>_bi</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#default_testbed_bi_ext" class="internal-link" title="cocopp.testbedsettings.default_testbed_bi_ext">default<wbr></wbr>_testbed<wbr></wbr>_bi<wbr></wbr>_ext</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#default_testbed_cons" class="internal-link" title="cocopp.testbedsettings.default_testbed_cons">default<wbr></wbr>_testbed<wbr></wbr>_cons</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#default_testbed_ls" class="internal-link" title="cocopp.testbedsettings.default_testbed_ls">default<wbr></wbr>_testbed<wbr></wbr>_ls</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#default_testbed_mixint" class="internal-link" title="cocopp.testbedsettings.default_testbed_mixint">default<wbr></wbr>_testbed<wbr></wbr>_mixint</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#default_testbed_single" class="internal-link" title="cocopp.testbedsettings.default_testbed_single">default<wbr></wbr>_testbed<wbr></wbr>_single</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#default_testbed_single_noisy" class="internal-link" title="cocopp.testbedsettings.default_testbed_single_noisy">default<wbr></wbr>_testbed<wbr></wbr>_single<wbr></wbr>_noisy</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#inf_like" class="internal-link" title="cocopp.testbedsettings.inf_like">inf<wbr></wbr>_like</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#reference_values" class="internal-link" title="cocopp.testbedsettings.reference_values">reference<wbr></wbr>_values</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#scenario_biobjextfixed" class="internal-link" title="cocopp.testbedsettings.scenario_biobjextfixed">scenario<wbr></wbr>_biobjextfixed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#scenario_biobjfixed" class="internal-link" title="cocopp.testbedsettings.scenario_biobjfixed">scenario<wbr></wbr>_biobjfixed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#scenario_biobjmixintfixed" class="internal-link" title="cocopp.testbedsettings.scenario_biobjmixintfixed">scenario<wbr></wbr>_biobjmixintfixed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#scenario_biobjrlbased" class="internal-link" title="cocopp.testbedsettings.scenario_biobjrlbased">scenario<wbr></wbr>_biobjrlbased</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#scenario_constrainedfixed" class="internal-link" title="cocopp.testbedsettings.scenario_constrainedfixed">scenario<wbr></wbr>_constrainedfixed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#scenario_fixed" class="internal-link" title="cocopp.testbedsettings.scenario_fixed">scenario<wbr></wbr>_fixed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#scenario_largescalefixed" class="internal-link" title="cocopp.testbedsettings.scenario_largescalefixed">scenario<wbr></wbr>_largescalefixed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#scenario_mixintfixed" class="internal-link" title="cocopp.testbedsettings.scenario_mixintfixed">scenario<wbr></wbr>_mixintfixed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#scenario_rlbased" class="internal-link" title="cocopp.testbedsettings.scenario_rlbased">scenario<wbr></wbr>_rlbased</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#scenario_sboxcostfixed" class="internal-link" title="cocopp.testbedsettings.scenario_sboxcostfixed">scenario<wbr></wbr>_sboxcostfixed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#suite_name_bi" class="internal-link" title="cocopp.testbedsettings.suite_name_bi">suite<wbr></wbr>_name<wbr></wbr>_bi</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#suite_name_bi_ext" class="internal-link" title="cocopp.testbedsettings.suite_name_bi_ext">suite<wbr></wbr>_name<wbr></wbr>_bi<wbr></wbr>_ext</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#suite_name_bi_mixint" class="internal-link" title="cocopp.testbedsettings.suite_name_bi_mixint">suite<wbr></wbr>_name<wbr></wbr>_bi<wbr></wbr>_mixint</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#suite_name_cons" class="internal-link" title="cocopp.testbedsettings.suite_name_cons">suite<wbr></wbr>_name<wbr></wbr>_cons</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#suite_name_ls" class="internal-link" title="cocopp.testbedsettings.suite_name_ls">suite<wbr></wbr>_name<wbr></wbr>_ls</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#suite_name_mixint" class="internal-link" title="cocopp.testbedsettings.suite_name_mixint">suite<wbr></wbr>_name<wbr></wbr>_mixint</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#suite_name_sboxcost" class="internal-link" title="cocopp.testbedsettings.suite_name_sboxcost">suite<wbr></wbr>_name<wbr></wbr>_sboxcost</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#suite_name_single" class="internal-link" title="cocopp.testbedsettings.suite_name_single">suite<wbr></wbr>_name<wbr></wbr>_single</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#suite_name_single_noisy" class="internal-link" title="cocopp.testbedsettings.suite_name_single_noisy">suite<wbr></wbr>_name<wbr></wbr>_single<wbr></wbr>_noisy</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#suite_to_testbed" class="internal-link" title="cocopp.testbedsettings.suite_to_testbed">suite<wbr></wbr>_to<wbr></wbr>_testbed</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="index.html" class="internal-link" title="The parent of this module">cocopp</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.comp2.html" class="internal-link" title="cocopp.comp2">comp2</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.compall.html" class="internal-link" title="cocopp.compall">compall</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.algportfolio.html" class="internal-link" title="cocopp.algportfolio">algportfolio</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.archiving.html" class="internal-link" title="cocopp.archiving">archiving</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.bestalg.html" class="internal-link" title="cocopp.bestalg">bestalg</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.bwsettings.html" class="internal-link" title="cocopp.bwsettings">bwsettings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.captions.html" class="internal-link" title="cocopp.captions">captions</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.cococommands.html" class="internal-link" title="cocopp.cococommands">cococommands</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.config.html" class="internal-link" title="cocopp.config">config</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.dataformatsettings.html" class="internal-link" title="cocopp.dataformatsettings">dataformatsettings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.findfiles.html" class="internal-link" title="cocopp.findfiles">findfiles</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.firstsession.html" class="internal-link" title="cocopp.firstsession">firstsession</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.genericsettings.html" class="internal-link" title="cocopp.genericsettings">genericsettings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.grayscalesettings.html" class="internal-link" title="cocopp.grayscalesettings">grayscalesettings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.htmldesc.html" class="internal-link" title="cocopp.htmldesc">htmldesc</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.old_line_styles.html" class="internal-link" title="cocopp.old_line_styles">old<wbr></wbr>_line<wbr></wbr>_styles</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppconverrorbars.html" class="internal-link" title="cocopp.ppconverrorbars">ppconverrorbars</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppfig.html" class="internal-link" title="cocopp.ppfig">ppfig</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppfigcons1.html" class="internal-link" title="cocopp.ppfigcons1">ppfigcons1</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppfigdim.html" class="internal-link" title="cocopp.ppfigdim">ppfigdim</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppfigparam.html" class="internal-link" title="cocopp.ppfigparam">ppfigparam</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pplogloss.html" class="internal-link" title="cocopp.pplogloss">pplogloss</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pprldistr.html" class="internal-link" title="cocopp.pprldistr">pprldistr</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pprldistr2009_hardestRLB.html" class="internal-link" title="cocopp.pprldistr2009_hardestRLB">pprldistr2009_hardest<wbr></wbr>RLB</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.html" class="internal-link" title="cocopp.pproc">pproc</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.ppsingle.html" class="internal-link" title="cocopp.ppsingle">ppsingle</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pptable.html" class="internal-link" title="cocopp.pptable">pptable</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pptex.html" class="internal-link" title="cocopp.pptex">pptex</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.preparehtml.html" class="internal-link" title="cocopp.preparehtml">preparehtml</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.preparetexforhtml.html" class="internal-link" title="cocopp.preparetexforhtml">preparetexforhtml</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.readalign.html" class="internal-link" title="cocopp.readalign">readalign</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.rungeneric.html" class="internal-link" title="cocopp.rungeneric">rungeneric</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.rungeneric1.html" class="internal-link" title="cocopp.rungeneric1">rungeneric1</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.rungenericmany.html" class="internal-link" title="cocopp.rungenericmany">rungenericmany</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.sanitycheck.html" class="internal-link" title="cocopp.sanitycheck">sanitycheck</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.test.html" class="internal-link" title="cocopp.test">test</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.testbedsettings.html" class="internal-link" title="cocopp.testbedsettings">testbedsettings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.toolsdivers.html" class="internal-link" title="cocopp.toolsdivers">toolsdivers</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.toolsstats.html" class="internal-link" title="cocopp.toolsstats">toolsstats</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.__main__.html" class="internal-link" title="cocopp.__main__">__main__</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp._version.html" class="internal-link" title="cocopp._version">_version</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.Interface.html" class="internal-link" title="cocopp.Interface"><wbr></wbr>Interface</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
       </div>
 
-      <div class="moduleDocstring">
-        <div><p class="undocumented">Undocumented</p></div>
-      </div>
+      <div id="main" class="">
+        
 
-      <div id="splitTables">
-        <table class="children sortable" id="id134">
+        
+
+        <div class="page-header">
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">cocopp</a></code><wbr></wbr>.<code><a href="cocopp.testbedsettings.html" class="internal-link" title="cocopp.testbedsettings">testbedsettings</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          module documentation
+        </div>
+
+        <div class="extrasDocstring">
+          
+          <p></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id115">
   
   
   <tr class="class">
     
     <td>Class</td>
-    <td><code><a href="cocopp.testbedsettings.BBOBLargeScaleJOINEDTestbed.html" class="internal-link" title="cocopp.testbedsettings.BBOBLargeScaleJOINEDTestbed">​BBOBLarge​Scale​JOINEDTestbed</a></code></td>
+    <td><code><a href="cocopp.testbedsettings.BBOBLargeScaleJOINEDTestbed.html" class="internal-link" title="cocopp.testbedsettings.BBOBLargeScaleJOINEDTestbed"><wbr></wbr>BBOBLarge<wbr></wbr>Scale<wbr></wbr>JOINEDTestbed</a></code></td>
     <td>Union of GECCOBBOBTestbed and BBOBLargeScaleTestbed with all their dimensions.</td>
   </tr><tr class="class">
     
     <td>Class</td>
-    <td><code><a href="cocopp.testbedsettings.BBOBLargeScaleTestbed.html" class="internal-link" title="cocopp.testbedsettings.BBOBLargeScaleTestbed">​BBOBLarge​Scale​Testbed</a></code></td>
+    <td><code><a href="cocopp.testbedsettings.BBOBLargeScaleTestbed.html" class="internal-link" title="cocopp.testbedsettings.BBOBLargeScaleTestbed"><wbr></wbr>BBOBLarge<wbr></wbr>Scale<wbr></wbr>Testbed</a></code></td>
     <td>Settings related to <code>bbob-largescale</code> test suite.</td>
   </tr><tr class="class">
     
     <td>Class</td>
-    <td><code><a href="cocopp.testbedsettings.CONSBBOBTestbed.html" class="internal-link" title="cocopp.testbedsettings.CONSBBOBTestbed">​CONSBBOBTestbed</a></code></td>
+    <td><code><a href="cocopp.testbedsettings.CONSBBOBTestbed.html" class="internal-link" title="cocopp.testbedsettings.CONSBBOBTestbed"><wbr></wbr>CONSBBOBTestbed</a></code></td>
     <td>BBOB Testbed for constrained problems.</td>
   </tr><tr class="class">
     
     <td>Class</td>
-    <td><code><a href="cocopp.testbedsettings.GECCOBBOBBiObjMixintTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBBOBBiObjMixintTestbed">​GECCOBBOBBi​Obj​Mixint​Testbed</a></code></td>
+    <td><code><a href="cocopp.testbedsettings.GECCOBBOBBiObjMixintTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBBOBBiObjMixintTestbed"><wbr></wbr>GECCOBBOBBi<wbr></wbr>Obj<wbr></wbr>Mixint<wbr></wbr>Testbed</a></code></td>
     <td>Testbed used with the bbob-biobj-mixint test suite.</td>
   </tr><tr class="class">
     
     <td>Class</td>
-    <td><code><a href="cocopp.testbedsettings.GECCOBBOBMixintTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBBOBMixintTestbed">​GECCOBBOBMixint​Testbed</a></code></td>
+    <td><code><a href="cocopp.testbedsettings.GECCOBBOBMixintTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBBOBMixintTestbed"><wbr></wbr>GECCOBBOBMixint<wbr></wbr>Testbed</a></code></td>
     <td>Testbed used with the bbob-mixint test suite.</td>
   </tr><tr class="class">
     
     <td>Class</td>
-    <td><code><a href="cocopp.testbedsettings.GECCOBBOBNoisyTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBBOBNoisyTestbed">​GECCOBBOBNoisy​Testbed</a></code></td>
+    <td><code><a href="cocopp.testbedsettings.GECCOBBOBNoisyTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBBOBNoisyTestbed"><wbr></wbr>GECCOBBOBNoisy<wbr></wbr>Testbed</a></code></td>
     <td>The noisy testbed used in the GECCO BBOB workshops 2009, 2010, 2012, 2013, 2015, and 2016.</td>
   </tr><tr class="class">
     
     <td>Class</td>
-    <td><code><a href="cocopp.testbedsettings.GECCOBBOBTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBBOBTestbed">​GECCOBBOBTestbed</a></code></td>
-    <td>Testbed used in the GECCO BBOB workshops 2009, 2010, 2012, 2013, 2015, and 2016.</td>
+    <td><code><a href="cocopp.testbedsettings.GECCOBBOBTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBBOBTestbed"><wbr></wbr>GECCOBBOBTestbed</a></code></td>
+    <td>Testbed of 24 noiseless functions used in the GECCO BBOB workshops since 2009.</td>
   </tr><tr class="class">
     
     <td>Class</td>
-    <td><code><a href="cocopp.testbedsettings.GECCOBiObjBBOBTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBiObjBBOBTestbed">​GECCOBi​Obj​BBOBTestbed</a></code></td>
+    <td><code><a href="cocopp.testbedsettings.GECCOBiObjBBOBTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBiObjBBOBTestbed"><wbr></wbr>GECCOBi<wbr></wbr>Obj<wbr></wbr>BBOBTestbed</a></code></td>
     <td>Testbed used in the BBOB workshops to display data sets run on the <code>bbob-biobj</code> test suite.</td>
   </tr><tr class="class">
     
     <td>Class</td>
-    <td><code><a href="cocopp.testbedsettings.GECCOBiObjExtBBOBTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBiObjExtBBOBTestbed">​GECCOBi​Obj​Ext​BBOBTestbed</a></code></td>
+    <td><code><a href="cocopp.testbedsettings.GECCOBiObjExtBBOBTestbed.html" class="internal-link" title="cocopp.testbedsettings.GECCOBiObjExtBBOBTestbed"><wbr></wbr>GECCOBi<wbr></wbr>Obj<wbr></wbr>Ext<wbr></wbr>BBOBTestbed</a></code></td>
     <td>Biobjective testbed to display data sets run on the <code>bbob-biobj-ext</code> test suite.</td>
   </tr><tr class="class">
     
     <td>Class</td>
-    <td><code><a href="cocopp.testbedsettings.Testbed.html" class="internal-link" title="cocopp.testbedsettings.Testbed">​Testbed</a></code></td>
+    <td><code><a href="cocopp.testbedsettings.SboxCostJOINEDTestbed.html" class="internal-link" title="cocopp.testbedsettings.SboxCostJOINEDTestbed"><wbr></wbr>Sbox<wbr></wbr>Cost<wbr></wbr>JOINEDTestbed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="cocopp.testbedsettings.SBOXCOSTTestbed.html" class="internal-link" title="cocopp.testbedsettings.SBOXCOSTTestbed"><wbr></wbr>SBOXCOSTTestbed</a></code></td>
+    <td>Testbed of box-constrained versions of the bbob functions.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="cocopp.testbedsettings.Testbed.html" class="internal-link" title="cocopp.testbedsettings.Testbed"><wbr></wbr>Testbed</a></code></td>
     <td>this might become the future way to have settings related to testbeds TODO: how do we pass information from the benchmark to the post-processing?</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#copy_reference_values" class="internal-link" title="cocopp.testbedsettings.copy_reference_values">copy​_reference​_values</a></code></td>
+    <td><code><a href="#copy_reference_values" class="internal-link" title="cocopp.testbedsettings.copy_reference_values">copy<wbr></wbr>_reference<wbr></wbr>_values</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#get_first_reference_values" class="internal-link" title="cocopp.testbedsettings.get_first_reference_values">get​_first​_reference​_values</a></code></td>
+    <td><code><a href="#get_first_reference_values" class="internal-link" title="cocopp.testbedsettings.get_first_reference_values">get<wbr></wbr>_first<wbr></wbr>_reference<wbr></wbr>_values</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#get_reference_values" class="internal-link" title="cocopp.testbedsettings.get_reference_values">get​_reference​_values</a></code></td>
-    <td><span class="undocumented">No summary</span></td>
+    <td><code><a href="#get_reference_values" class="internal-link" title="cocopp.testbedsettings.get_reference_values">get<wbr></wbr>_reference<wbr></wbr>_values</a></code></td>
+    <td>Returns the hash value of the hypervolume reference values for the specified algorithm (if available, i.e. if the algorithm has been run on the <code>bbob-biobj</code> testbed). If algorithm=None, all hash values are returned as a set (i...</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#get_short_names" class="internal-link" title="cocopp.testbedsettings.get_short_names">get​_short​_names</a></code></td>
+    <td><code><a href="#get_short_names" class="internal-link" title="cocopp.testbedsettings.get_short_names">get<wbr></wbr>_short<wbr></wbr>_names</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#get_testbed_from_suite" class="internal-link" title="cocopp.testbedsettings.get_testbed_from_suite">get​_testbed​_from​_suite</a></code></td>
+    <td><code><a href="#get_testbed_from_suite" class="internal-link" title="cocopp.testbedsettings.get_testbed_from_suite">get<wbr></wbr>_testbed<wbr></wbr>_from<wbr></wbr>_suite</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#load_current_testbed" class="internal-link" title="cocopp.testbedsettings.load_current_testbed">load​_current​_testbed</a></code></td>
+    <td><code><a href="#load_current_testbed" class="internal-link" title="cocopp.testbedsettings.load_current_testbed">load<wbr></wbr>_current<wbr></wbr>_testbed</a></code></td>
     <td>Loads testbed class corresponding to suite_name.</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#reset_current_testbed" class="internal-link" title="cocopp.testbedsettings.reset_current_testbed">reset​_current​_testbed</a></code></td>
+    <td><code><a href="#reset_current_testbed" class="internal-link" title="cocopp.testbedsettings.reset_current_testbed">reset<wbr></wbr>_current<wbr></wbr>_testbed</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#reset_reference_values" class="internal-link" title="cocopp.testbedsettings.reset_reference_values">reset​_reference​_values</a></code></td>
+    <td><code><a href="#reset_reference_values" class="internal-link" title="cocopp.testbedsettings.reset_reference_values">reset<wbr></wbr>_reference<wbr></wbr>_values</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#SuiteClass" class="internal-link" title="cocopp.testbedsettings.SuiteClass">​Suite​Class</a></code></td>
+    <td><code><a href="#SuiteClass" class="internal-link" title="cocopp.testbedsettings.SuiteClass"><wbr></wbr>Suite<wbr></wbr>Class</a></code></td>
     <td>return the <code>class</code> matching the string <code>suite_name</code> (e.g. the attribute of <code>DataSet</code>)</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#update_reference_values" class="internal-link" title="cocopp.testbedsettings.update_reference_values">update​_reference​_values</a></code></td>
+    <td><code><a href="#update_reference_values" class="internal-link" title="cocopp.testbedsettings.update_reference_values">update<wbr></wbr>_reference<wbr></wbr>_values</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#all_scenarios" class="internal-link" title="cocopp.testbedsettings.all_scenarios">all​_scenarios</a></code></td>
+    <td><code><a href="#all_scenarios" class="internal-link" title="cocopp.testbedsettings.all_scenarios">all<wbr></wbr>_scenarios</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#current_testbed" class="internal-link" title="cocopp.testbedsettings.current_testbed">current​_testbed</a></code></td>
+    <td><code><a href="#current_testbed" class="internal-link" title="cocopp.testbedsettings.current_testbed">current<wbr></wbr>_testbed</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#default_suite_bi" class="internal-link" title="cocopp.testbedsettings.default_suite_bi">default​_suite​_bi</a></code></td>
+    <td><code><a href="#default_suite_bi" class="internal-link" title="cocopp.testbedsettings.default_suite_bi">default<wbr></wbr>_suite<wbr></wbr>_bi</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#default_suite_single" class="internal-link" title="cocopp.testbedsettings.default_suite_single">default​_suite​_single</a></code></td>
+    <td><code><a href="#default_suite_single" class="internal-link" title="cocopp.testbedsettings.default_suite_single">default<wbr></wbr>_suite<wbr></wbr>_single</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#default_suite_single_noisy" class="internal-link" title="cocopp.testbedsettings.default_suite_single_noisy">default​_suite​_single​_noisy</a></code></td>
+    <td><code><a href="#default_suite_single_noisy" class="internal-link" title="cocopp.testbedsettings.default_suite_single_noisy">default<wbr></wbr>_suite<wbr></wbr>_single<wbr></wbr>_noisy</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#default_testbed_bi" class="internal-link" title="cocopp.testbedsettings.default_testbed_bi">default​_testbed​_bi</a></code></td>
+    <td><code><a href="#default_testbed_bi" class="internal-link" title="cocopp.testbedsettings.default_testbed_bi">default<wbr></wbr>_testbed<wbr></wbr>_bi</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#default_testbed_bi_ext" class="internal-link" title="cocopp.testbedsettings.default_testbed_bi_ext">default​_testbed​_bi​_ext</a></code></td>
+    <td><code><a href="#default_testbed_bi_ext" class="internal-link" title="cocopp.testbedsettings.default_testbed_bi_ext">default<wbr></wbr>_testbed<wbr></wbr>_bi<wbr></wbr>_ext</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#default_testbed_cons" class="internal-link" title="cocopp.testbedsettings.default_testbed_cons">default​_testbed​_cons</a></code></td>
+    <td><code><a href="#default_testbed_cons" class="internal-link" title="cocopp.testbedsettings.default_testbed_cons">default<wbr></wbr>_testbed<wbr></wbr>_cons</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#default_testbed_ls" class="internal-link" title="cocopp.testbedsettings.default_testbed_ls">default​_testbed​_ls</a></code></td>
+    <td><code><a href="#default_testbed_ls" class="internal-link" title="cocopp.testbedsettings.default_testbed_ls">default<wbr></wbr>_testbed<wbr></wbr>_ls</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#default_testbed_mixint" class="internal-link" title="cocopp.testbedsettings.default_testbed_mixint">default​_testbed​_mixint</a></code></td>
+    <td><code><a href="#default_testbed_mixint" class="internal-link" title="cocopp.testbedsettings.default_testbed_mixint">default<wbr></wbr>_testbed<wbr></wbr>_mixint</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#default_testbed_single" class="internal-link" title="cocopp.testbedsettings.default_testbed_single">default​_testbed​_single</a></code></td>
+    <td><code><a href="#default_testbed_single" class="internal-link" title="cocopp.testbedsettings.default_testbed_single">default<wbr></wbr>_testbed<wbr></wbr>_single</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#default_testbed_single_noisy" class="internal-link" title="cocopp.testbedsettings.default_testbed_single_noisy">default​_testbed​_single​_noisy</a></code></td>
+    <td><code><a href="#default_testbed_single_noisy" class="internal-link" title="cocopp.testbedsettings.default_testbed_single_noisy">default<wbr></wbr>_testbed<wbr></wbr>_single<wbr></wbr>_noisy</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#inf_like" class="internal-link" title="cocopp.testbedsettings.inf_like">inf​_like</a></code></td>
+    <td><code><a href="#inf_like" class="internal-link" title="cocopp.testbedsettings.inf_like">inf<wbr></wbr>_like</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#reference_values" class="internal-link" title="cocopp.testbedsettings.reference_values">reference​_values</a></code></td>
+    <td><code><a href="#reference_values" class="internal-link" title="cocopp.testbedsettings.reference_values">reference<wbr></wbr>_values</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#scenario_biobjextfixed" class="internal-link" title="cocopp.testbedsettings.scenario_biobjextfixed">scenario​_biobjextfixed</a></code></td>
+    <td><code><a href="#scenario_biobjextfixed" class="internal-link" title="cocopp.testbedsettings.scenario_biobjextfixed">scenario<wbr></wbr>_biobjextfixed</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#scenario_biobjfixed" class="internal-link" title="cocopp.testbedsettings.scenario_biobjfixed">scenario​_biobjfixed</a></code></td>
+    <td><code><a href="#scenario_biobjfixed" class="internal-link" title="cocopp.testbedsettings.scenario_biobjfixed">scenario<wbr></wbr>_biobjfixed</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#scenario_biobjmixintfixed" class="internal-link" title="cocopp.testbedsettings.scenario_biobjmixintfixed">scenario​_biobjmixintfixed</a></code></td>
+    <td><code><a href="#scenario_biobjmixintfixed" class="internal-link" title="cocopp.testbedsettings.scenario_biobjmixintfixed">scenario<wbr></wbr>_biobjmixintfixed</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#scenario_biobjrlbased" class="internal-link" title="cocopp.testbedsettings.scenario_biobjrlbased">scenario​_biobjrlbased</a></code></td>
+    <td><code><a href="#scenario_biobjrlbased" class="internal-link" title="cocopp.testbedsettings.scenario_biobjrlbased">scenario<wbr></wbr>_biobjrlbased</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#scenario_constrainedfixed" class="internal-link" title="cocopp.testbedsettings.scenario_constrainedfixed">scenario​_constrainedfixed</a></code></td>
+    <td><code><a href="#scenario_constrainedfixed" class="internal-link" title="cocopp.testbedsettings.scenario_constrainedfixed">scenario<wbr></wbr>_constrainedfixed</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#scenario_fixed" class="internal-link" title="cocopp.testbedsettings.scenario_fixed">scenario​_fixed</a></code></td>
+    <td><code><a href="#scenario_fixed" class="internal-link" title="cocopp.testbedsettings.scenario_fixed">scenario<wbr></wbr>_fixed</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#scenario_largescalefixed" class="internal-link" title="cocopp.testbedsettings.scenario_largescalefixed">scenario​_largescalefixed</a></code></td>
+    <td><code><a href="#scenario_largescalefixed" class="internal-link" title="cocopp.testbedsettings.scenario_largescalefixed">scenario<wbr></wbr>_largescalefixed</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#scenario_mixintfixed" class="internal-link" title="cocopp.testbedsettings.scenario_mixintfixed">scenario​_mixintfixed</a></code></td>
+    <td><code><a href="#scenario_mixintfixed" class="internal-link" title="cocopp.testbedsettings.scenario_mixintfixed">scenario<wbr></wbr>_mixintfixed</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#scenario_rlbased" class="internal-link" title="cocopp.testbedsettings.scenario_rlbased">scenario​_rlbased</a></code></td>
+    <td><code><a href="#scenario_rlbased" class="internal-link" title="cocopp.testbedsettings.scenario_rlbased">scenario<wbr></wbr>_rlbased</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#suite_name_bi" class="internal-link" title="cocopp.testbedsettings.suite_name_bi">suite​_name​_bi</a></code></td>
+    <td><code><a href="#scenario_sboxcostfixed" class="internal-link" title="cocopp.testbedsettings.scenario_sboxcostfixed">scenario<wbr></wbr>_sboxcostfixed</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#suite_name_bi_ext" class="internal-link" title="cocopp.testbedsettings.suite_name_bi_ext">suite​_name​_bi​_ext</a></code></td>
+    <td><code><a href="#suite_name_bi" class="internal-link" title="cocopp.testbedsettings.suite_name_bi">suite<wbr></wbr>_name<wbr></wbr>_bi</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#suite_name_bi_mixint" class="internal-link" title="cocopp.testbedsettings.suite_name_bi_mixint">suite​_name​_bi​_mixint</a></code></td>
+    <td><code><a href="#suite_name_bi_ext" class="internal-link" title="cocopp.testbedsettings.suite_name_bi_ext">suite<wbr></wbr>_name<wbr></wbr>_bi<wbr></wbr>_ext</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#suite_name_cons" class="internal-link" title="cocopp.testbedsettings.suite_name_cons">suite​_name​_cons</a></code></td>
+    <td><code><a href="#suite_name_bi_mixint" class="internal-link" title="cocopp.testbedsettings.suite_name_bi_mixint">suite<wbr></wbr>_name<wbr></wbr>_bi<wbr></wbr>_mixint</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#suite_name_ls" class="internal-link" title="cocopp.testbedsettings.suite_name_ls">suite​_name​_ls</a></code></td>
+    <td><code><a href="#suite_name_cons" class="internal-link" title="cocopp.testbedsettings.suite_name_cons">suite<wbr></wbr>_name<wbr></wbr>_cons</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#suite_name_mixint" class="internal-link" title="cocopp.testbedsettings.suite_name_mixint">suite​_name​_mixint</a></code></td>
+    <td><code><a href="#suite_name_ls" class="internal-link" title="cocopp.testbedsettings.suite_name_ls">suite<wbr></wbr>_name<wbr></wbr>_ls</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#suite_name_single" class="internal-link" title="cocopp.testbedsettings.suite_name_single">suite​_name​_single</a></code></td>
+    <td><code><a href="#suite_name_mixint" class="internal-link" title="cocopp.testbedsettings.suite_name_mixint">suite<wbr></wbr>_name<wbr></wbr>_mixint</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#suite_name_single_noisy" class="internal-link" title="cocopp.testbedsettings.suite_name_single_noisy">suite​_name​_single​_noisy</a></code></td>
+    <td><code><a href="#suite_name_sboxcost" class="internal-link" title="cocopp.testbedsettings.suite_name_sboxcost">suite<wbr></wbr>_name<wbr></wbr>_sboxcost</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
     <td>Variable</td>
-    <td><code><a href="#suite_to_testbed" class="internal-link" title="cocopp.testbedsettings.suite_to_testbed">suite​_to​_testbed</a></code></td>
+    <td><code><a href="#suite_name_single" class="internal-link" title="cocopp.testbedsettings.suite_name_single">suite<wbr></wbr>_name<wbr></wbr>_single</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#suite_name_single_noisy" class="internal-link" title="cocopp.testbedsettings.suite_name_single_noisy">suite<wbr></wbr>_name<wbr></wbr>_single<wbr></wbr>_noisy</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#suite_to_testbed" class="internal-link" title="cocopp.testbedsettings.suite_to_testbed">suite<wbr></wbr>_to<wbr></wbr>_testbed</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
-        
-
           
-      </div>
 
-      <div id="childList">
+            
+        </div>
 
-        <div class="basefunction">
+        <div id="childList">
+          <div class="basefunction">
   
   
   <a name="cocopp.testbedsettings.copy_reference_values">
@@ -357,11 +1531,16 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">copy_reference_values</span>(old_algorithm_id, new_algorithm_id):
     
+    <span class="py-keyword">def</span> <span class="py-defname">copy_reference_values</span><span class="function-signature">(old_algorithm_id, new_algorithm_id)</span>:
+    
+    <a class="headerLink" href="#copy_reference_values" title="cocopp.testbedsettings.copy_reference_values">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -376,11 +1555,16 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">get_first_reference_values</span>():
     
+    <span class="py-keyword">def</span> <span class="py-defname">get_first_reference_values</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#get_first_reference_values" title="cocopp.testbedsettings.get_first_reference_values">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -395,18 +1579,23 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">get_reference_values</span>(algorithm):
     
+    <span class="py-keyword">def</span> <span class="py-defname">get_reference_values</span><span class="function-signature">(algorithm)</span>:
+    
+    <a class="headerLink" href="#get_reference_values" title="cocopp.testbedsettings.get_reference_values">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     
-    
-    <div>Returns the hash value of the hypervolume reference values
+    <div><p>Returns the hash value of the hypervolume reference values
 for the specified algorithm (if available, i.e. if the algorithm
 has been run on the <code>bbob-biobj</code> testbed).
 If algorithm=None, all hash values are returned as a set
 (i.e. with no duplicates) if more than one hash is available
-or as a string if all hashes are the same.</div>
+or as a string if all hashes are the same.</p></div>
   </div>
 </div><div class="basefunction">
   
@@ -419,11 +1608,16 @@ or as a string if all hashes are the same.</div>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">get_short_names</span>(file_name):
     
+    <span class="py-keyword">def</span> <span class="py-defname">get_short_names</span><span class="function-signature">(file_name)</span>:
+    
+    <a class="headerLink" href="#get_short_names" title="cocopp.testbedsettings.get_short_names">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -438,11 +1632,16 @@ or as a string if all hashes are the same.</div>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">get_testbed_from_suite</span>(suite_name):
     
+    <span class="py-keyword">def</span> <span class="py-defname">get_testbed_from_suite</span><span class="function-signature">(suite_name)</span>:
+    
+    <a class="headerLink" href="#get_testbed_from_suite" title="cocopp.testbedsettings.get_testbed_from_suite">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -457,11 +1656,16 @@ or as a string if all hashes are the same.</div>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">load_current_testbed</span>(suite_name, target_values):
     
+    <span class="py-keyword">def</span> <span class="py-defname">load_current_testbed</span><span class="function-signature">(suite_name, target_values)</span>:
+    
+    <a class="headerLink" href="#load_current_testbed" title="cocopp.testbedsettings.load_current_testbed">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Loads testbed class corresponding to suite_name.</p>
 <p>The parameter suite_name is a string, defining the
@@ -480,11 +1684,16 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">reset_current_testbed</span>():
     
+    <span class="py-keyword">def</span> <span class="py-defname">reset_current_testbed</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#reset_current_testbed" title="cocopp.testbedsettings.reset_current_testbed">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -499,11 +1708,16 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">reset_reference_values</span>():
     
+    <span class="py-keyword">def</span> <span class="py-defname">reset_reference_values</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#reset_reference_values" title="cocopp.testbedsettings.reset_reference_values">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -518,13 +1732,18 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">SuiteClass</span>(suite_name):
     
+    <span class="py-keyword">def</span> <span class="py-defname">SuiteClass</span><span class="function-signature">(suite_name)</span>:
+    
+    <a class="headerLink" href="#SuiteClass" title="cocopp.testbedsettings.SuiteClass">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     
-    
-    <div>return the <code>class</code> matching the string <code>suite_name</code> (e.g. the attribute of <code>DataSet</code>)</div>
+    <div><p>return the <code>class</code> matching the string <code>suite_name</code> (e.g. the attribute of <code>DataSet</code>)</p></div>
   </div>
 </div><div class="basefunction">
   
@@ -537,11 +1756,16 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">update_reference_values</span>(algorithm, reference_value):
     
+    <span class="py-keyword">def</span> <span class="py-defname">update_reference_values</span><span class="function-signature">(algorithm, reference_value)</span>:
+    
+    <a class="headerLink" href="#update_reference_values" title="cocopp.testbedsettings.update_reference_values">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -558,9 +1782,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">all_scenarios</span> =
     
+    <a class="headerLink" href="#all_scenarios" title="cocopp.testbedsettings.all_scenarios">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -578,9 +1806,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">current_testbed</span> =
     
+    <a class="headerLink" href="#current_testbed" title="cocopp.testbedsettings.current_testbed">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -598,9 +1830,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">default_suite_bi</span>: <code>str</code> =
     
+    <a class="headerLink" href="#default_suite_bi" title="cocopp.testbedsettings.default_suite_bi">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -618,9 +1854,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">default_suite_single</span>: <code>str</code> =
     
+    <a class="headerLink" href="#default_suite_single" title="cocopp.testbedsettings.default_suite_single">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -638,9 +1878,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">default_suite_single_noisy</span>: <code>str</code> =
     
+    <a class="headerLink" href="#default_suite_single_noisy" title="cocopp.testbedsettings.default_suite_single_noisy">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -658,9 +1902,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">default_testbed_bi</span>: <code>str</code> =
     
+    <a class="headerLink" href="#default_testbed_bi" title="cocopp.testbedsettings.default_testbed_bi">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -678,9 +1926,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">default_testbed_bi_ext</span>: <code>str</code> =
     
+    <a class="headerLink" href="#default_testbed_bi_ext" title="cocopp.testbedsettings.default_testbed_bi_ext">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -698,9 +1950,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">default_testbed_cons</span>: <code>str</code> =
     
+    <a class="headerLink" href="#default_testbed_cons" title="cocopp.testbedsettings.default_testbed_cons">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -718,9 +1974,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">default_testbed_ls</span>: <code>str</code> =
     
+    <a class="headerLink" href="#default_testbed_ls" title="cocopp.testbedsettings.default_testbed_ls">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -738,9 +1998,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">default_testbed_mixint</span>: <code>str</code> =
     
+    <a class="headerLink" href="#default_testbed_mixint" title="cocopp.testbedsettings.default_testbed_mixint">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -758,9 +2022,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">default_testbed_single</span>: <code>str</code> =
     
+    <a class="headerLink" href="#default_testbed_single" title="cocopp.testbedsettings.default_testbed_single">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -778,9 +2046,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">default_testbed_single_noisy</span>: <code>str</code> =
     
+    <a class="headerLink" href="#default_testbed_single_noisy" title="cocopp.testbedsettings.default_testbed_single_noisy">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -798,9 +2070,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">inf_like</span>: <code>float</code> =
     
+    <a class="headerLink" href="#inf_like" title="cocopp.testbedsettings.inf_like">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -818,9 +2094,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">reference_values</span>: <code>dict</code> =
     
+    <a class="headerLink" href="#reference_values" title="cocopp.testbedsettings.reference_values">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -838,9 +2118,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">scenario_biobjextfixed</span>: <code>str</code> =
     
+    <a class="headerLink" href="#scenario_biobjextfixed" title="cocopp.testbedsettings.scenario_biobjextfixed">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -858,9 +2142,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">scenario_biobjfixed</span>: <code>str</code> =
     
+    <a class="headerLink" href="#scenario_biobjfixed" title="cocopp.testbedsettings.scenario_biobjfixed">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -878,9 +2166,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">scenario_biobjmixintfixed</span>: <code>str</code> =
     
+    <a class="headerLink" href="#scenario_biobjmixintfixed" title="cocopp.testbedsettings.scenario_biobjmixintfixed">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -898,9 +2190,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">scenario_biobjrlbased</span>: <code>str</code> =
     
+    <a class="headerLink" href="#scenario_biobjrlbased" title="cocopp.testbedsettings.scenario_biobjrlbased">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -918,9 +2214,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">scenario_constrainedfixed</span>: <code>str</code> =
     
+    <a class="headerLink" href="#scenario_constrainedfixed" title="cocopp.testbedsettings.scenario_constrainedfixed">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -938,9 +2238,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">scenario_fixed</span>: <code>str</code> =
     
+    <a class="headerLink" href="#scenario_fixed" title="cocopp.testbedsettings.scenario_fixed">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -958,9 +2262,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">scenario_largescalefixed</span>: <code>str</code> =
     
+    <a class="headerLink" href="#scenario_largescalefixed" title="cocopp.testbedsettings.scenario_largescalefixed">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -978,9 +2286,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">scenario_mixintfixed</span>: <code>str</code> =
     
+    <a class="headerLink" href="#scenario_mixintfixed" title="cocopp.testbedsettings.scenario_mixintfixed">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -998,9 +2310,37 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">scenario_rlbased</span>: <code>str</code> =
     
+    <a class="headerLink" href="#scenario_rlbased" title="cocopp.testbedsettings.scenario_rlbased">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="cocopp.testbedsettings.scenario_sboxcostfixed">
+    
+  </a>
+  <a name="scenario_sboxcostfixed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">scenario_sboxcostfixed</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#scenario_sboxcostfixed" title="cocopp.testbedsettings.scenario_sboxcostfixed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -1018,9 +2358,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">suite_name_bi</span>: <code>str</code> =
     
+    <a class="headerLink" href="#suite_name_bi" title="cocopp.testbedsettings.suite_name_bi">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -1038,9 +2382,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">suite_name_bi_ext</span>: <code>str</code> =
     
+    <a class="headerLink" href="#suite_name_bi_ext" title="cocopp.testbedsettings.suite_name_bi_ext">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -1058,9 +2406,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">suite_name_bi_mixint</span>: <code>str</code> =
     
+    <a class="headerLink" href="#suite_name_bi_mixint" title="cocopp.testbedsettings.suite_name_bi_mixint">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -1078,9 +2430,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">suite_name_cons</span>: <code>str</code> =
     
+    <a class="headerLink" href="#suite_name_cons" title="cocopp.testbedsettings.suite_name_cons">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -1098,9 +2454,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">suite_name_ls</span>: <code>str</code> =
     
+    <a class="headerLink" href="#suite_name_ls" title="cocopp.testbedsettings.suite_name_ls">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -1118,9 +2478,37 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">suite_name_mixint</span>: <code>str</code> =
     
+    <a class="headerLink" href="#suite_name_mixint" title="cocopp.testbedsettings.suite_name_mixint">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="cocopp.testbedsettings.suite_name_sboxcost">
+    
+  </a>
+  <a name="suite_name_sboxcost">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">suite_name_sboxcost</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#suite_name_sboxcost" title="cocopp.testbedsettings.suite_name_sboxcost">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -1138,9 +2526,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">suite_name_single</span>: <code>str</code> =
     
+    <a class="headerLink" href="#suite_name_single" title="cocopp.testbedsettings.suite_name_single">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -1158,9 +2550,13 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">suite_name_single_noisy</span>: <code>str</code> =
     
+    <a class="headerLink" href="#suite_name_single_noisy" title="cocopp.testbedsettings.suite_name_single_noisy">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -1178,27 +2574,40 @@ test suite to be loaded, for example <code>bbob</code>, <code>bbob-biobj</code>,
     
     <span class="py-defname">suite_to_testbed</span> =
     
+    <a class="headerLink" href="#suite_to_testbed" title="cocopp.testbedsettings.suite_to_testbed">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
   </div>
 </div>
-
+        </div>
+      
       </div>
     </div>
 
     <footer class="navbar navbar-default">
+
   
   <div class="container">
     <a href="index.html">API Documentation</a> for cocopp,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.2.1 at 2022-03-01 09:40:36.
+    23.9.1 at 2024-07-11 01:05:24.
   </div>
-</footer>
 
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
     <script src="pydoctor.js" type="text/javascript"></script>
 
   </body>
