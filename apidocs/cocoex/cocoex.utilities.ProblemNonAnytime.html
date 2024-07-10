@@ -7,11 +7,11 @@
   <head>
     
     <title>cocoex.utilities.ProblemNonAnytime</title>
-    <meta name="generator" content="pydoctor 22.2.1"> 
+    <meta name="generator" content="pydoctor 23.9.1"> 
         
     </meta>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.75" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="apidocs.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
@@ -21,56 +21,538 @@
 
     
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default mainnavbar">
+      
   
-  <div class="container">
+  <div class="container-fluid">
+
 
     <div class="navbar-header">
       
       <div class="navlinks">
-          <span class="navbar-brand">
-            cocoex <a href="index.html">API Documentation</a>
-          </span>
+        <span class="navbar-brand">
+          cocoex <a href="index.html">API Documentation</a>
+        </span>
 
-          <a href="moduleIndex.html">
-            Modules
-          </a>
+        <a href="moduleIndex.html">
+          Modules
+        </a>
 
-          <a href="classIndex.html">
-            Classes
-          </a>
+        <a href="classIndex.html">
+          Classes
+        </a>
 
-          <a href="nameIndex.html">
-            Names
-          </a>
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
       </div>
 
-    </div>
-  </div>
-</nav>
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
 
-    
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
 
-    <div class="container">
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
 
-      <div class="page-header">
-        <h1 class="class"><code><code><a href="index.html" class="internal-link">cocoex</a></code><wbr></wbr>.<code><a href="cocoex.utilities.html" class="internal-link" title="cocoex.utilities">utilities</a></code><wbr></wbr>.<code><a href="cocoex.utilities.ProblemNonAnytime.html" class="internal-link" title="cocoex.utilities.ProblemNonAnytime">ProblemNonAnytime</a></code></code></h1>
-        <div id="showPrivate">
-          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
         </div>
       </div>
 
-      <div class="categoryHeader">
-        class documentation
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="cocoex.utilities.ProblemNonAnytime.html" class="internal-link" title="This class"><wbr></wbr>Problem<wbr></wbr>Non<wbr></wbr>Anytime</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__call__" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.__call__">__call__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__enter__" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.__enter__">__enter__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__exit__" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.__exit__">__exit__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#delivered" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.delivered">delivered</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#free" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.free">free</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#print_progress" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.print_progress">print<wbr></wbr>_progress</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#reset" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.reset">reset</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#inherited_constant_attributes" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.inherited_constant_attributes">inherited<wbr></wbr>_constant<wbr></wbr>_attributes</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#evaluations" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.evaluations">evaluations</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#p_observed" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.p_observed">p<wbr></wbr>_observed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#p_unobserved" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.p_unobserved">p<wbr></wbr>_unobserved</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#suite" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.suite">suite</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#best_observed_fvalue1" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.best_observed_fvalue1">best<wbr></wbr>_observed<wbr></wbr>_fvalue1</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#final_target_hit" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.final_target_hit">final<wbr></wbr>_target<wbr></wbr>_hit</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#random_solution" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.random_solution">random<wbr></wbr>_solution</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_number_of_delivery_evaluations" class="internal-link" title="cocoex.utilities.ProblemNonAnytime._number_of_delivery_evaluations">_number<wbr></wbr>_of<wbr></wbr>_delivery<wbr></wbr>_evaluations</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_p" class="internal-link" title="cocoex.utilities.ProblemNonAnytime._p">_p</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="cocoex.utilities.html" class="internal-link" title="The parent of this class">utilities</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.utilities.MiniPrint.html" class="internal-link" title="cocoex.utilities.MiniPrint"><wbr></wbr>Mini<wbr></wbr>Print</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.utilities.ObserverOptions.html" class="internal-link" title="cocoex.utilities.ObserverOptions"><wbr></wbr>Observer<wbr></wbr>Options</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.utilities.ProblemNonAnytime.html" class="internal-link" title="cocoex.utilities.ProblemNonAnytime"><wbr></wbr>Problem<wbr></wbr>Non<wbr></wbr>Anytime</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.utilities.SameFunction.html" class="internal-link" title="cocoex.utilities.SameFunction"><wbr></wbr>Same<wbr></wbr>Function</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.utilities.ShortInfo.html" class="internal-link" title="cocoex.utilities.ShortInfo"><wbr></wbr>Short<wbr></wbr>Info</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.utilities.html#about_equal" class="internal-link" title="cocoex.utilities.about_equal">about<wbr></wbr>_equal</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.utilities.html#args_to_dict" class="internal-link" title="cocoex.utilities.args_to_dict">args<wbr></wbr>_to<wbr></wbr>_dict</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.utilities.html#ascetime" class="internal-link" title="cocoex.utilities.ascetime">ascetime</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.utilities.html#dict_to_eval" class="internal-link" title="cocoex.utilities.dict_to_eval">dict<wbr></wbr>_to<wbr></wbr>_eval</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.utilities.html#forgiving_import" class="internal-link" title="cocoex.utilities.forgiving_import">forgiving<wbr></wbr>_import</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.utilities.html#print_flush" class="internal-link" title="cocoex.utilities.print_flush">print<wbr></wbr>_flush</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.utilities.html#read_setting" class="internal-link" title="cocoex.utilities.read_setting">read<wbr></wbr>_setting</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.utilities.html#write_setting" class="internal-link" title="cocoex.utilities.write_setting">write<wbr></wbr>_setting</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
       </div>
 
-      <div class="extrasDocstring">
-        <p><code><span class="py-keyword">class</span> <span class="py-defname">ProblemNonAnytime</span>(object):</code></p>
-        <p><a href="classIndex.html#cocoex.utilities.ProblemNonAnytime">View In Hierarchy</a></p>
-      </div>
+      <div id="main" class="">
+        
 
-      <div class="moduleDocstring">
-        <div><p>The non-anytime problem class.</p>
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">cocoex</a></code><wbr></wbr>.<code><a href="cocoex.utilities.html" class="internal-link" title="cocoex.utilities">utilities</a></code><wbr></wbr>.<code><a href="cocoex.utilities.ProblemNonAnytime.html" class="internal-link" title="cocoex.utilities.ProblemNonAnytime">ProblemNonAnytime</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ProblemNonAnytime</span>:</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.__init__">ProblemNonAnytime(suite, observer, index)</a></code></p>
+          <p><a href="classIndex.html#cocoex.utilities.ProblemNonAnytime">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>The non-anytime problem class.</p>
 <p>Serves to benchmark a "budgeted" algorithm whose behavior decisively
 depends on a budget input parameter.</p>
 <p>Usage:</p>
@@ -89,10 +571,10 @@ for index in range(len(suite)):
 other unobserved. It switches from unobserved to observed when
 <tt class="rst-docutils literal">p_unobserved.evaluations &gt;= p_observed.evaluations</tt>.</p>
 </div>
-      </div>
+        </div>
 
-      <div id="splitTables">
-        <table class="children sortable" id="id9">
+        <div id="splitTables">
+          <table class="children sortable" id="id11">
   
   
   <tr class="method">
@@ -128,7 +610,7 @@ other unobserved. It switches from unobserved to observed when
   </tr><tr class="method">
     
     <td>Method</td>
-    <td><code><a href="#print_progress" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.print_progress">print​_progress</a></code></td>
+    <td><code><a href="#print_progress" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.print_progress">print<wbr></wbr>_progress</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="method">
     
@@ -138,7 +620,7 @@ other unobserved. It switches from unobserved to observed when
   </tr><tr class="classvariable">
     
     <td>Class Variable</td>
-    <td><code><a href="#inherited_constant_attributes" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.inherited_constant_attributes">inherited​_constant​_attributes</a></code></td>
+    <td><code><a href="#inherited_constant_attributes" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.inherited_constant_attributes">inherited<wbr></wbr>_constant<wbr></wbr>_attributes</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="instancevariable">
     
@@ -148,12 +630,12 @@ other unobserved. It switches from unobserved to observed when
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="#p_observed" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.p_observed">p​_observed</a></code></td>
+    <td><code><a href="#p_observed" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.p_observed">p<wbr></wbr>_observed</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="#p_unobserved" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.p_unobserved">p​_unobserved</a></code></td>
+    <td><code><a href="#p_unobserved" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.p_unobserved">p<wbr></wbr>_unobserved</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="instancevariable">
     
@@ -163,38 +645,37 @@ other unobserved. It switches from unobserved to observed when
   </tr><tr class="property">
     
     <td>Property</td>
-    <td><code><a href="#best_observed_fvalue1" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.best_observed_fvalue1">best​_observed​_fvalue1</a></code></td>
+    <td><code><a href="#best_observed_fvalue1" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.best_observed_fvalue1">best<wbr></wbr>_observed<wbr></wbr>_fvalue1</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="property">
     
     <td>Property</td>
-    <td><code><a href="#final_target_hit" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.final_target_hit">final​_target​_hit</a></code></td>
+    <td><code><a href="#final_target_hit" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.final_target_hit">final<wbr></wbr>_target<wbr></wbr>_hit</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="property">
     
     <td>Property</td>
-    <td><code><a href="#random_solution" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.random_solution">random​_solution</a></code></td>
+    <td><code><a href="#random_solution" class="internal-link" title="cocoex.utilities.ProblemNonAnytime.random_solution">random<wbr></wbr>_solution</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="instancevariable private">
     
     <td>Instance Variable</td>
-    <td><code><a href="#_number_of_delivery_evaluations" class="internal-link" title="cocoex.utilities.ProblemNonAnytime._number_of_delivery_evaluations">​_number​_of​_delivery​_evaluations</a></code></td>
+    <td><code><a href="#_number_of_delivery_evaluations" class="internal-link" title="cocoex.utilities.ProblemNonAnytime._number_of_delivery_evaluations">_number<wbr></wbr>_of<wbr></wbr>_delivery<wbr></wbr>_evaluations</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="instancevariable private">
     
     <td>Instance Variable</td>
-    <td><code><a href="#_p" class="internal-link" title="cocoex.utilities.ProblemNonAnytime._p">​_p</a></code></td>
+    <td><code><a href="#_p" class="internal-link" title="cocoex.utilities.ProblemNonAnytime._p">_p</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
-        
-
           
-      </div>
 
-      <div id="childList">
+            
+        </div>
 
-        <div class="basemethod">
+        <div id="childList">
+          <div class="basemethod">
   
   
   <a name="cocoex.utilities.ProblemNonAnytime.__call__">
@@ -205,11 +686,16 @@ other unobserved. It switches from unobserved to observed when
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">__call__</span>(self, x, *args, **kwargs):
     
+    <span class="py-keyword">def</span> <span class="py-defname">__call__</span><span class="function-signature">(self, x, *args, **kwargs)</span>:
+    
+    <a class="headerLink" href="#__call__" title="cocoex.utilities.ProblemNonAnytime.__call__">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -224,11 +710,16 @@ other unobserved. It switches from unobserved to observed when
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">__enter__</span>(self):
     
+    <span class="py-keyword">def</span> <span class="py-defname">__enter__</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__enter__" title="cocoex.utilities.ProblemNonAnytime.__enter__">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -243,11 +734,16 @@ other unobserved. It switches from unobserved to observed when
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">__exit__</span>(self, *args):
     
+    <span class="py-keyword">def</span> <span class="py-defname">__exit__</span><span class="function-signature">(self, *args)</span>:
+    
+    <a class="headerLink" href="#__exit__" title="cocoex.utilities.ProblemNonAnytime.__exit__">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -262,11 +758,16 @@ other unobserved. It switches from unobserved to observed when
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, suite, observer, index):
     
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, suite, observer, index)</span>:
+    
+    <a class="headerLink" href="#__init__" title="cocoex.utilities.ProblemNonAnytime.__init__">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -281,11 +782,16 @@ other unobserved. It switches from unobserved to observed when
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">delivered</span>(self, x, *args, **kwargs):
     
+    <span class="py-keyword">def</span> <span class="py-defname">delivered</span><span class="function-signature">(self, x, *args, **kwargs)</span>:
+    
+    <a class="headerLink" href="#delivered" title="cocoex.utilities.ProblemNonAnytime.delivered">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>to be called with the solution returned by the solver.</p>
 <p>The method records the delivered solution (if necessary) and
@@ -304,11 +810,16 @@ prepares the problem to be run on the next budget by calling
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">free</span>(self):
     
+    <span class="py-keyword">def</span> <span class="py-defname">free</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#free" title="cocoex.utilities.ProblemNonAnytime.free">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -323,11 +834,16 @@ prepares the problem to be run on the next budget by calling
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">print_progress</span>(self):
     
+    <span class="py-keyword">def</span> <span class="py-defname">print_progress</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#print_progress" title="cocoex.utilities.ProblemNonAnytime.print_progress">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -342,13 +858,18 @@ prepares the problem to be run on the next budget by calling
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">reset</span>(self):
     
+    <span class="py-keyword">def</span> <span class="py-defname">reset</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#reset" title="cocoex.utilities.ProblemNonAnytime.reset">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     
-    
-    <div>prepare the problem to be run on the next budget</div>
+    <div><p>prepare the problem to be run on the next budget</p></div>
   </div>
 </div><div class="baseclassvariable">
   
@@ -363,9 +884,13 @@ prepares the problem to be run on the next budget by calling
     
     <span class="py-defname">inherited_constant_attributes</span>: <code>list[<wbr></wbr>str]</code> =
     
+    <a class="headerLink" href="#inherited_constant_attributes" title="cocoex.utilities.ProblemNonAnytime.inherited_constant_attributes">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -383,9 +908,13 @@ prepares the problem to be run on the next budget by calling
     
     <span class="py-defname">evaluations</span>: <code>int</code> =
     
+    <a class="headerLink" href="#evaluations" title="cocoex.utilities.ProblemNonAnytime.evaluations">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -403,9 +932,13 @@ prepares the problem to be run on the next budget by calling
     
     <span class="py-defname">p_observed</span> =
     
+    <a class="headerLink" href="#p_observed" title="cocoex.utilities.ProblemNonAnytime.p_observed">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -423,9 +956,13 @@ prepares the problem to be run on the next budget by calling
     
     <span class="py-defname">p_unobserved</span> =
     
+    <a class="headerLink" href="#p_unobserved" title="cocoex.utilities.ProblemNonAnytime.p_unobserved">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -443,9 +980,13 @@ prepares the problem to be run on the next budget by calling
     
     <span class="py-defname">suite</span> =
     
+    <a class="headerLink" href="#suite" title="cocoex.utilities.ProblemNonAnytime.suite">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -463,9 +1004,13 @@ prepares the problem to be run on the next budget by calling
     @property<br />
     <span class="py-defname">best_observed_fvalue1</span> =
     
+    <a class="headerLink" href="#best_observed_fvalue1" title="cocoex.utilities.ProblemNonAnytime.best_observed_fvalue1">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -483,9 +1028,13 @@ prepares the problem to be run on the next budget by calling
     @property<br />
     <span class="py-defname">final_target_hit</span> =
     
+    <a class="headerLink" href="#final_target_hit" title="cocoex.utilities.ProblemNonAnytime.final_target_hit">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -503,9 +1052,13 @@ prepares the problem to be run on the next budget by calling
     @property<br />
     <span class="py-defname">random_solution</span> =
     
+    <a class="headerLink" href="#random_solution" title="cocoex.utilities.ProblemNonAnytime.random_solution">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -523,9 +1076,13 @@ prepares the problem to be run on the next budget by calling
     
     <span class="py-defname">_number_of_delivery_evaluations</span>: <code>int</code> =
     
+    <a class="headerLink" href="#_number_of_delivery_evaluations" title="cocoex.utilities.ProblemNonAnytime._number_of_delivery_evaluations">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -543,27 +1100,40 @@ prepares the problem to be run on the next budget by calling
     
     <span class="py-defname">_p</span> =
     
+    <a class="headerLink" href="#_p" title="cocoex.utilities.ProblemNonAnytime._p">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
   </div>
 </div>
-
+        </div>
+      
       </div>
     </div>
 
     <footer class="navbar navbar-default">
+
   
   <div class="container">
     <a href="index.html">API Documentation</a> for cocoex,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.2.1 at 2022-03-01 09:44:24.
+    23.9.1 at 2024-07-11 01:55:35.
   </div>
-</footer>
 
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
     <script src="pydoctor.js" type="text/javascript"></script>
 
   </body>

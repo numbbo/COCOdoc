@@ -6,7 +6,7 @@
 
   <head>
     
-    <title>cocoex.exceptions</title>
+    <title>cocoex.BatchScheduler</title>
     <meta name="generator" content="pydoctor 23.9.1"> 
         
     </meta>
@@ -141,8 +141,8 @@
   <div>
 
       <div class="thingTitle">
-        <span>Module</span>
-        <code class="thisobject"><a href="cocoex.exceptions.html" class="internal-link" title="This module">exceptions</a></code> 
+        <span>Class</span>
+        <code class="thisobject"><a href="cocoex.BatchScheduler.html" class="internal-link" title="This class"><wbr></wbr>Batch<wbr></wbr>Scheduler</a></code> 
       </div>
       
       <div>
@@ -151,7 +151,10 @@
         
          
 
-        <div class="childrenKindTitle">Classes</div>
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
         <ul>
     
     <li class="">
@@ -160,7 +163,7 @@
         
 
         
-            <div class="itemName"><code><a href="cocoex.exceptions.InvalidProblemException.html" class="internal-link" title="cocoex.exceptions.InvalidProblemException"><wbr></wbr>Invalid<wbr></wbr>Problem<wbr></wbr>Exception</a></code>
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="cocoex.BatchScheduler.__init__">__init__</a></code>
             </div>
         
 
@@ -170,31 +173,61 @@
         
 
         
-            <div class="itemName"><code><a href="cocoex.exceptions.NoSuchProblemException.html" class="internal-link" title="cocoex.exceptions.NoSuchProblemException"><wbr></wbr>No<wbr></wbr>Such<wbr></wbr>Problem<wbr></wbr>Exception</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="cocoex.exceptions.NoSuchSuiteException.html" class="internal-link" title="cocoex.exceptions.NoSuchSuiteException"><wbr></wbr>No<wbr></wbr>Such<wbr></wbr>Suite<wbr></wbr>Exception</a></code>
+            <div class="itemName"><code><a href="#is_in_batch" class="internal-link" title="cocoex.BatchScheduler.is_in_batch">is<wbr></wbr>_in<wbr></wbr>_batch</a></code>
             </div>
         
 
     </li>
-</ul>
+</ul> 
 
         
          
 
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
         
-         
+        
+        
 
         
-         
+            <div class="itemName"><code><a href="#current_batch" class="internal-link" title="cocoex.BatchScheduler.current_batch">current<wbr></wbr>_batch</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#current_problem" class="internal-link" title="cocoex.BatchScheduler.current_problem">current<wbr></wbr>_problem</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#first_problem" class="internal-link" title="cocoex.BatchScheduler.first_problem">first<wbr></wbr>_problem</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#params" class="internal-link" title="cocoex.BatchScheduler.params">params</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
 
         
          
@@ -204,7 +237,7 @@
 
       <div class="thingTitle">
         <span>Package</span>
-        <code><a href="index.html" class="internal-link" title="The parent of this module">cocoex</a></code> 
+        <code><a href="index.html" class="internal-link" title="The parent of this class">cocoex</a></code> 
       </div>
       
       <div>
@@ -213,7 +246,7 @@
         <div class="childrenKindTitle">Modules</div>
         <ul>
     
-    <li class=" thisobject">
+    <li class="">
         
         
         
@@ -259,7 +292,7 @@
         <div class="childrenKindTitle">Classes</div>
         <ul>
     
-    <li class="">
+    <li class=" thisobject">
         
         
         
@@ -369,43 +402,81 @@
         
 
         <div class="page-header">
-          <h1 class="module"><code><code><a href="index.html" class="internal-link">cocoex</a></code><wbr></wbr>.<code><a href="cocoex.exceptions.html" class="internal-link" title="cocoex.exceptions">exceptions</a></code></code></h1>
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">cocoex</a></code><wbr></wbr>.<code><a href="cocoex.BatchScheduler.html" class="internal-link" title="cocoex.BatchScheduler">BatchScheduler</a></code></code></h1>
           <div id="showPrivate">
             <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
           </div>
         </div>
 
         <div class="categoryHeader">
-          module documentation
+          class documentation
         </div>
 
         <div class="extrasDocstring">
-          
-          <p></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">BatchScheduler</span>:</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="cocoex.BatchScheduler.__init__">BatchScheduler(number_of_batches, batch_to_execute)</a></code></p>
+          <p><a href="classIndex.html#cocoex.BatchScheduler">View In Hierarchy</a></p>
         </div>
 
         <div class="moduleDocstring">
-          <div><p class="undocumented">Undocumented</p></div>
+          <div><p><dl class="rst-docutils">
+<dt>Facilitate running a benchmarking experiment on a <code><a href="cocoex.Suite.html" class="internal-link">cocoex.Suite</a></code> in</dt>
+<dd>several independent batches.</dd>
+</dl>
+<p>The batch scheduler crucially assumes that in each batch the same
+problems are given <em>in the same order</em> when calling <code><a href="#is_in_batch" class="internal-link" title="cocoex.BatchScheduler.is_in_batch">is_in_batch</a></code>.</p>
+<p>Pseudo code example:</p>
+<pre class="rst-literal-block">
+batch_to_execute = 0  # set current batch to execute in [0, 3]
+
+suite = cocoex.Suite('bbob', '', '')
+batcher = cocoex.BatchScheduler(4, batch_to_execute)
+for problem in suite:
+    if not batcher.is_in_batch(problem):
+        continue
+    # ... run optimizer on problem ...
+</pre>
+<p>needs to be run four times overall (e.g., in parallel) with
+<tt class="rst-docutils literal">batch_to_execute</tt> = 0..3 to generate the full experimental data.</p>
+<p>Details: to get a more even time distribution over all batches, it
+seems advisable that the number of functions is not divisible by the
+number of batches. That is, 4 (or 6 or 8 or 12) batches is not likely
+to be ideal on the <code>'bbob'</code> testbed of 24 functions.</p>
+</p></div>
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id4">
+          <table class="children sortable" id="id16">
   
   
-  <tr class="exception">
+  <tr class="method">
     
-    <td>Exception</td>
-    <td><code><a href="cocoex.exceptions.InvalidProblemException.html" class="internal-link" title="cocoex.exceptions.InvalidProblemException"><wbr></wbr>Invalid<wbr></wbr>Problem<wbr></wbr>Exception</a></code></td>
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="cocoex.BatchScheduler.__init__">__init__</a></code></td>
+    <td>distribute over <code>number_of_batches</code> batches and executed here</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#is_in_batch" class="internal-link" title="cocoex.BatchScheduler.is_in_batch">is<wbr></wbr>_in<wbr></wbr>_batch</a></code></td>
+    <td>return <code>True</code> iff the batch number for <code>problem</code> equals <code>batch_to_execute</code></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#current_batch" class="internal-link" title="cocoex.BatchScheduler.current_batch">current<wbr></wbr>_batch</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
-  </tr><tr class="exception">
+  </tr><tr class="instancevariable">
     
-    <td>Exception</td>
-    <td><code><a href="cocoex.exceptions.NoSuchProblemException.html" class="internal-link" title="cocoex.exceptions.NoSuchProblemException"><wbr></wbr>No<wbr></wbr>Such<wbr></wbr>Problem<wbr></wbr>Exception</a></code></td>
+    <td>Instance Variable</td>
+    <td><code><a href="#current_problem" class="internal-link" title="cocoex.BatchScheduler.current_problem">current<wbr></wbr>_problem</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
-  </tr><tr class="exception">
+  </tr><tr class="instancevariable">
     
-    <td>Exception</td>
-    <td><code><a href="cocoex.exceptions.NoSuchSuiteException.html" class="internal-link" title="cocoex.exceptions.NoSuchSuiteException"><wbr></wbr>No<wbr></wbr>Such<wbr></wbr>Suite<wbr></wbr>Exception</a></code></td>
+    <td>Instance Variable</td>
+    <td><code><a href="#first_problem" class="internal-link" title="cocoex.BatchScheduler.first_problem">first<wbr></wbr>_problem</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#params" class="internal-link" title="cocoex.BatchScheduler.params">params</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
@@ -415,7 +486,162 @@
         </div>
 
         <div id="childList">
-          
+          <div class="basemethod">
+  
+  
+  <a name="cocoex.BatchScheduler.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, number_of_batches, batch_to_execute)</span>:
+    
+    <a class="headerLink" href="#__init__" title="cocoex.BatchScheduler.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>distribute over <code>number_of_batches</code> batches and executed here</p>
+<p>the batch with number <code>batch_to_execute</code>.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="cocoex.BatchScheduler.is_in_batch">
+    
+  </a>
+  <a name="is_in_batch">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">is_in_batch</span><span class="function-signature">(self, problem)</span>:
+    
+    <a class="headerLink" href="#is_in_batch" title="cocoex.BatchScheduler.is_in_batch">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>return <code>True</code> iff the batch number for <code>problem</code> equals <code>batch_to_execute</code></p>
+<p>which was given as a constructor argument. Assumes that
+<tt class="rst-docutils literal">id_function</tt> and <tt class="rst-docutils literal">dimension</tt> are attributes of <code>problem</code>.</p>
+<p>The batch number for <code>problem</code> is attributed using
+<tt class="rst-docutils literal">(problem.id_function, problem.dimension)</tt> by order of
+appearance, in that the number is incremented whenever either
+<tt class="rst-docutils literal">id_function</tt> or <tt class="rst-docutils literal">dimension</tt> changes. Instances that follow
+suit with the same function ID and dimension belong to the same
+batch.</p>
+</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="cocoex.BatchScheduler.current_batch">
+    
+  </a>
+  <a name="current_batch">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">current_batch</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#current_batch" title="cocoex.BatchScheduler.current_batch">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="cocoex.BatchScheduler.current_problem">
+    
+  </a>
+  <a name="current_problem">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">current_problem</span> =
+    
+    <a class="headerLink" href="#current_problem" title="cocoex.BatchScheduler.current_problem">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="cocoex.BatchScheduler.first_problem">
+    
+  </a>
+  <a name="first_problem">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">first_problem</span> =
+    
+    <a class="headerLink" href="#first_problem" title="cocoex.BatchScheduler.first_problem">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="cocoex.BatchScheduler.params">
+    
+  </a>
+  <a name="params">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">params</span> =
+    
+    <a class="headerLink" href="#params" title="cocoex.BatchScheduler.params">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
         </div>
       
       </div>

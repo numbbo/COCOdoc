@@ -7,11 +7,11 @@
   <head>
     
     <title>cocoex.Problem</title>
-    <meta name="generator" content="pydoctor 22.2.1"> 
+    <meta name="generator" content="pydoctor 23.9.1"> 
         
     </meta>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.75" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="apidocs.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
@@ -21,65 +21,643 @@
 
     
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default mainnavbar">
+      
   
-  <div class="container">
+  <div class="container-fluid">
+
 
     <div class="navbar-header">
       
       <div class="navlinks">
-          <span class="navbar-brand">
-            cocoex <a href="index.html">API Documentation</a>
-          </span>
+        <span class="navbar-brand">
+          cocoex <a href="index.html">API Documentation</a>
+        </span>
 
-          <a href="moduleIndex.html">
-            Modules
-          </a>
+        <a href="moduleIndex.html">
+          Modules
+        </a>
 
-          <a href="classIndex.html">
-            Classes
-          </a>
+        <a href="classIndex.html">
+          Classes
+        </a>
 
-          <a href="nameIndex.html">
-            Names
-          </a>
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
       </div>
 
-    </div>
-  </div>
-</nav>
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
 
-    
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
 
-    <div class="container">
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
 
-      <div class="page-header">
-        <h1 class="class"><code><code><a href="index.html" class="internal-link">cocoex</a></code><wbr></wbr>.<code><a href="cocoex.Problem.html" class="internal-link" title="cocoex.Problem">Problem</a></code></code></h1>
-        <div id="showPrivate">
-          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
         </div>
       </div>
 
-      <div class="categoryHeader">
-        class documentation
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="cocoex.Problem.html" class="internal-link" title="This class"><wbr></wbr>Problem</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="cocoex.Problem.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#add_observer" class="internal-link" title="cocoex.Problem.add_observer">add<wbr></wbr>_observer</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#constraint" class="internal-link" title="cocoex.Problem.constraint">constraint</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#free" class="internal-link" title="cocoex.Problem.free">free</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#initial_solution_proposal" class="internal-link" title="cocoex.Problem.initial_solution_proposal">initial<wbr></wbr>_solution<wbr></wbr>_proposal</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#logger_biobj_feed_solution" class="internal-link" title="cocoex.Problem.logger_biobj_feed_solution">logger<wbr></wbr>_biobj<wbr></wbr>_feed<wbr></wbr>_solution</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#observe_with" class="internal-link" title="cocoex.Problem.observe_with">observe<wbr></wbr>_with</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_f0" class="internal-link" title="cocoex.Problem._f0">_f0</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#best_observed_fvalue1" class="internal-link" title="cocoex.Problem.best_observed_fvalue1">best<wbr></wbr>_observed<wbr></wbr>_fvalue1</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#dimension" class="internal-link" title="cocoex.Problem.dimension">dimension</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#evaluations" class="internal-link" title="cocoex.Problem.evaluations">evaluations</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#final_target_fvalue1" class="internal-link" title="cocoex.Problem.final_target_fvalue1">final<wbr></wbr>_target<wbr></wbr>_fvalue1</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#final_target_hit" class="internal-link" title="cocoex.Problem.final_target_hit">final<wbr></wbr>_target<wbr></wbr>_hit</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#id" class="internal-link" title="cocoex.Problem.id">id</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#id_function" class="internal-link" title="cocoex.Problem.id_function">id<wbr></wbr>_function</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#id_instance" class="internal-link" title="cocoex.Problem.id_instance">id<wbr></wbr>_instance</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#id_triple" class="internal-link" title="cocoex.Problem.id_triple">id<wbr></wbr>_triple</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#index" class="internal-link" title="cocoex.Problem.index">index</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#info" class="internal-link" title="cocoex.Problem.info">info</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#initial_solution" class="internal-link" title="cocoex.Problem.initial_solution">initial<wbr></wbr>_solution</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#is_observed" class="internal-link" title="cocoex.Problem.is_observed">is<wbr></wbr>_observed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#lower_bounds" class="internal-link" title="cocoex.Problem.lower_bounds">lower<wbr></wbr>_bounds</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#name" class="internal-link" title="cocoex.Problem.name">name</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#number_of_constraints" class="internal-link" title="cocoex.Problem.number_of_constraints">number<wbr></wbr>_of<wbr></wbr>_constraints</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#number_of_objectives" class="internal-link" title="cocoex.Problem.number_of_objectives">number<wbr></wbr>_of<wbr></wbr>_objectives</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#number_of_variables" class="internal-link" title="cocoex.Problem.number_of_variables">number<wbr></wbr>_of<wbr></wbr>_variables</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#observers" class="internal-link" title="cocoex.Problem.observers">observers</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#suite" class="internal-link" title="cocoex.Problem.suite">suite</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#upper_bounds" class="internal-link" title="cocoex.Problem.upper_bounds">upper<wbr></wbr>_bounds</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="index.html" class="internal-link" title="The parent of this class">cocoex</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.exceptions.html" class="internal-link" title="cocoex.exceptions">exceptions</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.solvers.html" class="internal-link" title="cocoex.solvers">solvers</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.utilities.html" class="internal-link" title="cocoex.utilities">utilities</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex._version.html" class="internal-link" title="cocoex._version">_version</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.BatchScheduler.html" class="internal-link" title="cocoex.BatchScheduler"><wbr></wbr>Batch<wbr></wbr>Scheduler</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.ExperimentRepeater.html" class="internal-link" title="cocoex.ExperimentRepeater"><wbr></wbr>Experiment<wbr></wbr>Repeater</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.Observer.html" class="internal-link" title="cocoex.Observer"><wbr></wbr>Observer</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.Problem.html" class="internal-link" title="cocoex.Problem"><wbr></wbr>Problem</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.Suite.html" class="internal-link" title="cocoex.Suite"><wbr></wbr>Suite</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="index.html#default_observers" class="internal-link" title="cocoex.default_observers">default<wbr></wbr>_observers</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="index.html#_default_observers" class="internal-link" title="cocoex._default_observers">_default<wbr></wbr>_observers</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
       </div>
 
-      <div class="extrasDocstring">
-        <p><code><span class="py-keyword">class</span> <span class="py-defname">Problem</span>(_interface.Problem):</code></p>
-        <p><a href="classIndex.html#cocoex.Problem">View In Hierarchy</a></p>
-      </div>
+      <div id="main" class="">
+        
 
-      <div class="moduleDocstring">
-        <div><p><code><a href="cocoex.Problem.html" class="internal-link" title="cocoex.Problem">Problem</a></code> instances are usually generated using class <code><a href="cocoex.Suite.html" class="internal-link" title="cocoex.Suite">Suite</a></code>.</p>
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">cocoex</a></code><wbr></wbr>.<code><a href="cocoex.Problem.html" class="internal-link" title="cocoex.Problem">Problem</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Problem</span>(_Problem):</code></p>
+          <p><a href="classIndex.html#cocoex.Problem">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p><code><a href="cocoex.Problem.html" class="internal-link" title="cocoex.Problem">Problem</a></code> instances are usually generated using class <code><a href="cocoex.Suite.html" class="internal-link" title="cocoex.Suite">Suite</a></code>.</p>
 <p>The main feature of a problem instance is that it is callable, returning the
 objective function value when called with a candidate solution as input.</p>
 <p>It provides other useful properties and methods like <code><a href="#dimension" class="internal-link" title="cocoex.Problem.dimension">dimension</a></code>,
 <code><a href="#number_of_constraints" class="internal-link" title="cocoex.Problem.number_of_constraints">number_of_constraints</a></code>, <code><a href="#observe_with" class="internal-link" title="cocoex.Problem.observe_with">observe_with</a></code>, <code><a href="#initial_solution_proposal" class="internal-link" title="cocoex.Problem.initial_solution_proposal">initial_solution_proposal</a></code>...</p>
 </div>
-      </div>
+        </div>
 
-      <div id="splitTables">
-        <table class="children sortable" id="id15">
+        <div id="splitTables">
+          <table class="children sortable" id="id19">
   
   
   <tr class="method">
@@ -90,8 +668,8 @@ objective function value when called with a candidate solution as input.</p>
   </tr><tr class="method">
     
     <td>Method</td>
-    <td><code><a href="#add_observer" class="internal-link" title="cocoex.Problem.add_observer">add​_observer</a></code></td>
-    <td><code>add_observer(self, observer: Observer)</code>, see <code><a href="#observe_with" class="internal-link" title="cocoex.Problem.observe_with">observe_with</a></code>.</td>
+    <td><code><a href="#add_observer" class="internal-link" title="cocoex.Problem.add_observer">add<wbr></wbr>_observer</a></code></td>
+    <td><code>add_observer(self, observer: Observer)</code>, see <code><a href="cocoex.Problem.html#observe_with" class="internal-link" title="cocoex.Problem.observe_with">observe_with</a></code>.</td>
   </tr><tr class="method">
     
     <td>Method</td>
@@ -105,28 +683,28 @@ objective function value when called with a candidate solution as input.</p>
   </tr><tr class="method">
     
     <td>Method</td>
-    <td><code><a href="#initial_solution_proposal" class="internal-link" title="cocoex.Problem.initial_solution_proposal">initial​_solution​_proposal</a></code></td>
+    <td><code><a href="#initial_solution_proposal" class="internal-link" title="cocoex.Problem.initial_solution_proposal">initial<wbr></wbr>_solution<wbr></wbr>_proposal</a></code></td>
     <td>return feasible initial solution proposals.</td>
   </tr><tr class="method">
     
     <td>Method</td>
-    <td><code><a href="#logger_biobj_feed_solution" class="internal-link" title="cocoex.Problem.logger_biobj_feed_solution">logger​_biobj​_feed​_solution</a></code></td>
+    <td><code><a href="#logger_biobj_feed_solution" class="internal-link" title="cocoex.Problem.logger_biobj_feed_solution">logger<wbr></wbr>_biobj<wbr></wbr>_feed<wbr></wbr>_solution</a></code></td>
     <td>Feed the given solution to logger_biobj in order to reconstruct its output.</td>
   </tr><tr class="method">
     
     <td>Method</td>
-    <td><code><a href="#observe_with" class="internal-link" title="cocoex.Problem.observe_with">observe​_with</a></code></td>
+    <td><code><a href="#observe_with" class="internal-link" title="cocoex.Problem.observe_with">observe<wbr></wbr>_with</a></code></td>
     <td><tt class="rst-docutils literal">observe_with(self, observer: Observer)</tt> attaches an <code><a href="cocoex.Observer.html" class="internal-link" title="cocoex.Observer">Observer</a></code> instance to this problem.</td>
   </tr><tr class="property">
     
     <td>Property</td>
-    <td><code><a href="#best_observed_fvalue1" class="internal-link" title="cocoex.Problem.best_observed_fvalue1">best​_observed​_fvalue1</a></code></td>
+    <td><code><a href="#best_observed_fvalue1" class="internal-link" title="cocoex.Problem.best_observed_fvalue1">best<wbr></wbr>_observed<wbr></wbr>_fvalue1</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="property">
     
     <td>Property</td>
     <td><code><a href="#dimension" class="internal-link" title="cocoex.Problem.dimension">dimension</a></code></td>
-    <td>alias for <code><a href="#number_of_variables" class="internal-link" title="cocoex.Problem.number_of_variables">number_of_variables</a></code> of the input space</td>
+    <td>alias for <code><a href="cocoex.Problem.html#number_of_variables" class="internal-link" title="cocoex.Problem.number_of_variables">number_of_variables</a></code> of the input space</td>
   </tr><tr class="property">
     
     <td>Property</td>
@@ -135,12 +713,12 @@ objective function value when called with a candidate solution as input.</p>
   </tr><tr class="property">
     
     <td>Property</td>
-    <td><code><a href="#final_target_fvalue1" class="internal-link" title="cocoex.Problem.final_target_fvalue1">final​_target​_fvalue1</a></code></td>
+    <td><code><a href="#final_target_fvalue1" class="internal-link" title="cocoex.Problem.final_target_fvalue1">final<wbr></wbr>_target<wbr></wbr>_fvalue1</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="property">
     
     <td>Property</td>
-    <td><code><a href="#final_target_hit" class="internal-link" title="cocoex.Problem.final_target_hit">final​_target​_hit</a></code></td>
+    <td><code><a href="#final_target_hit" class="internal-link" title="cocoex.Problem.final_target_hit">final<wbr></wbr>_target<wbr></wbr>_hit</a></code></td>
     <td>return 1 if the final target is known and has been hit, 0 otherwise</td>
   </tr><tr class="property">
     
@@ -150,13 +728,18 @@ objective function value when called with a candidate solution as input.</p>
   </tr><tr class="property">
     
     <td>Property</td>
-    <td><code><a href="#id_function" class="internal-link" title="cocoex.Problem.id_function">id​_function</a></code></td>
-    <td>function number inferred from <code><a href="#id" class="internal-link" title="cocoex.Problem.id">id</a></code></td>
+    <td><code><a href="#id_function" class="internal-link" title="cocoex.Problem.id_function">id<wbr></wbr>_function</a></code></td>
+    <td>function number inferred from <code><a href="cocoex.Problem.html#id" class="internal-link" title="cocoex.Problem.id">id</a></code></td>
   </tr><tr class="property">
     
     <td>Property</td>
-    <td><code><a href="#id_instance" class="internal-link" title="cocoex.Problem.id_instance">id​_instance</a></code></td>
-    <td>instance number inferred from <code><a href="#id" class="internal-link" title="cocoex.Problem.id">id</a></code></td>
+    <td><code><a href="#id_instance" class="internal-link" title="cocoex.Problem.id_instance">id<wbr></wbr>_instance</a></code></td>
+    <td>instance number inferred from <code><a href="cocoex.Problem.html#id" class="internal-link" title="cocoex.Problem.id">id</a></code></td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#id_triple" class="internal-link" title="cocoex.Problem.id_triple">id<wbr></wbr>_triple</a></code></td>
+    <td>unique problem id triplet <tt class="rst-docutils literal">(function, dimension, instance)</tt></td>
   </tr><tr class="property">
     
     <td>Property</td>
@@ -170,17 +753,17 @@ objective function value when called with a candidate solution as input.</p>
   </tr><tr class="property">
     
     <td>Property</td>
-    <td><code><a href="#initial_solution" class="internal-link" title="cocoex.Problem.initial_solution">initial​_solution</a></code></td>
+    <td><code><a href="#initial_solution" class="internal-link" title="cocoex.Problem.initial_solution">initial<wbr></wbr>_solution</a></code></td>
     <td>return feasible initial solution</td>
   </tr><tr class="property">
     
     <td>Property</td>
-    <td><code><a href="#is_observed" class="internal-link" title="cocoex.Problem.is_observed">is​_observed</a></code></td>
+    <td><code><a href="#is_observed" class="internal-link" title="cocoex.Problem.is_observed">is<wbr></wbr>_observed</a></code></td>
     <td>problem <tt class="rst-docutils literal">p</tt> is observed <tt class="rst-docutils literal">p.is_observed</tt> times.</td>
   </tr><tr class="property">
     
     <td>Property</td>
-    <td><code><a href="#lower_bounds" class="internal-link" title="cocoex.Problem.lower_bounds">lower​_bounds</a></code></td>
+    <td><code><a href="#lower_bounds" class="internal-link" title="cocoex.Problem.lower_bounds">lower<wbr></wbr>_bounds</a></code></td>
     <td>depending on the test bed, these are not necessarily strict bounds</td>
   </tr><tr class="property">
     
@@ -190,17 +773,17 @@ objective function value when called with a candidate solution as input.</p>
   </tr><tr class="property">
     
     <td>Property</td>
-    <td><code><a href="#number_of_constraints" class="internal-link" title="cocoex.Problem.number_of_constraints">number​_of​_constraints</a></code></td>
+    <td><code><a href="#number_of_constraints" class="internal-link" title="cocoex.Problem.number_of_constraints">number<wbr></wbr>_of<wbr></wbr>_constraints</a></code></td>
     <td>number of constraints</td>
   </tr><tr class="property">
     
     <td>Property</td>
-    <td><code><a href="#number_of_objectives" class="internal-link" title="cocoex.Problem.number_of_objectives">number​_of​_objectives</a></code></td>
+    <td><code><a href="#number_of_objectives" class="internal-link" title="cocoex.Problem.number_of_objectives">number<wbr></wbr>_of<wbr></wbr>_objectives</a></code></td>
     <td>number of objectives, if equal to 1, call returns a scalar</td>
   </tr><tr class="property">
     
     <td>Property</td>
-    <td><code><a href="#number_of_variables" class="internal-link" title="cocoex.Problem.number_of_variables">number​_of​_variables</a></code></td>
+    <td><code><a href="#number_of_variables" class="internal-link" title="cocoex.Problem.number_of_variables">number<wbr></wbr>_of<wbr></wbr>_variables</a></code></td>
     <td>Number of variables this problem instance expects as input.</td>
   </tr><tr class="property">
     
@@ -215,23 +798,22 @@ objective function value when called with a candidate solution as input.</p>
   </tr><tr class="property">
     
     <td>Property</td>
-    <td><code><a href="#upper_bounds" class="internal-link" title="cocoex.Problem.upper_bounds">upper​_bounds</a></code></td>
+    <td><code><a href="#upper_bounds" class="internal-link" title="cocoex.Problem.upper_bounds">upper<wbr></wbr>_bounds</a></code></td>
     <td>depending on the test bed, these are not necessarily strict bounds</td>
   </tr><tr class="method private">
     
     <td>Method</td>
-    <td><code><a href="#_f0" class="internal-link" title="cocoex.Problem._f0">​_f0</a></code></td>
+    <td><code><a href="#_f0" class="internal-link" title="cocoex.Problem._f0">_f0</a></code></td>
     <td>"inofficial" interface to <code>self</code> with target f-value of zero.</td>
   </tr>
 </table>
-        
-
           
-      </div>
 
-      <div id="childList">
+            
+        </div>
 
-        <div class="basemethod">
+        <div id="childList">
+          <div class="basemethod">
   
   
   <a name="cocoex.Problem.__init__">
@@ -242,11 +824,16 @@ objective function value when called with a candidate solution as input.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self):
     
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__init__" title="cocoex.Problem.__init__">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
@@ -261,13 +848,18 @@ objective function value when called with a candidate solution as input.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">add_observer</span>(self, observer):
     
+    <span class="py-keyword">def</span> <span class="py-defname">add_observer</span><span class="function-signature">(self, observer)</span>:
+    
+    <a class="headerLink" href="#add_observer" title="cocoex.Problem.add_observer">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     
-    
-    <div><code>add_observer(self, observer: Observer)</code>, see <code><a href="#observe_with" class="internal-link" title="cocoex.Problem.observe_with">observe_with</a></code>.</div>
+    <div><p><code>add_observer(self, observer: Observer)</code>, see <code><a href="#observe_with" class="internal-link" title="cocoex.Problem.observe_with">observe_with</a></code>.</p></div>
   </div>
 </div><div class="basemethod">
   
@@ -280,11 +872,16 @@ objective function value when called with a candidate solution as input.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">constraint</span>(self, x):
     
+    <span class="py-keyword">def</span> <span class="py-defname">constraint</span><span class="function-signature">(self, x)</span>:
+    
+    <a class="headerLink" href="#constraint" title="cocoex.Problem.constraint">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>return constraint values for <code>x</code>.</p>
 <p>By convention, constraints with values &lt;= 0 are satisfied.</p>
@@ -301,11 +898,16 @@ objective function value when called with a candidate solution as input.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">free</span>(self, force=False):
     
+    <span class="py-keyword">def</span> <span class="py-defname">free</span><span class="function-signature">(self, force=False)</span>:
+    
+    <a class="headerLink" href="#free" title="cocoex.Problem.free">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Free the given test problem.</p>
 <p>Not strictly necessary (unless, possibly, for the observer). <code><a href="#free" class="internal-link" title="cocoex.Problem.free">free</a></code>
@@ -326,11 +928,16 @@ exception.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">initial_solution_proposal</span>(self, restart_number=None):
     
+    <span class="py-keyword">def</span> <span class="py-defname">initial_solution_proposal</span><span class="function-signature">(self, restart_number=None)</span>:
+    
+    <a class="headerLink" href="#initial_solution_proposal" title="cocoex.Problem.initial_solution_proposal">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>return feasible initial solution proposals.</p>
 <p>For unconstrained problems, the proposal is different for each
@@ -366,11 +973,16 @@ domain boundaries. On the <tt class="rst-docutils literal">'bbob'</tt> suite the
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">logger_biobj_feed_solution</span>(self, evaluation, y):
     
+    <span class="py-keyword">def</span> <span class="py-defname">logger_biobj_feed_solution</span><span class="function-signature">(self, evaluation, y)</span>:
+    
+    <a class="headerLink" href="#logger_biobj_feed_solution" title="cocoex.Problem.logger_biobj_feed_solution">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p>Feed the given solution to logger_biobj in order to reconstruct its
 output.</p>
@@ -390,11 +1002,16 @@ with new indicator reference values.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">observe_with</span>(self, observer):
     
+    <span class="py-keyword">def</span> <span class="py-defname">observe_with</span><span class="function-signature">(self, observer)</span>:
+    
+    <a class="headerLink" href="#observe_with" title="cocoex.Problem.observe_with">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
-    
     
     <div><p><tt class="rst-docutils literal">observe_with(self, observer: Observer)</tt> attaches an <code><a href="cocoex.Observer.html" class="internal-link" title="cocoex.Observer">Observer</a></code>
 instance to this problem.</p>
@@ -419,9 +1036,13 @@ must be free'd (implictly or explicitly).</p>
     @property<br />
     <span class="py-defname">best_observed_fvalue1</span> =
     
+    <a class="headerLink" href="#best_observed_fvalue1" title="cocoex.Problem.best_observed_fvalue1">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -439,11 +1060,15 @@ must be free'd (implictly or explicitly).</p>
     @property<br />
     <span class="py-defname">dimension</span> =
     
+    <a class="headerLink" href="#dimension" title="cocoex.Problem.dimension">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
-    
-    <div>alias for <code><a href="#number_of_variables" class="internal-link" title="cocoex.Problem.number_of_variables">number_of_variables</a></code> of the input space</div>
+    <div><p>alias for <code><a href="#number_of_variables" class="internal-link" title="cocoex.Problem.number_of_variables">number_of_variables</a></code> of the input space</p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -459,11 +1084,15 @@ must be free'd (implictly or explicitly).</p>
     @property<br />
     <span class="py-defname">evaluations</span> =
     
+    <a class="headerLink" href="#evaluations" title="cocoex.Problem.evaluations">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
-    
-    <div>number of times this <code><a href="cocoex.Problem.html" class="internal-link" title="cocoex.Problem">Problem</a></code> instance was evaluated</div>
+    <div><p>number of times this <code><a href="cocoex.Problem.html" class="internal-link" title="cocoex.Problem">Problem</a></code> instance was evaluated</p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -479,9 +1108,13 @@ must be free'd (implictly or explicitly).</p>
     @property<br />
     <span class="py-defname">final_target_fvalue1</span> =
     
+    <a class="headerLink" href="#final_target_fvalue1" title="cocoex.Problem.final_target_fvalue1">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p class="undocumented">Undocumented</p></div>
     
@@ -499,11 +1132,15 @@ must be free'd (implictly or explicitly).</p>
     @property<br />
     <span class="py-defname">final_target_hit</span> =
     
+    <a class="headerLink" href="#final_target_hit" title="cocoex.Problem.final_target_hit">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
-    
-    <div>return 1 if the final target is known and has been hit, 0 otherwise</div>
+    <div><p>return 1 if the final target is known and has been hit, 0 otherwise</p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -519,11 +1156,15 @@ must be free'd (implictly or explicitly).</p>
     @property<br />
     <span class="py-defname">id</span> =
     
+    <a class="headerLink" href="#id" title="cocoex.Problem.id">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
-    
-    <div>ID as string without spaces or weird characters</div>
+    <div><p>ID as string without spaces or weird characters</p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -539,11 +1180,15 @@ must be free'd (implictly or explicitly).</p>
     @property<br />
     <span class="py-defname">id_function</span> =
     
+    <a class="headerLink" href="#id_function" title="cocoex.Problem.id_function">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
-    
-    <div>function number inferred from <code><a href="#id" class="internal-link" title="cocoex.Problem.id">id</a></code></div>
+    <div><p>function number inferred from <code><a href="#id" class="internal-link" title="cocoex.Problem.id">id</a></code></p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -559,11 +1204,39 @@ must be free'd (implictly or explicitly).</p>
     @property<br />
     <span class="py-defname">id_instance</span> =
     
+    <a class="headerLink" href="#id_instance" title="cocoex.Problem.id_instance">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
+    <div><p>instance number inferred from <code><a href="#id" class="internal-link" title="cocoex.Problem.id">id</a></code></p></div>
     
-    <div>instance number inferred from <code><a href="#id" class="internal-link" title="cocoex.Problem.id">id</a></code></div>
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="cocoex.Problem.id_triple">
+    
+  </a>
+  <a name="id_triple">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">id_triple</span> =
+    
+    <a class="headerLink" href="#id_triple" title="cocoex.Problem.id_triple">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>unique problem id triplet <tt class="rst-docutils literal">(function, dimension, instance)</tt></p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -579,11 +1252,15 @@ must be free'd (implictly or explicitly).</p>
     @property<br />
     <span class="py-defname">index</span> =
     
+    <a class="headerLink" href="#index" title="cocoex.Problem.index">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
-    
-    <div>problem index in the benchmark <code><a href="cocoex.Suite.html" class="internal-link" title="cocoex.Suite">Suite</a></code> of origin</div>
+    <div><p>problem index in the benchmark <code><a href="cocoex.Suite.html" class="internal-link" title="cocoex.Suite">Suite</a></code> of origin</p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -599,9 +1276,13 @@ must be free'd (implictly or explicitly).</p>
     @property<br />
     <span class="py-defname">info</span> =
     
+    <a class="headerLink" href="#info" title="cocoex.Problem.info">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p>human readible info, alias for <tt class="rst-docutils literal">str(self)</tt>.</p>
 <p>The format of this info string is not guarantied and may change
@@ -623,11 +1304,15 @@ in future.</p>
     @property<br />
     <span class="py-defname">initial_solution</span> =
     
+    <a class="headerLink" href="#initial_solution" title="cocoex.Problem.initial_solution">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
-    
-    <div>return feasible initial solution</div>
+    <div><p>return feasible initial solution</p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -643,9 +1328,13 @@ in future.</p>
     @property<br />
     <span class="py-defname">is_observed</span> =
     
+    <a class="headerLink" href="#is_observed" title="cocoex.Problem.is_observed">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
-    
     
     <div><p>problem <tt class="rst-docutils literal">p</tt> is observed <tt class="rst-docutils literal">p.is_observed</tt> times.</p>
 <p>See also: the list of observers in property <code><a href="#observers" class="internal-link" title="cocoex.Problem.observers">observers</a></code>.</p>
@@ -665,11 +1354,15 @@ in future.</p>
     @property<br />
     <span class="py-defname">lower_bounds</span> =
     
+    <a class="headerLink" href="#lower_bounds" title="cocoex.Problem.lower_bounds">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
-    
-    <div>depending on the test bed, these are not necessarily strict bounds</div>
+    <div><p>depending on the test bed, these are not necessarily strict bounds</p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -685,11 +1378,15 @@ in future.</p>
     @property<br />
     <span class="py-defname">name</span> =
     
+    <a class="headerLink" href="#name" title="cocoex.Problem.name">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
-    
-    <div>human readible short description with spaces</div>
+    <div><p>human readible short description with spaces</p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -705,11 +1402,15 @@ in future.</p>
     @property<br />
     <span class="py-defname">number_of_constraints</span> =
     
+    <a class="headerLink" href="#number_of_constraints" title="cocoex.Problem.number_of_constraints">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
-    
-    <div>number of constraints</div>
+    <div><p>number of constraints</p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -725,11 +1426,15 @@ in future.</p>
     @property<br />
     <span class="py-defname">number_of_objectives</span> =
     
+    <a class="headerLink" href="#number_of_objectives" title="cocoex.Problem.number_of_objectives">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
-    
-    <div>number of objectives, if equal to 1, call returns a scalar</div>
+    <div><p>number of objectives, if equal to 1, call returns a scalar</p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -745,11 +1450,15 @@ in future.</p>
     @property<br />
     <span class="py-defname">number_of_variables</span> =
     
+    <a class="headerLink" href="#number_of_variables" title="cocoex.Problem.number_of_variables">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
-    
-    <div>Number of variables this problem instance expects as input.</div>
+    <div><p>Number of variables this problem instance expects as input.</p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -765,11 +1474,15 @@ in future.</p>
     @property<br />
     <span class="py-defname">observers</span> =
     
+    <a class="headerLink" href="#observers" title="cocoex.Problem.observers">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
-    
-    <div>list of observers wrapped around this problem</div>
+    <div><p>list of observers wrapped around this problem</p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -785,11 +1498,15 @@ in future.</p>
     @property<br />
     <span class="py-defname">suite</span> =
     
+    <a class="headerLink" href="#suite" title="cocoex.Problem.suite">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
-    
-    <div>benchmark suite this problem is from</div>
+    <div><p>benchmark suite this problem is from</p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -805,11 +1522,15 @@ in future.</p>
     @property<br />
     <span class="py-defname">upper_bounds</span> =
     
+    <a class="headerLink" href="#upper_bounds" title="cocoex.Problem.upper_bounds">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="functionBody">
     
-    
-    <div>depending on the test bed, these are not necessarily strict bounds</div>
+    <div><p>depending on the test bed, these are not necessarily strict bounds</p></div>
     
   </div>
 </div><div class="basemethod private">
@@ -823,28 +1544,42 @@ in future.</p>
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">_f0</span>(self, x):
     
+    <span class="py-keyword">def</span> <span class="py-defname">_f0</span><span class="function-signature">(self, x)</span>:
+    
+    <a class="headerLink" href="#_f0" title="cocoex.Problem._f0">
+      
+      
+      ¶
+    </a>
   </div>
   <div class="docstring functionBody">
     
-    
-    <div>"inofficial" interface to <code>self</code> with target f-value of zero.</div>
+    <div><p>"inofficial" interface to <code>self</code> with target f-value of zero.</p></div>
   </div>
 </div>
-
+        </div>
+      
       </div>
     </div>
 
     <footer class="navbar navbar-default">
+
   
   <div class="container">
     <a href="index.html">API Documentation</a> for cocoex,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.2.1 at 2022-03-01 09:44:24.
+    23.9.1 at 2024-07-11 01:55:35.
   </div>
-</footer>
 
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
     <script src="pydoctor.js" type="text/javascript"></script>
 
   </body>
