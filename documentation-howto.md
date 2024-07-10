@@ -79,12 +79,16 @@ in the C/ subfolder of this `gh-pages` branch of the numbbo/coco-doc repository 
 (www.doxygen.org/). After installing doxygen, and having a clone of the `master` or `development` branch of the
 numbbo/coco github repository in the same folder than your numbbo/coco-doc checkout, you can create the html output
 in this directory by simply typing `doxygen` in the docs/coco-doc/C/ folder. Afterwards, commit and push
-of this repository will again update the web page directly as described above. Note that we have tried a few versions of doxygen back in January 2020 and not all were producing the output we wanted. Hence, we suggest to use Doxygen version 1.8.11.
+of this repository will again update the web page directly as described above.
+Note that we have tried a few versions of doxygen back in January 2020 and not all were producing the output we wanted.
+Hence, we suggest to use Doxygen version 1.8.11.
 
 #### Python documentation
 
-To create and publish the documentation of the cocoex and cocopp modules as well as the `example_experiment2.py`,
-use pydoctor via the script `run_pydoctor.sh` at the root. Then add and commit the changes to the `apidocs` folder.
+To create and publish the documentation of the `coco-experiment` (`cocoex`)
+and `cocopp` modules as well as the examples in `build/python/example`,
+using `pydoctor`, see the script `run_pydoctor.sh` at the root for how to.
+Then add and commit the changes to the `apidocs` folder.
 
 ```bash
 cd coco-doc
