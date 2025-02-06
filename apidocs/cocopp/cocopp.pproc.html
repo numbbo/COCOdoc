@@ -370,6 +370,16 @@
             </div>
         
 
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_set_using_recommendations" class="internal-link" title="cocopp.pproc._set_using_recommendations">_set<wbr></wbr>_using<wbr></wbr>_recommendations</a></code>
+            </div>
+        
+
     </li>
 </ul> 
 
@@ -396,6 +406,26 @@
 
         
             <div class="itemName"><code><a href="#targets_displayed_for_info" class="internal-link" title="cocopp.pproc.targets_displayed_for_info">targets<wbr></wbr>_displayed<wbr></wbr>_for<wbr></wbr>_info</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_block_using_recommendations" class="internal-link" title="cocopp.pproc._block_using_recommendations">_block<wbr></wbr>_using<wbr></wbr>_recommendations</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_using_recommendations" class="internal-link" title="cocopp.pproc._using_recommendations">_using<wbr></wbr>_recommendations</a></code>
             </div>
         
 
@@ -696,16 +726,6 @@
 
         
             <div class="itemName"><code><a href="cocopp.pptex.html" class="internal-link" title="cocopp.pptex">pptex</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="cocopp.preparehtml.html" class="internal-link" title="cocopp.preparehtml">preparehtml</a></code>
             </div>
         
 
@@ -1025,6 +1045,21 @@ for comparisons.</p>
     <td>Function</td>
     <td><code><a href="#_DataSet_complement_data" class="internal-link" title="cocopp.pproc._DataSet_complement_data">_<wbr></wbr>Data<wbr></wbr>Set_complement_data</a></code></td>
     <td>insert a line for each target value, never used (detEvals(targets) does the job on the fly).</td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_set_using_recommendations" class="internal-link" title="cocopp.pproc._set_using_recommendations">_set<wbr></wbr>_using<wbr></wbr>_recommendations</a></code></td>
+    <td>set module variable <code><a href="cocopp.pproc.html#_using_recommendations" class="internal-link" title="cocopp.pproc._using_recommendations">_using_recommendations</a></code></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><code><a href="#_block_using_recommendations" class="internal-link" title="cocopp.pproc._block_using_recommendations">_block<wbr></wbr>_using<wbr></wbr>_recommendations</a></code></td>
+    <td>meta flag to control setting and changing of _using_recommendations.</td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><code><a href="#_using_recommendations" class="internal-link" title="cocopp.pproc._using_recommendations">_using<wbr></wbr>_recommendations</a></code></td>
+    <td><code>bool</code> to determine which data are used in the <code><a href="cocopp.pproc.DataSet.html" class="internal-link" title="cocopp.pproc.DataSet">DataSet</a></code> constructor</td>
   </tr>
 </table>
           
@@ -1545,6 +1580,88 @@ attribute value from <tt class="rst-docutils literal">taken_ids</tt> or from
 therefore it must be global in the module</p>
 </div>
   </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="cocopp.pproc._set_using_recommendations">
+    
+  </a>
+  <a name="_set_using_recommendations">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_set_using_recommendations</span><span class="function-signature">(index)</span>:
+    
+    <a class="headerLink" href="#_set_using_recommendations" title="cocopp.pproc._set_using_recommendations">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>set module variable <code><a href="#_using_recommendations" class="internal-link" title="cocopp.pproc._using_recommendations">_using_recommendations</a></code></p>
+<p>as <tt class="rst-docutils literal">genericsettings.use_recommendations(index)</tt> handling the cases
+when <code>index</code> is in <tt class="rst-docutils literal">(True, False, None)</tt> or a too large index. Return
+previous value such that it is easy to restore.</p>
+</div>
+  </div>
+</div><div class="basevariable private">
+  
+  
+  <a name="cocopp.pproc._block_using_recommendations">
+    
+  </a>
+  <a name="_block_using_recommendations">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_block_using_recommendations</span>: <code>bool</code> =
+    
+    <a class="headerLink" href="#_block_using_recommendations" title="cocopp.pproc._block_using_recommendations">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>meta flag to control setting and changing of _using_recommendations.</p>
+<p><code><a href="cocopp.rungenericmany.html#main" class="internal-link" title="cocopp.rungenericmany.main">rungenericmany.main</a></code> unblocks <code><a href="#_using_recommendations" class="internal-link" title="cocopp.pproc._using_recommendations">_using_recommendations</a></code> before calling
+<code><a href="#processInputArgs" class="internal-link" title="cocopp.pproc.processInputArgs">processInputArgs</a></code>. The latter sets <code><a href="#_block_using_recommendations" class="internal-link" title="cocopp.pproc._block_using_recommendations">_block_using_recommendations</a></code> to
+<code>True</code> after calling <code><a href="#process_arguments" class="internal-link" title="cocopp.pproc.process_arguments">process_arguments</a></code> once and background algorithms
+are then processed without recommendations and <code><a href="#_using_recommendations" class="internal-link" title="cocopp.pproc._using_recommendations">_using_recommendations</a></code>
+is blocked to <code>False</code> as postcondition.</p>
+</div>
+    
+  </div>
+</div><div class="basevariable private">
+  
+  
+  <a name="cocopp.pproc._using_recommendations">
+    
+  </a>
+  <a name="_using_recommendations">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_using_recommendations</span> =
+    
+    <a class="headerLink" href="#_using_recommendations" title="cocopp.pproc._using_recommendations">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p><code>bool</code> to determine which data are used in the <code><a href="cocopp.pproc.DataSet.html" class="internal-link" title="cocopp.pproc.DataSet">DataSet</a></code> constructor</p></div>
+    
+  </div>
 </div>
         </div>
       
@@ -1557,7 +1674,7 @@ therefore it must be global in the module</p>
   <div class="container">
     <a href="index.html">API Documentation</a> for cocopp,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    23.9.1 at 2024-07-11 01:05:24.
+    23.9.1 at 2025-02-06 19:31:19.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

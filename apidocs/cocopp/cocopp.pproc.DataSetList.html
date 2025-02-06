@@ -333,6 +333,26 @@
         
 
         
+            <div class="itemName"><code><a href="#filter" class="internal-link" title="cocopp.pproc.DataSetList.filter">filter</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#filtered" class="internal-link" title="cocopp.pproc.DataSetList.filtered">filtered</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#get_all_data_lines" class="internal-link" title="cocopp.pproc.DataSetList.get_all_data_lines">get<wbr></wbr>_all<wbr></wbr>_data<wbr></wbr>_lines</a></code>
             </div>
         
@@ -404,6 +424,16 @@
 
         
             <div class="itemName"><code><a href="#processIndexFile" class="internal-link" title="cocopp.pproc.DataSetList.processIndexFile">process<wbr></wbr>Index<wbr></wbr>File</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#remove_if" class="internal-link" title="cocopp.pproc.DataSetList.remove_if">remove<wbr></wbr>_if</a></code>
             </div>
         
 
@@ -685,6 +715,16 @@
             </div>
         
 
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.html#_set_using_recommendations" class="internal-link" title="cocopp.pproc._set_using_recommendations">_set<wbr></wbr>_using<wbr></wbr>_recommendations</a></code>
+            </div>
+        
+
     </li>
 </ul> 
 
@@ -711,6 +751,26 @@
 
         
             <div class="itemName"><code><a href="cocopp.pproc.html#targets_displayed_for_info" class="internal-link" title="cocopp.pproc.targets_displayed_for_info">targets<wbr></wbr>_displayed<wbr></wbr>_for<wbr></wbr>_info</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.html#_block_using_recommendations" class="internal-link" title="cocopp.pproc._block_using_recommendations">_block<wbr></wbr>_using<wbr></wbr>_recommendations</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocopp.pproc.html#_using_recommendations" class="internal-link" title="cocopp.pproc._using_recommendations">_using<wbr></wbr>_recommendations</a></code>
             </div>
         
 
@@ -854,6 +914,16 @@
   </tr><tr class="method">
     
     <td>Method</td>
+    <td><code><a href="#filter" class="internal-link" title="cocopp.pproc.DataSetList.filter">filter</a></code></td>
+    <td>discard DataSets for which <tt class="rst-docutils literal">condition(dataset)</tt> is not true.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#filtered" class="internal-link" title="cocopp.pproc.DataSetList.filtered">filtered</a></code></td>
+    <td>return a <code>list</code> of <code><a href="cocopp.pproc.DataSet.html" class="internal-link" title="cocopp.pproc.DataSet">DataSet</a></code> for which <tt class="rst-docutils literal">condition(dataset)</tt> holds.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
     <td><code><a href="#get_all_data_lines" class="internal-link" title="cocopp.pproc.DataSetList.get_all_data_lines">get<wbr></wbr>_all<wbr></wbr>_data<wbr></wbr>_lines</a></code></td>
     <td>return a list of all data lines in <tt class="rst-docutils literal">self</tt> for each algorithm and a list of the respective computed ERTs.</td>
   </tr><tr class="method">
@@ -885,12 +955,17 @@
     
     <td>Method</td>
     <td><code><a href="#pickle" class="internal-link" title="cocopp.pproc.DataSetList.pickle">pickle</a></code></td>
-    <td>Loop over self to pickle each element.</td>
+    <td>Loop over self to pickle each element, not in use (anymore).</td>
   </tr><tr class="method">
     
     <td>Method</td>
     <td><code><a href="#processIndexFile" class="internal-link" title="cocopp.pproc.DataSetList.processIndexFile">process<wbr></wbr>Index<wbr></wbr>File</a></code></td>
     <td>Reads in an index (.info?) file information on the different runs.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#remove_if" class="internal-link" title="cocopp.pproc.DataSetList.remove_if">remove<wbr></wbr>_if</a></code></td>
+    <td>discard DataSets for which <tt class="rst-docutils literal">condition(self[i])</tt> is true.</td>
   </tr><tr class="method">
     
     <td>Method</td>
@@ -1395,6 +1470,74 @@ superseded. This method could be the origin of efficiency issue.</p>
 </div><div class="basemethod">
   
   
+  <a name="cocopp.pproc.DataSetList.filter">
+    
+  </a>
+  <a name="filter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">filter</span><span class="function-signature">(self, condition, verbose=0)</span>:
+    
+    <a class="headerLink" href="#filter" title="cocopp.pproc.DataSetList.filter">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>discard DataSets for which <tt class="rst-docutils literal">condition(dataset)</tt> is not true.</p>
+<p>The <code><a href="#filter" class="internal-link" title="cocopp.pproc.DataSetList.filter">filter</a></code> method makes changes in place and returns <code>None</code>
+unless <tt class="rst-docutils literal">verbose &gt;= 2</tt>. It does nothing <tt class="rst-docutils literal">if not condition or
+condition is True</tt>.</p>
+<p>Example: <tt class="rst-docutils literal">.filter(lambda ds: ds.funcId in [1, 2] +
+list(range(5, <span class="pre">15)))</span></tt> keeps only the "effectively unimodal"
+functions of the <tt class="rst-docutils literal">'bbob'</tt> suite.</p>
+<p>Details: <tt class="rst-docutils literal">if verbose in [2, 3]</tt>, return a list of the removed
+data sets.</p>
+<p>See also: <code><a href="#filtered" class="internal-link" title="cocopp.pproc.DataSetList.filtered">filtered</a></code>, <code><a href="#remove_if" class="internal-link" title="cocopp.pproc.DataSetList.remove_if">remove_if</a></code>, <code><a href="cocopp.genericsettings.html#filter_data_condition" class="internal-link" title="cocopp.genericsettings.filter_data_condition">genericsettings.filter_data_condition</a></code></p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="cocopp.pproc.DataSetList.filtered">
+    
+  </a>
+  <a name="filtered">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">filtered</span><span class="function-signature">(self, condition, type_=<span class="rst-variable-quote">'</span><span class="rst-variable-string">DataSetList</span><span class="rst-variable-quote">'</span>)</span>:
+    
+    <a class="headerLink" href="#filtered" title="cocopp.pproc.DataSetList.filtered">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>return a <code>list</code> of <code><a href="cocopp.pproc.DataSet.html" class="internal-link" title="cocopp.pproc.DataSet">DataSet</a></code> for which <tt class="rst-docutils literal">condition(dataset)</tt> holds.</p>
+<p>For example, <tt class="rst-docutils literal">condition=lambda ds: ds.funcId in [1, 2] +
+list(range(5, 15))</tt> returns for the <tt class="rst-docutils literal">'bbob'</tt> suite the data sets
+on the "effectively unimodal" functions.</p>
+<p>The <code><a href="#filtered" class="internal-link" title="cocopp.pproc.DataSetList.filtered">filtered</a></code> method returns an empty list <tt class="rst-docutils literal">if not condition</tt>
+and a <code>list</code> with all elements <tt class="rst-docutils literal">if condition is True</tt> (or
+<tt class="rst-docutils literal">condition=lambda ds: True</tt>). If <tt class="rst-docutils literal">type_ is list</tt> return a
+simple <code>list</code>. If <tt class="rst-docutils literal">type_ != 'DataSetList'</tt> the resulting type is
+a <code>list</code>, however this may change in future.</p>
+<p>See also: <code><a href="#filter" class="internal-link" title="cocopp.pproc.DataSetList.filter">filter</a></code></p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
   <a name="cocopp.pproc.DataSetList.get_all_data_lines">
     
   </a>
@@ -1585,7 +1728,7 @@ and function group descriptions as values.</p>
   </div>
   <div class="docstring functionBody">
     
-    <div><p>Loop over self to pickle each element.</p></div>
+    <div><p>Loop over self to pickle each element, not in use (anymore).</p></div>
   </div>
 </div><div class="basemethod">
   
@@ -1610,6 +1753,34 @@ and function group descriptions as values.</p>
   <div class="docstring functionBody">
     
     <div><p>Reads in an index (.info?) file information on the different runs.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="cocopp.pproc.DataSetList.remove_if">
+    
+  </a>
+  <a name="remove_if">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">remove_if</span><span class="function-signature">(self, condition)</span>:
+    
+    <a class="headerLink" href="#remove_if" title="cocopp.pproc.DataSetList.remove_if">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>discard DataSets for which <tt class="rst-docutils literal">condition(self[i])</tt> is true.</p>
+<p>To remove functions f1 and f5 we can use <tt class="rst-docutils literal">condition=lambda ds:
+ds.funcId in [1, 5]</tt> which is equivalent with calling
+<tt class="rst-docutils literal">.filter(lambda ds: ds.funcId not in [1, 5])</tt>.</p>
+</div>
   </div>
 </div><div class="basemethod">
   
@@ -1731,7 +1902,7 @@ restarts.</td></tr></table></div>
   <div class="container">
     <a href="index.html">API Documentation</a> for cocopp,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    23.9.1 at 2024-07-11 01:05:24.
+    23.9.1 at 2025-02-06 19:31:19.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

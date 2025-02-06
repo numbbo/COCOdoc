@@ -542,16 +542,6 @@
         
 
         
-            <div class="itemName"><code><a href="cocopp.preparehtml.html" class="internal-link" title="cocopp.preparehtml">preparehtml</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
             <div class="itemName"><code><a href="cocopp.preparetexforhtml.html" class="internal-link" title="cocopp.preparetexforhtml">preparetexforhtml</a></code>
             </div>
         
@@ -907,7 +897,7 @@ functions of the <code><a href="index.html" class="internal-link">cocopp</a></co
   <div class="functionHeader">
     
     
-    <span class="py-keyword">def</span> <span class="py-defname">load2</span><span class="function-signature">(args)</span>:
+    <span class="py-keyword">def</span> <span class="py-defname">load2</span><span class="function-signature">(args, keep=None, remove=None)</span>:
     
     <a class="headerLink" href="#load2" title="cocopp.cococommands.load2">
       
@@ -921,22 +911,28 @@ functions of the <code><a href="index.html" class="internal-link">cocopp</a></co
 <p><code>args</code> is a string or a list of strings passed to
 <code>cocopp.official_archives.all.get_extended</code> to determine the desired
 data sets which can also come from a local folder or a zip-file.</p>
+<p><code>keep</code> and <code>remove</code> are callables taking a <code><a href="cocopp.pproc.DataSet.html" class="internal-link">cocopp.pproc.DataSet</a></code> class
+instance as argument and return a <code>bool</code> according to which data sets
+are filtered (usually based on the <tt class="rst-docutils literal">funcId</tt> attribute, see below
+example). In case, <code>remove</code> takes precedent. When <tt class="rst-docutils literal">keep is None</tt> all
+elements are kept unless removed.</p>
 <p>Examples:</p>
 <pre class="py-doctest">
 <span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> cocopp
-<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">def</span> <span class="py-defname">load2</span>(s):
-<span class="py-more">... </span>    <span class="py-builtin">print</span>(s)  <span class="py-comment"># predictable output</span>
-<span class="py-more">... </span>    <span class="py-keyword">return</span> cocopp.load2(s)
-<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">def</span> <span class="py-defname">pprld</span>(dsl):
-<span class="py-more">... </span>    <span class="py-builtin">print</span>(<span class="py-string">'_'</span>)  <span class="py-comment"># predictable output</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">def</span> <span class="py-defname">pprldmany</span>(dsl):
+<span class="py-more">... </span>    <span class="py-builtin">print</span>(<span class="py-string">'OK'</span>)  <span class="py-comment"># circumvent output checking</span>
 <span class="py-more">... </span>    <span class="py-keyword">with</span> cocopp.toolsdivers.InfolderGoneWithTheWind():
 <span class="py-more">... </span>        cocopp.compall.pprldmany.main(dsl)  <span class="py-comment"># writes pprldmany_default.*</span>
-<span class="py-prompt">&gt;&gt;&gt; </span>ddsl = load2(<span class="py-string">'bbob/2009/B*'</span>)  <span class="py-comment"># doctest:+ELLIPSIS</span>
-<span class="py-output">bbob/200...</span>
-<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">assert</span> <span class="py-builtin">sorted</span>(ddsl) == [2, 3, 5, 10, 20, 40], ddsl
+<span class="py-more">...</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>_, ddsl = (<span class="py-builtin">print</span>(<span class="py-string">'OK'</span>),  <span class="py-comment"># circumvent output checking</span>
+<span class="py-more">... </span>    cocopp.load2(<span class="py-string">'bbob/2009/B*'</span>,
+<span class="py-more">... </span>                 remove=<span class="py-keyword">lambda</span> ds: ds.funcId <span class="py-keyword">in</span> [1, 5]))  <span class="py-comment"># doctest:+ELLIPSIS</span>
+<span class="py-output">OK...</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">assert</span> <span class="py-builtin">sorted</span>(ddsl) == [2, 3, 5, 10, 20, 40], <span class="py-builtin">sorted</span>(ddsl)
 <span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">assert</span> <span class="py-builtin">all</span>([<span class="py-builtin">len</span>(ddsl[i]) == 3 <span class="py-keyword">for</span> i <span class="py-keyword">in</span> ddsl]), ddsl  <span class="py-comment"># 3 algorithms</span>
-<span class="py-prompt">&gt;&gt;&gt; </span>pprld(ddsl[2])  <span class="py-comment"># doctest:+ELLIPSIS</span>
-<span class="py-output">_...</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">assert</span> <span class="py-builtin">len</span>(<span class="py-builtin">list</span>(ddsl[3].values())[0]) == 22, <span class="py-builtin">list</span>(ddsl[3].values())[0]
+<span class="py-prompt">&gt;&gt;&gt; </span>pprldmany(ddsl[2])  <span class="py-comment"># doctest:+ELLIPSIS</span>
+<span class="py-output">OK...</span>
 </pre><pre class="rst-literal-block">
 &gt;&gt; ddsl31 = load('bbob/2009/*')  # 31 data sets, takes ~3 minutes at first ever loading
 &gt;&gt; assert sorted(ddsl31) == [2, 3, 5, 10, 20, 40], ddsl
@@ -1028,7 +1024,7 @@ data sets which can also come from a local folder or a zip-file.</p>
   <div class="container">
     <a href="index.html">API Documentation</a> for cocopp,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    23.9.1 at 2024-07-11 01:05:24.
+    23.9.1 at 2025-02-06 19:31:19.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

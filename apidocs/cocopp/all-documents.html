@@ -452,14 +452,6 @@
             <div class="kind">Module</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary">Routines for writing TeX for tables.</div>
-          </li><li id="cocopp.preparehtml">
-            
-            <div class="fullName">cocopp<wbr></wbr>.preparehtml</div>
-            <div class="url">cocopp.preparehtml.html</div>
-            <div class="type">Module</div>
-            <div class="kind">Module</div>
-            <div class="privacy">PUBLIC</div>
-            <div class="summary">Prepares the figure and table descriptions in html.</div>
           </li><li id="cocopp.preparetexforhtml">
             
             <div class="fullName">cocopp<wbr></wbr>.preparetexforhtml</div>
@@ -556,6 +548,54 @@
             <div class="kind">Variable</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="cocopp.genericsettings.use_recommendations">
+            
+            <div class="fullName">cocopp<wbr></wbr>.genericsettings<wbr></wbr>.use<wbr></wbr>_recommendations</div>
+            <div class="url">cocopp.genericsettings.html#use_recommendations</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">use only recommendations data (.mdat files) for the respective algorithm where the last element is recycled for the remaining algorithms</div>
+          </li><li id="cocopp.genericsettings.parameter_sweep">
+            
+            <div class="fullName">cocopp<wbr></wbr>.genericsettings<wbr></wbr>.parameter<wbr></wbr>_sweep</div>
+            <div class="url">cocopp.genericsettings.html#parameter_sweep</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">configure line styles for a parameter sweep, see also <code><a href="cocopp.config.html#config_line_styles" class="internal-link">cocopp.config.config_line_styles</a></code></div>
+          </li><li id="cocopp.genericsettings.parameter_sweep_colormaps">
+            
+            <div class="fullName">cocopp<wbr></wbr>.genericsettings<wbr></wbr>.parameter<wbr></wbr>_sweep<wbr></wbr>_colormaps</div>
+            <div class="url">cocopp.genericsettings.html#parameter_sweep_colormaps</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">colormap(s) for parameter sweep set from the respective input long_option.</div>
+          </li><li id="cocopp.genericsettings.parameter_sweep_sort">
+            
+            <div class="fullName">cocopp<wbr></wbr>.genericsettings<wbr></wbr>.parameter<wbr></wbr>_sweep<wbr></wbr>_sort</div>
+            <div class="url">cocopp.genericsettings.html#parameter_sweep_sort</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">assign color in sweep by leading float of algorithm name</div>
+          </li><li id="cocopp.genericsettings.sequential_colormaps">
+            
+            <div class="fullName">cocopp<wbr></wbr>.genericsettings<wbr></wbr>.sequential<wbr></wbr>_colormaps</div>
+            <div class="url">cocopp.genericsettings.html#sequential_colormaps</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">default color maps for a parameter sweep</div>
+          </li><li id="cocopp.genericsettings.line_style_mapping">
+            
+            <div class="fullName">cocopp<wbr></wbr>.genericsettings<wbr></wbr>.line<wbr></wbr>_style<wbr></wbr>_mapping</div>
+            <div class="url">cocopp.genericsettings.html#line_style_mapping</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">map the input argument position to a line style position, by default the identity. This could be useful to get the same style for several algorithm variants. Only effective with when <tt class="rst-docutils literal">bool(parameter_sweep) is True</tt>...</div>
           </li><li id="cocopp.genericsettings.force_assertions">
             
             <div class="fullName">cocopp<wbr></wbr>.genericsettings<wbr></wbr>.force<wbr></wbr>_assertions</div>
@@ -692,6 +732,15 @@
             <div class="kind">Variable</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="cocopp.genericsettings.filter_data_condition">
+            
+            <div class="fullName">cocopp<wbr></wbr>.genericsettings<wbr></wbr>.filter<wbr></wbr>_data<wbr></wbr>_condition</div>
+            <div class="url">cocopp.genericsettings.html#filter_data_condition</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">a <code>callable</code> which is used in <code><a href="cocopp.rungenericmany.html" class="internal-link" title="cocopp.rungenericmany">rungenericmany</a></code> to filter the list of <code>DataSet</code>. For example, to keep only the "effectively unimodal" functions of the 'bbob' testbed, set <tt class="rst-docutils literal">filter_data_condition = lambda
+ds: ds.funcId in [1, 2,] + list(range(5, 15))</tt>...</div>
           </li><li id="cocopp.genericsettings.xlimit_pprldmany">
             
             <div class="fullName">cocopp<wbr></wbr>.genericsettings<wbr></wbr>.xlimit<wbr></wbr>_pprldmany</div>
@@ -748,6 +797,14 @@
             <div class="kind">Variable</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary">bootstrap samples, 30 is a multiple of 10 and 15. Used for tables and plots. <code>int(1e4)</code> would be preferable for a final camera-ready paper version.</div>
+          </li><li id="cocopp.genericsettings._current_args">
+            
+            <div class="fullName">cocopp<wbr></wbr>.genericsettings<wbr></wbr>._current<wbr></wbr>_args</div>
+            <div class="url">cocopp.genericsettings.html#_current_args</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Variable</div>
+            <div class="privacy">PRIVATE</div>
+            <div class="summary">arguments found in rungeneric.main, namely a list of folders returned by <code><a href="cocopp.archiving.COCODataArchive.html#get_extended" class="internal-link" title="cocopp.archiving.COCODataArchive.get_extended">COCODataArchive.get_extended</a></code> of <tt class="rst-docutils literal">cocopp.archives.all</tt>.</div>
           </li><li id="cocopp.genericsettings.instancesOfInterest2009">
             
             <div class="fullName">cocopp<wbr></wbr>.genericsettings<wbr></wbr>.instances<wbr></wbr>Of<wbr></wbr>Interest2009</div>
@@ -875,6 +932,14 @@
             <div class="type">Attribute</div>
             <div class="kind">Variable</div>
             <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="cocopp.genericsettings._default_line_styles">
+            
+            <div class="fullName">cocopp<wbr></wbr>.genericsettings<wbr></wbr>._default<wbr></wbr>_line<wbr></wbr>_styles</div>
+            <div class="url">cocopp.genericsettings.html#_default_line_styles</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Variable</div>
+            <div class="privacy">PRIVATE</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
           </li><li id="cocopp.genericsettings.figsize">
             
@@ -1179,7 +1244,7 @@
             <div class="type">Attribute</div>
             <div class="kind">Variable</div>
             <div class="privacy">PUBLIC</div>
-            <div class="summary"><span class="undocumented">Undocumented</span></div>
+            <div class="summary">algorithms to shown for comparison "in the background". Usage: `` background = {(color, linestyle): [path_to_data1, path_to_data2, ...], }`` Examples: <tt class="rst-docutils literal">background = {None: <span class="pre">cocopp.archives.bbob.get_all('2009/')}</span></tt>...</div>
           </li><li id="cocopp.genericsettings.background_default_style">
             
             <div class="fullName">cocopp<wbr></wbr>.genericsettings<wbr></wbr>.background<wbr></wbr>_default<wbr></wbr>_style</div>
@@ -1452,10 +1517,10 @@
             <div class="kind">Variable</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
-          </li><li id="cocopp.testbedsettings.scenario_sboxcostfixed">
+          </li><li id="cocopp.testbedsettings.scenario_bbobboxedfixed">
             
-            <div class="fullName">cocopp<wbr></wbr>.testbedsettings<wbr></wbr>.scenario<wbr></wbr>_sboxcostfixed</div>
-            <div class="url">cocopp.testbedsettings.html#scenario_sboxcostfixed</div>
+            <div class="fullName">cocopp<wbr></wbr>.testbedsettings<wbr></wbr>.scenario<wbr></wbr>_bbobboxedfixed</div>
+            <div class="url">cocopp.testbedsettings.html#scenario_bbobboxedfixed</div>
             <div class="type">Attribute</div>
             <div class="kind">Variable</div>
             <div class="privacy">PUBLIC</div>
@@ -1732,6 +1797,14 @@
             <div class="kind">Class</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary">this might become the future way to have settings related to testbeds TODO: how do we pass information from the benchmark to the post-processing?</div>
+          </li><li id="cocopp.testbedsettings.Testbed.flex_navigation_json_file">
+            
+            <div class="fullName">cocopp<wbr></wbr>.testbedsettings<wbr></wbr>.<wbr></wbr>Testbed<wbr></wbr>.flex<wbr></wbr>_navigation<wbr></wbr>_json<wbr></wbr>_file</div>
+            <div class="url">cocopp.testbedsettings.Testbed.html#flex_navigation_json_file</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
           </li><li id="cocopp.testbedsettings.Testbed.reference_algorithm_displayname">
             
             <div class="fullName">cocopp<wbr></wbr>.testbedsettings<wbr></wbr>.<wbr></wbr>Testbed<wbr></wbr>.reference<wbr></wbr>_algorithm<wbr></wbr>_displayname</div>
@@ -1939,7 +2012,7 @@
             <div class="type">Class</div>
             <div class="kind">Class</div>
             <div class="privacy">PUBLIC</div>
-            <div class="summary"><span class="undocumented">Undocumented</span></div>
+            <div class="summary"><span class="undocumented">No class docstring; 0/3 instance variable, 1/2 method documented</span></div>
           </li><li id="cocopp.testbedsettings.SboxCostJOINEDTestbed.__init__">
             
             <div class="fullName">cocopp<wbr></wbr>.testbedsettings<wbr></wbr>.<wbr></wbr>Sbox<wbr></wbr>Cost<wbr></wbr>JOINEDTestbed<wbr></wbr>.__init__</div>
@@ -1972,6 +2045,14 @@
             <div class="kind">Instance Variable</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="cocopp.testbedsettings.SboxCostJOINEDTestbed.filter">
+            
+            <div class="fullName">cocopp<wbr></wbr>.testbedsettings<wbr></wbr>.<wbr></wbr>Sbox<wbr></wbr>Cost<wbr></wbr>JOINEDTestbed<wbr></wbr>.filter</div>
+            <div class="url">cocopp.testbedsettings.SboxCostJOINEDTestbed.html#filter</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Changes the test suite name to <code>bbob-boxed</code> for all DataSets in dsl if data from both the bbob and the bbob-boxed suite are detected.</div>
           </li><li id="cocopp.testbedsettings.BBOBLargeScaleJOINEDTestbed">
             
             <div class="fullName">cocopp<wbr></wbr>.testbedsettings<wbr></wbr>.<wbr></wbr>BBOBLarge<wbr></wbr>Scale<wbr></wbr>JOINEDTestbed</div>
@@ -2787,7 +2868,7 @@
             <div class="type">Function</div>
             <div class="kind">Function</div>
             <div class="privacy">PUBLIC</div>
-            <div class="summary"><span class="undocumented">Undocumented</span></div>
+            <div class="summary">return the absolute path prepended to <code>subpath</code> in this module.</div>
           </li><li id="cocopp.findfiles.is_recognized_repository_filetype">
             
             <div class="fullName">cocopp<wbr></wbr>.findfiles<wbr></wbr>.is<wbr></wbr>_recognized<wbr></wbr>_repository<wbr></wbr>_filetype</div>
@@ -2820,6 +2901,14 @@
             <div class="kind">Function</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="cocopp.findfiles.hash">
+            
+            <div class="fullName">cocopp<wbr></wbr>.findfiles<wbr></wbr>.hash</div>
+            <div class="url">cocopp.findfiles.html#hash</div>
+            <div class="type">Function</div>
+            <div class="kind">Function</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">return a hash of len <code>len_</code> or full length if <tt class="rst-docutils literal">len_ is None</tt></div>
           </li><li id="cocopp.findfiles.get_output_directory_sub_folder">
             
             <div class="fullName">cocopp<wbr></wbr>.findfiles<wbr></wbr>.get<wbr></wbr>_output<wbr></wbr>_directory<wbr></wbr>_sub<wbr></wbr>_folder</div>
@@ -2827,7 +2916,7 @@
             <div class="type">Function</div>
             <div class="kind">Function</div>
             <div class="privacy">PUBLIC</div>
-            <div class="summary"><span class="undocumented">Undocumented</span></div>
+            <div class="summary"><code>addhash</code> indicates the number of chars to add to make the name unique</div>
           </li><li id="cocopp.toolsstats._has_len">
             
             <div class="fullName">cocopp<wbr></wbr>.toolsstats<wbr></wbr>._has<wbr></wbr>_len</div>
@@ -3692,6 +3781,14 @@
             <div class="kind">Function</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="cocopp.ppfig.get_rld_flex_link">
+            
+            <div class="fullName">cocopp<wbr></wbr>.ppfig<wbr></wbr>.get<wbr></wbr>_rld<wbr></wbr>_flex<wbr></wbr>_link</div>
+            <div class="url">cocopp.ppfig.html#get_rld_flex_link</div>
+            <div class="type">Function</div>
+            <div class="kind">Function</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
           </li><li id="cocopp.ppfig.get_parent_link">
             
             <div class="fullName">cocopp<wbr></wbr>.ppfig<wbr></wbr>.get<wbr></wbr>_parent<wbr></wbr>_link</div>
@@ -3724,14 +3821,14 @@
             <div class="kind">Function</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
-          </li><li id="cocopp.ppfig.copy_js_files">
+          </li><li id="cocopp.ppfig.copy_static_files">
             
-            <div class="fullName">cocopp<wbr></wbr>.ppfig<wbr></wbr>.copy<wbr></wbr>_js<wbr></wbr>_files</div>
-            <div class="url">cocopp.ppfig.html#copy_js_files</div>
+            <div class="fullName">cocopp<wbr></wbr>.ppfig<wbr></wbr>.copy<wbr></wbr>_static<wbr></wbr>_files</div>
+            <div class="url">cocopp.ppfig.html#copy_static_files</div>
             <div class="type">Function</div>
             <div class="kind">Function</div>
             <div class="privacy">PUBLIC</div>
-            <div class="summary">Copies js files to output directory.</div>
+            <div class="summary">Copies static files to output directory.</div>
           </li><li id="cocopp.ppfig.discretize_limits">
             
             <div class="fullName">cocopp<wbr></wbr>.ppfig<wbr></wbr>.discretize<wbr></wbr>_limits</div>
@@ -3907,6 +4004,14 @@
             <div class="type">Attribute</div>
             <div class="kind">Variable</div>
             <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="cocopp.archiving._url_to_folder_name_replace">
+            
+            <div class="fullName">cocopp<wbr></wbr>.archiving<wbr></wbr>._url<wbr></wbr>_to<wbr></wbr>_folder<wbr></wbr>_name<wbr></wbr>_replace</div>
+            <div class="url">cocopp.archiving.html#_url_to_folder_name_replace</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Variable</div>
+            <div class="privacy">PRIVATE</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
           </li><li id="cocopp.archiving.cocopp_home">
             
@@ -4756,6 +4861,30 @@
             <div class="kind">Variable</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="cocopp.pproc._block_using_recommendations">
+            
+            <div class="fullName">cocopp<wbr></wbr>.pproc<wbr></wbr>._block<wbr></wbr>_using<wbr></wbr>_recommendations</div>
+            <div class="url">cocopp.pproc.html#_block_using_recommendations</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Variable</div>
+            <div class="privacy">PRIVATE</div>
+            <div class="summary">meta flag to control setting and changing of _using_recommendations.</div>
+          </li><li id="cocopp.pproc._using_recommendations">
+            
+            <div class="fullName">cocopp<wbr></wbr>.pproc<wbr></wbr>._using<wbr></wbr>_recommendations</div>
+            <div class="url">cocopp.pproc.html#_using_recommendations</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Variable</div>
+            <div class="privacy">PRIVATE</div>
+            <div class="summary"><code>bool</code> to determine which data are used in the <code><a href="cocopp.pproc.DataSet.html" class="internal-link" title="cocopp.pproc.DataSet">DataSet</a></code> constructor</div>
+          </li><li id="cocopp.pproc._set_using_recommendations">
+            
+            <div class="fullName">cocopp<wbr></wbr>.pproc<wbr></wbr>._set<wbr></wbr>_using<wbr></wbr>_recommendations</div>
+            <div class="url">cocopp.pproc.html#_set_using_recommendations</div>
+            <div class="type">Function</div>
+            <div class="kind">Function</div>
+            <div class="privacy">PRIVATE</div>
+            <div class="summary">set module variable <code><a href="cocopp.pproc.html#_using_recommendations" class="internal-link" title="cocopp.pproc._using_recommendations">_using_recommendations</a></code></div>
           </li><li id="cocopp.pproc._DataSet_complement_data">
             
             <div class="fullName">cocopp<wbr></wbr>.pproc<wbr></wbr>._<wbr></wbr>Data<wbr></wbr>Set_complement_data</div>
@@ -5836,6 +5965,30 @@
             <div class="kind">Method</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary">Extend with elements.</div>
+          </li><li id="cocopp.pproc.DataSetList.filter">
+            
+            <div class="fullName">cocopp<wbr></wbr>.pproc<wbr></wbr>.<wbr></wbr>Data<wbr></wbr>Set<wbr></wbr>List<wbr></wbr>.filter</div>
+            <div class="url">cocopp.pproc.DataSetList.html#filter</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">discard DataSets for which <tt class="rst-docutils literal">condition(dataset)</tt> is not true.</div>
+          </li><li id="cocopp.pproc.DataSetList.remove_if">
+            
+            <div class="fullName">cocopp<wbr></wbr>.pproc<wbr></wbr>.<wbr></wbr>Data<wbr></wbr>Set<wbr></wbr>List<wbr></wbr>.remove<wbr></wbr>_if</div>
+            <div class="url">cocopp.pproc.DataSetList.html#remove_if</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">discard DataSets for which <tt class="rst-docutils literal">condition(self[i])</tt> is true.</div>
+          </li><li id="cocopp.pproc.DataSetList.filtered">
+            
+            <div class="fullName">cocopp<wbr></wbr>.pproc<wbr></wbr>.<wbr></wbr>Data<wbr></wbr>Set<wbr></wbr>List<wbr></wbr>.filtered</div>
+            <div class="url">cocopp.pproc.DataSetList.html#filtered</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">return a <code>list</code> of <code><a href="cocopp.pproc.DataSet.html" class="internal-link" title="cocopp.pproc.DataSet">DataSet</a></code> for which <tt class="rst-docutils literal">condition(dataset)</tt> holds.</div>
           </li><li id="cocopp.pproc.DataSetList.pickle">
             
             <div class="fullName">cocopp<wbr></wbr>.pproc<wbr></wbr>.<wbr></wbr>Data<wbr></wbr>Set<wbr></wbr>List<wbr></wbr>.pickle</div>
@@ -5843,7 +5996,7 @@
             <div class="type">Function</div>
             <div class="kind">Method</div>
             <div class="privacy">PUBLIC</div>
-            <div class="summary">Loop over self to pickle each element.</div>
+            <div class="summary">Loop over self to pickle each element, not in use (anymore).</div>
           </li><li id="cocopp.pproc.DataSetList.by">
             
             <div class="fullName">cocopp<wbr></wbr>.pproc<wbr></wbr>.<wbr></wbr>Data<wbr></wbr>Set<wbr></wbr>List<wbr></wbr>.by</div>
@@ -6195,6 +6348,14 @@
             <div class="type">Attribute</div>
             <div class="kind">Instance Variable</div>
             <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="cocopp.bestalg.BestAlgSet._missing_dimfunalgs">
+            
+            <div class="fullName">cocopp<wbr></wbr>.bestalg<wbr></wbr>.<wbr></wbr>Best<wbr></wbr>Alg<wbr></wbr>Set<wbr></wbr>._missing<wbr></wbr>_dimfunalgs</div>
+            <div class="url">cocopp.bestalg.BestAlgSet.html#_missing_dimfunalgs</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Instance Variable</div>
+            <div class="privacy">PRIVATE</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
           </li><li id="cocopp.bestalg.BestAlgSet._evals">
             
@@ -7741,6 +7902,46 @@ functions_ids_found, functions_ids_solved]</tt></div>
             <div class="kind">Function</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary">manage target values setting in "expensive" optimization scenario.</div>
+          </li><li id="cocopp.config._str_to_colormap">
+            
+            <div class="fullName">cocopp<wbr></wbr>.config<wbr></wbr>._str<wbr></wbr>_to<wbr></wbr>_colormap</div>
+            <div class="url">cocopp.config.html#_str_to_colormap</div>
+            <div class="type">Function</div>
+            <div class="kind">Function</div>
+            <div class="privacy">PRIVATE</div>
+            <div class="summary">return a color iterator from a string like <tt class="rst-docutils literal">'plasma.1.8'</tt></div>
+          </li><li id="cocopp.config._index_after_parameter">
+            
+            <div class="fullName">cocopp<wbr></wbr>.config<wbr></wbr>._index<wbr></wbr>_after<wbr></wbr>_parameter</div>
+            <div class="url">cocopp.config.html#_index_after_parameter</div>
+            <div class="type">Function</div>
+            <div class="kind">Function</div>
+            <div class="privacy">PRIVATE</div>
+            <div class="summary">return the first index after a sequence indicating a positive float.</div>
+          </li><li id="cocopp.config.map_indices_to_line_styles">
+            
+            <div class="fullName">cocopp<wbr></wbr>.config<wbr></wbr>.map<wbr></wbr>_indices<wbr></wbr>_to<wbr></wbr>_line<wbr></wbr>_styles</div>
+            <div class="url">cocopp.config.html#map_indices_to_line_styles</div>
+            <div class="type">Function</div>
+            <div class="kind">Function</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">helper function for <code><a href="cocopp.config.html#config_line_styles" class="internal-link" title="cocopp.config.config_line_styles">config_line_styles</a></code>.</div>
+          </li><li id="cocopp.config.sorted_line_styles">
+            
+            <div class="fullName">cocopp<wbr></wbr>.config<wbr></wbr>.sorted<wbr></wbr>_line<wbr></wbr>_styles</div>
+            <div class="url">cocopp.config.html#sorted_line_styles</div>
+            <div class="type">Function</div>
+            <div class="kind">Function</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">use the sorting of names up until and including a float to rearrange <code>styles</code>.</div>
+          </li><li id="cocopp.config.config_line_styles">
+            
+            <div class="fullName">cocopp<wbr></wbr>.config<wbr></wbr>.config<wbr></wbr>_line<wbr></wbr>_styles</div>
+            <div class="url">cocopp.config.html#config_line_styles</div>
+            <div class="type">Function</div>
+            <div class="kind">Function</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">configure <code><a href="cocopp.genericsettings.html#line_styles" class="internal-link" title="cocopp.genericsettings.line_styles">genericsettings.line_styles</a></code> for a parameter sweet</div>
           </li><li id="cocopp.config.config">
             
             <div class="fullName">cocopp<wbr></wbr>.config<wbr></wbr>.config</div>
@@ -8877,6 +9078,30 @@ functions_ids_found, functions_ids_solved]</tt></div>
             <div class="kind">Function</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="cocopp._version.TYPE_CHECKING">
+            
+            <div class="fullName">cocopp<wbr></wbr>._version<wbr></wbr>.TYPE<wbr></wbr>_CHECKING</div>
+            <div class="url">cocopp._version.html#TYPE_CHECKING</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Constant</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="cocopp._version.VERSION_TUPLE">
+            
+            <div class="fullName">cocopp<wbr></wbr>._version<wbr></wbr>.VERSION<wbr></wbr>_TUPLE</div>
+            <div class="url">cocopp._version.html#VERSION_TUPLE</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Type Alias</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="cocopp._version.version">
+            
+            <div class="fullName">cocopp<wbr></wbr>._version<wbr></wbr>.version</div>
+            <div class="url">cocopp._version.html#version</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
           </li><li id="cocopp._version.__version__">
             
             <div class="fullName">cocopp<wbr></wbr>._version<wbr></wbr>.__version__</div>
@@ -8885,10 +9110,18 @@ functions_ids_found, functions_ids_solved]</tt></div>
             <div class="kind">Variable</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
-          </li><li id="cocopp._version.version">
+          </li><li id="cocopp._version.__version_tuple__">
             
-            <div class="fullName">cocopp<wbr></wbr>._version<wbr></wbr>.version</div>
-            <div class="url">cocopp._version.html#version</div>
+            <div class="fullName">cocopp<wbr></wbr>._version<wbr></wbr>.__version<wbr></wbr>_tuple__</div>
+            <div class="url">cocopp._version.html#__version_tuple__</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="cocopp._version.version_tuple">
+            
+            <div class="fullName">cocopp<wbr></wbr>._version<wbr></wbr>.version<wbr></wbr>_tuple</div>
+            <div class="url">cocopp._version.html#version_tuple</div>
             <div class="type">Attribute</div>
             <div class="kind">Variable</div>
             <div class="privacy">PUBLIC</div>
@@ -9645,30 +9878,6 @@ functions_ids_found, functions_ids_solved]</tt></div>
             <div class="kind">Function</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
-          </li><li id="cocopp.preparehtml.main">
-            
-            <div class="fullName">cocopp<wbr></wbr>.preparehtml<wbr></wbr>.main</div>
-            <div class="url">cocopp.preparehtml.html#main</div>
-            <div class="type">Function</div>
-            <div class="kind">Function</div>
-            <div class="privacy">PUBLIC</div>
-            <div class="summary"><span class="undocumented">Undocumented</span></div>
-          </li><li id="cocopp.preparehtml.prepare_html">
-            
-            <div class="fullName">cocopp<wbr></wbr>.preparehtml<wbr></wbr>.prepare<wbr></wbr>_html</div>
-            <div class="url">cocopp.preparehtml.html#prepare_html</div>
-            <div class="type">Function</div>
-            <div class="kind">Function</div>
-            <div class="privacy">PUBLIC</div>
-            <div class="summary"><span class="undocumented">Undocumented</span></div>
-          </li><li id="cocopp.preparehtml.validate_html">
-            
-            <div class="fullName">cocopp<wbr></wbr>.preparehtml<wbr></wbr>.validate<wbr></wbr>_html</div>
-            <div class="url">cocopp.preparehtml.html#validate_html</div>
-            <div class="type">Function</div>
-            <div class="kind">Function</div>
-            <div class="privacy">PUBLIC</div>
-            <div class="summary"><span class="undocumented">Undocumented</span></div>
           </li><li id="cocopp.sanitycheck.crit_attr">
             
             <div class="fullName">cocopp<wbr></wbr>.sanitycheck<wbr></wbr>.crit<wbr></wbr>_attr</div>
@@ -9893,6 +10102,14 @@ functions_ids_found, functions_ids_solved]</tt></div>
             <div class="kind">Function</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary">these tests are executed when <tt class="rst-docutils literal">python cocopp</tt> is called.</div>
+          </li><li id="cocopp.test.do_doctest">
+            
+            <div class="fullName">cocopp<wbr></wbr>.test<wbr></wbr>.do<wbr></wbr>_doctest</div>
+            <div class="url">cocopp.test.html#do_doctest</div>
+            <div class="type">Function</div>
+            <div class="kind">Function</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
           </li>
        </ul>
     </div>

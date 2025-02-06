@@ -173,6 +173,16 @@
         
 
         
+            <div class="itemName"><code><a href="#config_line_styles" class="internal-link" title="cocopp.config.config_line_styles">config<wbr></wbr>_line<wbr></wbr>_styles</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#config_target_values_setting" class="internal-link" title="cocopp.config.config_target_values_setting">config<wbr></wbr>_target<wbr></wbr>_values<wbr></wbr>_setting</a></code>
             </div>
         
@@ -184,6 +194,46 @@
 
         
             <div class="itemName"><code><a href="#main" class="internal-link" title="cocopp.config.main">main</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#map_indices_to_line_styles" class="internal-link" title="cocopp.config.map_indices_to_line_styles">map<wbr></wbr>_indices<wbr></wbr>_to<wbr></wbr>_line<wbr></wbr>_styles</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#sorted_line_styles" class="internal-link" title="cocopp.config.sorted_line_styles">sorted<wbr></wbr>_line<wbr></wbr>_styles</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_index_after_parameter" class="internal-link" title="cocopp.config._index_after_parameter">_index<wbr></wbr>_after<wbr></wbr>_parameter</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_str_to_colormap" class="internal-link" title="cocopp.config._str_to_colormap">_str<wbr></wbr>_to<wbr></wbr>_colormap</a></code>
             </div>
         
 
@@ -522,16 +572,6 @@
         
 
         
-            <div class="itemName"><code><a href="cocopp.preparehtml.html" class="internal-link" title="cocopp.preparehtml">preparehtml</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
             <div class="itemName"><code><a href="cocopp.preparetexforhtml.html" class="internal-link" title="cocopp.preparetexforhtml">preparetexforhtml</a></code>
             </div>
         
@@ -735,6 +775,11 @@ used by other modules, but does not modify settings of other modules.</p>
   </tr><tr class="function">
     
     <td>Function</td>
+    <td><code><a href="#config_line_styles" class="internal-link" title="cocopp.config.config_line_styles">config<wbr></wbr>_line<wbr></wbr>_styles</a></code></td>
+    <td>configure <code><a href="cocopp.genericsettings.html#line_styles" class="internal-link" title="cocopp.genericsettings.line_styles">genericsettings.line_styles</a></code> for a parameter sweet</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
     <td><code><a href="#config_target_values_setting" class="internal-link" title="cocopp.config.config_target_values_setting">config<wbr></wbr>_target<wbr></wbr>_values<wbr></wbr>_setting</a></code></td>
     <td>manage target values setting in "expensive" optimization scenario.</td>
   </tr><tr class="function">
@@ -742,6 +787,16 @@ used by other modules, but does not modify settings of other modules.</p>
     <td>Function</td>
     <td><code><a href="#main" class="internal-link" title="cocopp.config.main">main</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#map_indices_to_line_styles" class="internal-link" title="cocopp.config.map_indices_to_line_styles">map<wbr></wbr>_indices<wbr></wbr>_to<wbr></wbr>_line<wbr></wbr>_styles</a></code></td>
+    <td>helper function for <code><a href="cocopp.config.html#config_line_styles" class="internal-link" title="cocopp.config.config_line_styles">config_line_styles</a></code>.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#sorted_line_styles" class="internal-link" title="cocopp.config.sorted_line_styles">sorted<wbr></wbr>_line<wbr></wbr>_styles</a></code></td>
+    <td>use the sorting of names up until and including a float to rearrange <code>styles</code>.</td>
   </tr><tr class="variable">
     
     <td>Variable</td>
@@ -752,6 +807,16 @@ used by other modules, but does not modify settings of other modules.</p>
     <td>Variable</td>
     <td><code><a href="#gs_spec" class="internal-link" title="cocopp.config.gs_spec">gs<wbr></wbr>_spec</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_index_after_parameter" class="internal-link" title="cocopp.config._index_after_parameter">_index<wbr></wbr>_after<wbr></wbr>_parameter</a></code></td>
+    <td>return the first index after a sequence indicating a positive float.</td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_str_to_colormap" class="internal-link" title="cocopp.config._str_to_colormap">_str<wbr></wbr>_to<wbr></wbr>_colormap</a></code></td>
+    <td>return a color iterator from a string like <tt class="rst-docutils literal">'plasma.1.8'</tt></td>
   </tr>
 </table>
           
@@ -784,6 +849,44 @@ used by other modules, but does not modify settings of other modules.</p>
     
     <div><p>called from a high level, e.g. rungeneric, to configure the lower level
 modules via modifying parameter settings.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="cocopp.config.config_line_styles">
+    
+  </a>
+  <a name="config_line_styles">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">config_line_styles</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#config_line_styles" title="cocopp.config.config_line_styles">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>configure <code><a href="cocopp.genericsettings.html#line_styles" class="internal-link" title="cocopp.genericsettings.line_styles">genericsettings.line_styles</a></code> for a parameter sweet</p>
+<p>if <tt class="rst-docutils literal">parameter_sweep</tt> is given on input. The colormap and range can be
+changed via the <tt class="rst-docutils literal"><span class="pre">--parameter_sweep_colormaps=</span></tt> value. The default
+value is <tt class="rst-docutils literal">'plasma.0.9'</tt>, viable alternatives are <tt class="rst-docutils literal">'viridis'</tt> or
+<tt class="rst-docutils literal">'gnuplot2.0.85'</tt> or a comma separated joined sequence of any of
+these, same color sweeps are 'Greens_r..7', 'Greys_r..7', 'Reds_r..7'.</p>
+<p>The sorting of the input arguments up to and including a float value in
+the name determines the positioning in the color map.</p>
+<p>Minor: The <tt class="rst-docutils literal">line_style_mapping</tt> attribute of <code><a href="cocopp.genericsettings.html" class="internal-link" title="cocopp.genericsettings">genericsettings</a></code> can be
+used to chose the marker and line style like <tt class="rst-docutils literal">{input_position:
+position_in_original_line_styles}</tt>. When <tt class="rst-docutils literal">input_position</tt> is not
+present, the usual marker line style combination is used matching
+<tt class="rst-docutils literal">input_position</tt>.</p>
+<p>TODO: we may want to keep the original symbol colors?</p>
+</div>
   </div>
 </div><div class="basefunction">
   
@@ -833,6 +936,64 @@ modules via modifying parameter settings.</p></div>
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
+</div><div class="basefunction">
+  
+  
+  <a name="cocopp.config.map_indices_to_line_styles">
+    
+  </a>
+  <a name="map_indices_to_line_styles">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">map_indices_to_line_styles</span><span class="function-signature">(names)</span>:
+    
+    <a class="headerLink" href="#map_indices_to_line_styles" title="cocopp.config.map_indices_to_line_styles">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>helper function for <code><a href="#config_line_styles" class="internal-link" title="cocopp.config.config_line_styles">config_line_styles</a></code>.</p>
+<p>Map each index of names to the index of the first appearence of the
+name, where equality of names is determined starting from after a float
+number (which represents a parameter value) using
+<code><a href="#_index_after_parameter" class="internal-link" title="cocopp.config._index_after_parameter">_index_after_parameter</a></code>.</p>
+</div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="cocopp.config.sorted_line_styles">
+    
+  </a>
+  <a name="sorted_line_styles">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">sorted_line_styles</span><span class="function-signature">(styles, names, indices)</span>:
+    
+    <a class="headerLink" href="#sorted_line_styles" title="cocopp.config.sorted_line_styles">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>use the sorting of names up until and including a float to rearrange <code>styles</code>.</p>
+<p>This assumes that the <tt class="rst-docutils literal">names[indices]</tt> correspond to
+<tt class="rst-docutils literal">styles[indices]</tt> and that <tt class="rst-docutils literal">styles[indices]</tt> (colormap) are in
+increasing order on input. On output, <tt class="rst-docutils literal">sorted_styles</tt> are in
+increasing order w.r.t. the sorting of <tt class="rst-docutils literal">names[indices]</tt>.</p>
+</div>
+  </div>
 </div><div class="basevariable">
   
   
@@ -881,6 +1042,58 @@ modules via modifying parameter settings.</p></div>
     <div><p class="undocumented">Undocumented</p></div>
     
   </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="cocopp.config._index_after_parameter">
+    
+  </a>
+  <a name="_index_after_parameter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_index_after_parameter</span><span class="function-signature">(name, return_first_digit_index=False)</span>:
+    
+    <a class="headerLink" href="#_index_after_parameter" title="cocopp.config._index_after_parameter">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>return the first index after a sequence indicating a positive float.</p>
+<p>In particular, <code>1.23</code> or <code>1.2e-3</code> are correctly identified as a float.</p>
+<p>If <code>return_first_digit_index</code>, the index of the first digit is returned
+instead of the first index after the float.</p>
+</div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="cocopp.config._str_to_colormap">
+    
+  </a>
+  <a name="_str_to_colormap">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_str_to_colormap</span><span class="function-signature">(s, len_)</span>:
+    
+    <a class="headerLink" href="#_str_to_colormap" title="cocopp.config._str_to_colormap">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>return a color iterator from a string like <tt class="rst-docutils literal">'plasma.1.8'</tt></p></div>
+  </div>
 </div>
         </div>
       
@@ -893,7 +1106,7 @@ modules via modifying parameter settings.</p></div>
   <div class="container">
     <a href="index.html">API Documentation</a> for cocopp,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    23.9.1 at 2024-07-11 01:05:24.
+    23.9.1 at 2025-02-06 19:31:19.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 
