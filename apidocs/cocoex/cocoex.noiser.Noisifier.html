@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>cocoex.noiser.Noisifier</title>
+    <meta name="generator" content="pydoctor 23.9.1"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          cocoex <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="cocoex.noiser.Noisifier.html" class="internal-link" title="This class"><wbr></wbr>Noisifier</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__call__" class="internal-link" title="cocoex.noiser.Noisifier.__call__">__call__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__getattr__" class="internal-link" title="cocoex.noiser.Noisifier.__getattr__">__getattr__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="cocoex.noiser.Noisifier.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#constraint" class="internal-link" title="cocoex.noiser.Noisifier.constraint">constraint</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#noisify" class="internal-link" title="cocoex.noiser.Noisifier.noisify">noisify</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#rand1" class="internal-link" title="cocoex.noiser.Noisifier.rand1">rand1</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#rand2" class="internal-link" title="cocoex.noiser.Noisifier.rand2">rand2</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#rand3" class="internal-link" title="cocoex.noiser.Noisifier.rand3">rand3</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_cnoise" class="internal-link" title="cocoex.noiser.Noisifier._cnoise">_cnoise</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_dump_params" class="internal-link" title="cocoex.noiser.Noisifier._dump_params">_dump<wbr></wbr>_params</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_fnoise" class="internal-link" title="cocoex.noiser.Noisifier._fnoise">_fnoise</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_load_params" class="internal-link" title="cocoex.noiser.Noisifier._load_params">_load<wbr></wbr>_params</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_set_params" class="internal-link" title="cocoex.noiser.Noisifier._set_params">_set<wbr></wbr>_params</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#parameters" class="internal-link" title="cocoex.noiser.Noisifier.parameters">parameters</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_params" class="internal-link" title="cocoex.noiser.Noisifier._params">_params</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_problem" class="internal-link" title="cocoex.noiser.Noisifier._problem">_problem</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="cocoex.noiser.html" class="internal-link" title="The parent of this class">noiser</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.noiser.Noisifier.html" class="internal-link" title="cocoex.noiser.Noisifier"><wbr></wbr>Noisifier</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.noiser.html#rand" class="internal-link" title="cocoex.noiser.rand">rand</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.noiser.html#randc" class="internal-link" title="cocoex.noiser.randc">randc</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.noiser.html#randn" class="internal-link" title="cocoex.noiser.randn">randn</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.noiser.html#_cauchy" class="internal-link" title="cocoex.noiser._cauchy">_cauchy</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.noiser.html#_gauss" class="internal-link" title="cocoex.noiser._gauss">_gauss</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.noiser.html#_seed" class="internal-link" title="cocoex.noiser._seed">_seed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.noiser.html#_unif" class="internal-link" title="cocoex.noiser._unif">_unif</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.noiser.html#parameters_file" class="internal-link" title="cocoex.noiser.parameters_file">parameters<wbr></wbr>_file</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.noiser.html#_frozen_noise" class="internal-link" title="cocoex.noiser._frozen_noise">_frozen<wbr></wbr>_noise</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.noiser.html#_seed_weights" class="internal-link" title="cocoex.noiser._seed_weights">_seed<wbr></wbr>_weights</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="cocoex.noiser.html#_seeds" class="internal-link" title="cocoex.noiser._seeds">_seeds</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">cocoex</a></code><wbr></wbr>.<code><a href="cocoex.noiser.html" class="internal-link" title="cocoex.noiser">noiser</a></code><wbr></wbr>.<code><a href="cocoex.noiser.Noisifier.html" class="internal-link" title="cocoex.noiser.Noisifier">Noisifier</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Noisifier</span>:</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="cocoex.noiser.Noisifier.__init__">Noisifier(p_add, p_subtract, p_epsilon, epsilon, rands)</a></code></p>
+          <p><a href="classIndex.html#cocoex.noiser.Noisifier">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>noise wrapper for an observed problem.</p>
+<p>The noise is applied with different probabilities for</p>
+<ul class="rst-simple">
+<li>subtracting a value (leading to good outliers)</li>
+<li>adding a value (leading to bad outliers)</li>
+<li>adding a small <code>epsilon</code> normally distributed noise</li>
+</ul>
+<p>The noise is frozen in x and y: whether it's applied and its
+sampled value depend deterministically on the input x and i.</p>
+<p>The outlier noise distribution is a Cauchy distribution multiplied by
+pi/2, which generates values larger than k with a probability awfully
+close to k**-1 when k &gt;= 10.</p>
+<p>Example:</p>
+<pre class="rst-literal-block">
+import cocoex  # experimentation module
+import scipy  # to define the solver to be benchmarked
+
+### input
+suite_name = "bbob"
+fmin = scipy.optimize.fmin  # optimizer to be benchmarked
+
+### prepare
+suite = cocoex.Suite(suite_name, "", "")
+observer = cocoex.Observer(suite_name, "")
+
+### go
+for problem in suite:  # this loop may take several minutes or more
+    problem.observe_with(observer)  # generates the data for cocopp
+    problem = cocoex.noiser.Noisifier().noisify(problem)  # a Noisifier
+    fmin(problem, problem.initial_solution, disp=False)
+</pre>
+<p>The <code>problem</code> is now a <code><a href="cocoex.noiser.Noisifier.html" class="internal-link" title="cocoex.noiser.Noisifier">Noisifier</a></code> but it still abides by the interface
+of the original problem.</p>
+<p>Details: the random number generators can be passed as argument and
+need to obey the interface of <code><a href="cocoex.noiser.html#rand" class="internal-link" title="cocoex.noiser.rand">noiser.rand</a></code>. <tt class="rst-docutils literal">rands[0]</tt> is assumed to
+be uniform in [0,1], <tt class="rst-docutils literal">rands[1]</tt> is used to sample the Gaussian noise,
+<tt class="rst-docutils literal">abs(rands[2])</tt> is used to sample added noise and <tt class="rst-docutils literal"><span class="pre">abs(rands[-1])</span></tt>
+is used to sample subtracted noise, both of which are assumed to be
+absolute Cauchy numbers scaled by pi/2 such that P(number &gt; a) equals
+about 1/a when a &gt;= 5.</p>
+<p>See <a class="rst-reference external" href="https://github.com/numbbo/coco-experiment/blob/main/build/python/example/example_experiment_complete.py" target="_top">https://github.com/numbbo/coco-experiment/blob/main/build/python/example/example_experiment_complete.py</a></p>
+</div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id9">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__call__" class="internal-link" title="cocoex.noiser.Noisifier.__call__">__call__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__getattr__" class="internal-link" title="cocoex.noiser.Noisifier.__getattr__">__getattr__</a></code></td>
+    <td>pretend to be a COCO <code>problem</code> as passed in <code><a href="cocoex.noiser.Noisifier.html#noisify" class="internal-link" title="cocoex.noiser.Noisifier.noisify">noisify</a></code></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="cocoex.noiser.Noisifier.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#constraint" class="internal-link" title="cocoex.noiser.Noisifier.constraint">constraint</a></code></td>
+    <td>return noisy constraint values</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#noisify" class="internal-link" title="cocoex.noiser.Noisifier.noisify">noisify</a></code></td>
+    <td>wrap <code>problem</code> with frozen noise</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#rand1" class="internal-link" title="cocoex.noiser.Noisifier.rand1">rand1</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#rand2" class="internal-link" title="cocoex.noiser.Noisifier.rand2">rand2</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#rand3" class="internal-link" title="cocoex.noiser.Noisifier.rand3">rand3</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#parameters" class="internal-link" title="cocoex.noiser.Noisifier.parameters">parameters</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_cnoise" class="internal-link" title="cocoex.noiser.Noisifier._cnoise">_cnoise</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_dump_params" class="internal-link" title="cocoex.noiser.Noisifier._dump_params">_dump<wbr></wbr>_params</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_fnoise" class="internal-link" title="cocoex.noiser.Noisifier._fnoise">_fnoise</a></code></td>
+    <td>x-dependent abs Cauchy noise with median pi/2</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_load_params" class="internal-link" title="cocoex.noiser.Noisifier._load_params">_load<wbr></wbr>_params</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_set_params" class="internal-link" title="cocoex.noiser.Noisifier._set_params">_set<wbr></wbr>_params</a></code></td>
+    <td>set parameters from file <code>filename</code></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_params" class="internal-link" title="cocoex.noiser.Noisifier._params">_params</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_problem" class="internal-link" title="cocoex.noiser.Noisifier._problem">_problem</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="cocoex.noiser.Noisifier.__call__">
+    
+  </a>
+  <a name="__call__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__call__</span><span class="function-signature">(self, x)</span>:
+    
+    <a class="headerLink" href="#__call__" title="cocoex.noiser.Noisifier.__call__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="cocoex.noiser.Noisifier.__getattr__">
+    
+  </a>
+  <a name="__getattr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__getattr__</span><span class="function-signature">(self, name)</span>:
+    
+    <a class="headerLink" href="#__getattr__" title="cocoex.noiser.Noisifier.__getattr__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>pretend to be a COCO <code>problem</code> as passed in <code><a href="#noisify" class="internal-link" title="cocoex.noiser.Noisifier.noisify">noisify</a></code></p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="cocoex.noiser.Noisifier.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, p_add=0.2, p_subtract=0.0, p_epsilon=0, epsilon=0.0001, rands=(<wbr></wbr><a href="cocoex.noiser.html#rand" class="internal-link" title="cocoex.noiser.rand">rand</a>, <wbr></wbr><a href="cocoex.noiser.html#randn" class="internal-link" title="cocoex.noiser.randn">randn</a>, <wbr></wbr><a href="cocoex.noiser.html#randc" class="internal-link" title="cocoex.noiser.randc">randc</a>))</span>:
+    
+    <a class="headerLink" href="#__init__" title="cocoex.noiser.Noisifier.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="cocoex.noiser.Noisifier.constraint">
+    
+  </a>
+  <a name="constraint">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">constraint</span><span class="function-signature">(self, x)</span>:
+    
+    <a class="headerLink" href="#constraint" title="cocoex.noiser.Noisifier.constraint">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>return noisy constraint values</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="cocoex.noiser.Noisifier.noisify">
+    
+  </a>
+  <a name="noisify">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">noisify</span><span class="function-signature">(self, problem)</span>:
+    
+    <a class="headerLink" href="#noisify" title="cocoex.noiser.Noisifier.noisify">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>wrap <code>problem</code> with frozen noise</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="cocoex.noiser.Noisifier.rand1">
+    
+  </a>
+  <a name="rand1">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">rand1</span><span class="function-signature">(self, x, fac=1)</span>:
+    
+    <a class="headerLink" href="#rand1" title="cocoex.noiser.Noisifier.rand1">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="cocoex.noiser.Noisifier.rand2">
+    
+  </a>
+  <a name="rand2">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">rand2</span><span class="function-signature">(self, x, fac=1)</span>:
+    
+    <a class="headerLink" href="#rand2" title="cocoex.noiser.Noisifier.rand2">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="cocoex.noiser.Noisifier.rand3">
+    
+  </a>
+  <a name="rand3">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">rand3</span><span class="function-signature">(self, x, fac=1)</span>:
+    
+    <a class="headerLink" href="#rand3" title="cocoex.noiser.Noisifier.rand3">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="cocoex.noiser.Noisifier.parameters">
+    
+  </a>
+  <a name="parameters">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">parameters</span> =
+    
+    <a class="headerLink" href="#parameters" title="cocoex.noiser.Noisifier.parameters">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="cocoex.noiser.Noisifier._cnoise">
+    
+  </a>
+  <a name="_cnoise">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_cnoise</span><span class="function-signature">(self, x)</span>:
+    
+    <a class="headerLink" href="#_cnoise" title="cocoex.noiser.Noisifier._cnoise">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="cocoex.noiser.Noisifier._dump_params">
+    
+  </a>
+  <a name="_dump_params">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_dump_params</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#_dump_params" title="cocoex.noiser.Noisifier._dump_params">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="cocoex.noiser.Noisifier._fnoise">
+    
+  </a>
+  <a name="_fnoise">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_fnoise</span><span class="function-signature">(self, x)</span>:
+    
+    <a class="headerLink" href="#_fnoise" title="cocoex.noiser.Noisifier._fnoise">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>x-dependent abs Cauchy noise with median pi/2</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="cocoex.noiser.Noisifier._load_params">
+    
+  </a>
+  <a name="_load_params">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_load_params</span><span class="function-signature">(self, filename=<a href="cocoex.noiser.html#parameters_file" class="internal-link" title="cocoex.noiser.parameters_file">parameters_file</a>, warn_errors=(<wbr></wbr>FileNotFoundError), ignore_errors=())</span>:
+    
+    <a class="headerLink" href="#_load_params" title="cocoex.noiser.Noisifier._load_params">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="cocoex.noiser.Noisifier._set_params">
+    
+  </a>
+  <a name="_set_params">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_set_params</span><span class="function-signature">(self, filename=<a href="cocoex.noiser.html#parameters_file" class="internal-link" title="cocoex.noiser.parameters_file">parameters_file</a>, **kwargs)</span>:
+    
+    <a class="headerLink" href="#_set_params" title="cocoex.noiser.Noisifier._set_params">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>set parameters from file <code>filename</code></p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="cocoex.noiser.Noisifier._params">
+    
+  </a>
+  <a name="_params">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_params</span> =
+    
+    <a class="headerLink" href="#_params" title="cocoex.noiser.Noisifier._params">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="cocoex.noiser.Noisifier._problem">
+    
+  </a>
+  <a name="_problem">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_problem</span> =
+    
+    <a class="headerLink" href="#_problem" title="cocoex.noiser.Noisifier._problem">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for cocoex,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    23.9.1 at 2025-02-06 19:11:15.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
