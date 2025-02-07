@@ -87,12 +87,14 @@ Hence, we suggest to use Doxygen version 1.8.11.
 
 To create and publish the documentation of the `coco-experiment` (`cocoex`)
 and `cocopp` modules as well as the examples in `build/python/example`,
-using `pydoctor`, see the script `run_pydoctor.sh` at the root for how to.
-Then add and commit the changes to the `apidocs` folder.
+we use `pydoctor`, see the script `run_pydoctor.sh` at the root for how to.
+After checking the result in `apidocs`, we add and commit the changes of the
+`apidocs` folder.
 
 ```bash
+python coco-experiment/scripts/fabricate
 cd coco-doc
-./run_pydoctor.sh
+./run_pydoctor.sh  # assumes folders ../coco-experiment and ../coco-postprocess
 git add apidocs/*
 git commit -m "update documentation for release X.X"
 git push  # to the gh-pages branch
