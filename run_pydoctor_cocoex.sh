@@ -1,13 +1,8 @@
 #!/bin/bash
-# Required: coco-experiment/scripts/fabricate has been run recently
 # The first argument is the folder where the repository folders 
-#   coco-experiment and coco-postprocess can be found, typically
-#   it may be ".."
-# was: first argument is path/to/coco , which doesn't work anymore, 
-#      because coco now lives in multiple repositories
+#   coco-experiment can be found, typically it may be ".."
 
-pydoctor --docformat=restructuredtext --make-html --html-output='apidocs/cocopp' "$1"/coco-postprocess/src/cocopp > err-pydoc-cocopp.txt
-echo "  to catch new files execute 'git add apidocs/cocopp'"
+python "$1"/coco-experiment/scripts/fabricate
 
 touch "$1"/coco-experiment/build/python/example/__init__.py
 pydoctor --docformat=restructuredtext --make-html --html-output='apidocs/example' "$1"/coco-experiment/build/python/example > err-pydoc-example.txt
